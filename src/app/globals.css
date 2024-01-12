@@ -16,12 +16,13 @@
   }
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+.big-heading {
+  font-size: clamp(40px, 6vw, 80px);
+  font-weight: 600;
+  text-wrap: nowrap;
+}
+
+.small-heading {
+  font-size: clamp(16px, 2vw, 32px);
+  text-wrap: nowrap;
 }

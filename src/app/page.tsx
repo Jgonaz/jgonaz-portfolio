@@ -1,21 +1,15 @@
-import Image from 'next/image'
+import Home from './_components/home'
+import Work from './_components/work'
+import Education from './_components/education'
+import Contact from './_components/contact'
 
-export default function Home () {
+export default function Page () {
   return (
-    <main className='relative z-10 flex min-h-screen container mx-auto p-24 pb-0'>
-      <div className='text-gray-800 text-pretty w-full text-center flex flex-col justify-between'>
-        <p>Jorge González Azpillaga</p>
-        <div className='w-full flex justify-center items-end'>
-          <Image
-            src='/profile.png'
-            alt='Foto de perfil personal - Jgonaz'
-            width={768}
-            height={768}
-            layout='responsive'
-            style={{ minWidth: '350px', maxWidth: '768px' }}
-          />
-        </div>
-      </div>
-    </main>
+    <>
+      <Home />
+      <Work />
+      <Education />
+      <Contact />
+    </>
   )
 }

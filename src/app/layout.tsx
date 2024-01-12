@@ -1,8 +1,9 @@
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
+import { Onest } from 'next/font/google'
 import './globals.css'
+import Menu from './_components/menu'
 
-const inter = Inter({ subsets: ['latin'] })
+const onest = Onest({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
   title: 'Jorge González Azpillaga - Webdev',
@@ -16,13 +17,15 @@ export default function RootLayout ({
   children: React.ReactNode
 }) {
   return (
-    <html lang='en'>
-      <body
-        className={`${inter.className} relative min-h-screen w-full bg-white`}
-      >
-        <div className='absolute top-0 z-[-2] h-screen w-screen bg-jade-50 bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(67,229,160,0.4),rgba(255,255,255,0))]'>
-          {children}
-        </div>
+    <html lang='es' style={{ scrollBehavior: 'smooth' }}>
+      <body className={onest.className}>
+        <header className='absolute w-full flex justify-center p-4 z-20'>
+          <Menu />
+        </header>
+        {children}
+        <footer>
+          <p>©️ 2024 Jorge González Azpillaga - Webdev</p>
+        </footer>
       </body>
     </html>
   )
