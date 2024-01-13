@@ -17,12 +17,22 @@
 }
 
 .big-heading {
-  font-size: clamp(40px, 6vw, 80px);
+  font-size: clamp(24px, 6vw, 48px);
   font-weight: 600;
   text-wrap: nowrap;
 }
 
 .small-heading {
-  font-size: clamp(16px, 2vw, 32px);
+  font-size: clamp(12px, 3vw, 24px);
   text-wrap: nowrap;
+}
+
+/* tailwind.css */
+@layer utilities {
+  .translate-y-4rem {
+    transform: translateY(4rem);
+  }
+  .translate-y-8rem {
+    transform: translateY(8rem);
+  }
 }

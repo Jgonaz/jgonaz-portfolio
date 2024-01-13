@@ -1,0 +1,49 @@
+.waves {
+  height: 60px;
+  width: 100%;
+
+  div {
+    height: 60px;
+    width: 100%;
+    position: absolute;
+
+    svg {
+      position: absolute;
+      background-color: transparent;
+      width: 100%;
+      height: 60px;
+      margin-bottom: -7px; /*Fix for safari gap*/
+    }
+  }
+}
+
+.parallax {
+  use {
+    animation: move-forever 25s cubic-bezier(0.55, 0.5, 0.45, 0.5) infinite;
+  }
+  .color1 {
+    animation-delay: -2s;
+    animation-duration: 8s;
+  }
+  .color2 {
+    animation-delay: -6s;
+    animation-duration: 16s;
+  }
+  .color3 {
+    animation-delay: -4s;
+    animation-duration: 12s;
+  }
+  .color4 {
+    animation-delay: -8s;
+    animation-duration: 20s;
+  }
+}
+
+@keyframes move-forever {
+  0% {
+    transform: translate3d(-90px, 0, 0);
+  }
+  100% {
+    transform: translate3d(85px, 0, 0);
+  }
+}
