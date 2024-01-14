@@ -1,7 +1,8 @@
 import type { Metadata } from 'next'
 import { Onest } from 'next/font/google'
 import './globals.css'
-import Menu from './_components/menu'
+import Header from './_components/header'
+import Footer from './_components/footer'
 
 const onest = Onest({ subsets: ['latin'] })
 
@@ -19,13 +20,9 @@ export default function RootLayout ({
   return (
     <html lang='es' style={{ scrollBehavior: 'smooth' }}>
       <body className={onest.className}>
-        <header className='absolute w-full flex justify-center p-4 z-20'>
-          <Menu />
-        </header>
+        <Header />
         {children}
-        <footer>
-          <p>©️ 2024 Jorge González Azpillaga - Webdev</p>
-        </footer>
+        <Footer />
       </body>
     </html>
   )

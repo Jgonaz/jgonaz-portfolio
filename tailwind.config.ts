@@ -9,6 +9,9 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      spacing: {
+        '22': '5.5rem'
+      },
       colors: {
         jade: {
           '50': '#effef7',

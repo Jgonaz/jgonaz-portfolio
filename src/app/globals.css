@@ -2,27 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
-/* :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-} */
-
 .animate-gradient {
   background-size: 300%;
   -webkit-animation: animatedgradient 6s ease infinite alternate;
   -moz-animation: animatedgradient 6s ease infinite alternate;
   animation: animatedgradient 6s ease infinite alternate;
 }
-
 @keyframes animatedgradient {
   0% {
     background-position: 0% 50%;
@@ -35,8 +20,26 @@
   }
 }
 
+@media (max-width: 768px) {
+  .show-mobile-menu {
+    position: fixed;
+    background: #effef7;
+    border-bottom-right-radius: 15px;
+    border-top-right-radius: 15px;
+
+    ul > li > a:hover {
+      color: #effef7;
+      border-radius: 12px;
+      background: #03301f;
+    }
+  }
+}
+
 /* tailwind.css */
 @layer utilities {
+  .translate-y-2rem {
+    transform: translateY(2rem);
+  }
   .translate-y-4rem {
     transform: translateY(4rem);
   }
