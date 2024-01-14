@@ -26,13 +26,14 @@
     animation-duration: 8s;
   }
   .color2 {
-    animation-delay: -6s;
-    animation-duration: 16s;
-  }
-  .color3 {
     animation-delay: -4s;
     animation-duration: 12s;
   }
+  .color3 {
+    animation-delay: -6s;
+    animation-duration: 16s;
+  }
+
   .color4 {
     animation-delay: -8s;
     animation-duration: 20s;

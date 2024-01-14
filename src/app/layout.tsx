@@ -6,9 +6,9 @@ import Menu from './_components/menu'
 const onest = Onest({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'Jorge González Azpillaga - Webdev',
+  title: 'Jorge González Azpillaga - Developer',
   description:
-    'Professional portfolio, made with NextJS, Tailwind & TypeScript - ©️ 2024'
+    'Professional portfolio. Made with NextJS v14, Tailwind & TypeScript - ©️ 2024'
 }
 
 export default function RootLayout ({

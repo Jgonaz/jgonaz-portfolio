@@ -3,16 +3,28 @@ import Image from 'next/image'
 export default function Home () {
   return (
     <main
-      className='h-screen w-screen max-w-full top-0 z-[-2] bg-jade-50 bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(67,229,160,0.4),rgba(255,255,255,0))]'
+      className='w-screen max-w-full
+      top-0 z-[-2] bg-jade-50 bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(67,229,160,0.4),rgba(255,255,255,0))]'
+      style={{ height: 'calc(100vh - 60px)' }}
       id='home'
     >
-      <div className='h-screen container mx-auto p-4 md:p-6 lg:p-24 flex justify-center'>
-        <div className='max-w-max text-gray-800 mt-16 md:mt-24 lg:mt-32 xl:mt-36'>
-          <h3 className='text-start small-heading'>¡Hola! Soy</h3>
-          <h1 className='big-heading'>Jorge González Azpillaga,</h1>
-          <h3 className='text-end small-heading'>desarrollador web.</h3>
+      <div className='h-screen container mx-auto p-8 sm:p-12 md:p-16 lg:p-20 xl:p-24 flex justify-center'>
+        <div className='max-w-max mt-24'>
+          <p className='text-center sm:text-start text-lg font-normal text-jade-900 lg:text-xl p-0 sm:px-4'>
+            ¡Hola! Soy
+          </p>
+          <h1
+            className='text-4xl md:text-5xl lg:text-6xl text-wrap sm:text-nowrap text-center sm:text-start font-extrabold tracking-tight
+          bg-gradient-to-br from-jade-950 via-jade-700 to-jade-500 text-transparent bg-clip-text animate-gradient'
+            style={{ lineHeight: 1.25 }}
+          >
+            Jorge González Azpillaga,
+          </h1>
+          <p className='text-center sm:text-end text-lg font-normal text-jade-900 lg:text-xl p-0 sm:px-4'>
+            y desarrollo aplicaciones web.
+          </p>
         </div>
-        <div className='profile-photo absolute bottom-0 flex justify-center items-end w-full max-w-full min-w-[350px] h-[768px] z-20 translate-y-4rem sm:translate-y-8rem'>
+        <div className='profile-photo absolute bottom-0 flex justify-center items-end w-full max-w-full min-w-[350px] h-[768px] z-20 sm:translate-y-4rem lg:translate-y-6rem'>
           <Image
             src='/profile.png'
             alt='Foto de perfil personal - Jgonaz'
