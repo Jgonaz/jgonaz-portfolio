@@ -24,7 +24,7 @@ export default function Home () {
             y desarrollo aplicaciones web.
           </p>
         </div>
-        <div className='profile-photo absolute bottom-0 flex justify-center items-end w-full max-w-full min-w-[350px] h-[768px] z-20 sm:translate-y-4rem lg:translate-y-6rem'>
+        <div className='profile-photo absolute bottom-0 flex justify-center items-end w-full max-w-full min-w-[350px] h-[768px] z-20 translate-y-2rem sm:translate-y-4rem lg:translate-y-6rem'>
           <Image
             src='/profile.png'
             alt='Foto de perfil personal - Jgonaz'
@@ -33,7 +33,7 @@ export default function Home () {
             priority={true}
             sizes='100vw'
             style={{
-              filter: 'drop-shadow(0px 0px 2px gray);',
+              filter: 'drop-shadow(0px 0px 2px gray)',
               objectFit: 'scale-down',
               minWidth: '350px',
               maxHeight: '65vh',
