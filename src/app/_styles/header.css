@@ -1,17 +1,23 @@
 @media (max-width: 768px) {
   header.show-mobile-menu {
-    position: fixed;
-    background: var(--color-jade-50);
+    position: absolute;
+    backdrop-filter: blur(30px);
+    padding-bottom: 5rem;
     border-bottom-right-radius: 15px;
     border-top-right-radius: 15px;
     transition-property: all;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-    transition-duration: 10ms;
-
-    .header-link:hover {
-      color: var(--color-jade-50);
-      border-radius: 12px;
-      background: var(--color-jade-950);
+    transition-duration: 25ms;
+    li {
+      border-top: 0.5px solid #11563a3b;
+      .header-link:hover {
+        color: var(--color-jade-50);
+        border-radius: 12px;
+        background: var(--color-jade-950);
+      }
+    }
+    li:last-child {
+      border-bottom: 0.5px solid #11563a3b;
     }
   }
 }
