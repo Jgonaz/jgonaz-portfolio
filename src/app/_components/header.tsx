@@ -25,10 +25,10 @@ export default function Header () {
           <div className='flex items-center md:order-2'>
             <button
               data-collapse-toggle='mobile-menu'
+              aria-controls='mobile-menu'
               onClick={toggleMobileMenu}
               type='button'
               className='inline-flex items-center p-2 ml-1 text-sm text-jade-700 rounded-md md:hidden hover:bg-jade-100 focus:outline-none'
-              aria-controls='mobile-menu'
               aria-expanded='false'
             >
               <span className='sr-only'>Abrir menú principal</span>
@@ -67,7 +67,7 @@ export default function Header () {
                 <a
                   onClick={toggleMobileMenu}
                   href='#work'
-                  className='flex items-center gap-2 py-2 pr-4 pl-3 text-jade-900 hover:bg-gray-50 md:hover:bg-transparent md:hover:text-primary-700 md:p-0'
+                  className='header-link flex items-center gap-2 py-2 pr-4 pl-3 text-jade-900 hover:bg-gray-50 md:hover:bg-transparent md:hover:text-primary-700 md:p-0'
                   aria-current='page'
                 >
                   <WorkIcon className='md:hidden' />
@@ -78,7 +78,7 @@ export default function Header () {
                 <a
                   onClick={toggleMobileMenu}
                   href='#education'
-                  className='flex items-center gap-2 py-2 pr-4 pl-3 text-jade-900 hover:bg-gray-50 md:hover:bg-transparent  md:hover:text-primary-700 md:p-0'
+                  className='header-link flex items-center gap-2 py-2 pr-4 pl-3 text-jade-900 hover:bg-gray-50 md:hover:bg-transparent  md:hover:text-primary-700 md:p-0'
                 >
                   <EducationIcon className='md:hidden' />
                   Formación
@@ -88,7 +88,7 @@ export default function Header () {
                 <a
                   onClick={toggleMobileMenu}
                   href='#contact'
-                  className='flex items-center gap-2 py-2 pr-4 pl-3 text-jade-900 hover:bg-gray-50 md:hover:bg-transparent md:hover:text-primary-700 md:p-0'
+                  className='header-link flex items-center gap-2 py-2 pr-4 pl-3 text-jade-900 hover:bg-gray-50 md:hover:bg-transparent md:hover:text-primary-700 md:p-0'
                 >
                   <MailIcon className='md:hidden' />
                   Contacto
@@ -98,7 +98,7 @@ export default function Header () {
                 <a
                   href='https://docs.google.com/document/d/119rL87biQUfklitcP0fOVYvQFW94zezUSvZMLK5W89Q/edit'
                   target='_blank'
-                  className='flex items-center gap-2 py-2 pr-4 pl-3 text-jade-900 hover:bg-gray-50 md:hover:bg-transparent md:hover:text-primary-700 md:p-0'
+                  className='header-link flex items-center gap-2 py-2 pr-4 pl-3 text-jade-900 hover:bg-gray-50 md:hover:bg-transparent md:hover:text-primary-700 md:p-0'
                 >
                   <UserIcon className='md:hidden' />
                   CV

@@ -2,6 +2,21 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --color-jade-50: #effef7;
+  --color-jade-75: #e4fef3;
+  --color-jade-100: #dafeef;
+  --color-jade-200: #b8fadd;
+  --color-jade-300: #81f4c3;
+  --color-jade-400: #43e5a0;
+  --color-jade-500: #1acd81;
+  --color-jade-600: #0fa968;
+  --color-jade-700: #108554;
+  --color-jade-800: #126945;
+  --color-jade-900: #11563a;
+  --color-jade-950: #03301f;
+}
+
 .animate-gradient {
   background-size: 300%;
   -webkit-animation: animatedgradient 6s ease infinite alternate;
@@ -26,12 +41,59 @@
     background: #effef7;
     border-bottom-right-radius: 15px;
     border-top-right-radius: 15px;
+    transition-property: all;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 10ms;
 
     ul > li > a:hover {
       color: #effef7;
       border-radius: 12px;
       background: #03301f;
     }
+  }
+}
+
+.back-to-top {
+  --offset: 50px;
+  position: sticky;
+  bottom: 20px;
+  margin-top: calc(100vh + var(--offset));
+  a {
+    cursor: pointer;
+    border-radius: 100%;
+    width: 40px;
+    height: 40px;
+    @media (min-width: 640px) {
+      width: 48px;
+      height: 48px;
+    }
+    @media (min-width: 1280px) {
+      width: 56px;
+      height: 56px;
+    }
+    svg.arrow-up {
+      fill: white;
+      width: 20px;
+      height: 20px;
+      @media (min-width: 640px) {
+        width: 24px;
+        height: 24px;
+      }
+      @media (min-width: 1280px) {
+        width: 32px;
+        height: 32px;
+      }
+    }
+  }
+
+  a:hover {
+    background-color: var(--color-jade-700);
+  }
+  a:active {
+    box-shadow: none;
+    background-color: var(--color-jade-600);
+    transform: translateY(0.5rem);
+    transition: all 0.05s;
   }
 }
 

@@ -9,11 +9,11 @@ interface WavesProps {
 }
 
 export default function Waves ({
-  color1 = '#b8fadd',
-  color2 = '#43e5a0',
-  color3 = '#0fa968',
-  color4 = '#11563a',
-  background = '#effef7'
+  background,
+  color1,
+  color2,
+  color3,
+  color4
 }: WavesProps) {
   return (
     <div className='waves' style={{ backgroundColor: background }}>
