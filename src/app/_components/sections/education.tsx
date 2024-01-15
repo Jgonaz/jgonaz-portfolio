@@ -3,8 +3,8 @@ import educationData from '../../_data/education.json'
 export default function Education () {
   return (
     <section
-      className='bg-jade-900 relative z-30 pt-16 sm:pt-12 md:pt-8 lg:pt-4 xl:pt-0'
-      id='work'
+      className='timeline bg-jade-900 relative z-30 pt-16 sm:pt-12 md:pt-8 lg:pt-4 xl:pt-0 pb-12 md:pb-4'
+      id='education'
     >
       <div className='container mx-auto  text-pretty gap-10 p-8 pt-0 sm:p-12 sm:pt-0 md:p-16 lg:p-20 xl:p-24'>
         <div className='flex flex-col justify-center'>
@@ -69,6 +69,14 @@ export default function Education () {
                 </li>
               ))}
             </ul>
+          </div>
+          <div className='flex md:hidden justify-center w-full mt-12'>
+            <a
+              href='https://docs.google.com/document/d/119rL87biQUfklitcP0fOVYvQFW94zezUSvZMLK5W89Q/export?format=pdf'
+              className='download-cv-btn text-white bg-jade-700 hover:bg-jade-800 focus:ring-1 focus:ring-jade-300 font-medium rounded-lg text-sm px-5 py-2.5 focus:outline-none'
+            >
+              Descargar CV
+            </a>
           </div>
         </div>
       </div>

@@ -1,4 +1,5 @@
 'use client'
+import '../../_styles/timeline.css'
 import { useEffect } from 'react'
 import workData from '../../_data/work.json'
 
@@ -30,13 +31,13 @@ export default function Work () {
   }, [])
   return (
     <section
-      className='bg-jade-900 relative z-30 pt-16 sm:pt-12 md:pt-8 lg:pt-4 xl:pt-0'
+      className='timeline bg-jade-900 relative z-30 pt-16 sm:pt-12 md:pt-8 lg:pt-4 xl:pt-0'
       id='work'
     >
       <div className='container mx-auto  text-pretty gap-10 px-8 sm:px-12 md:p-16 md:pb-0 lg:p-20 lg:pb-0 xl:p-24 xl:pb-0'>
         <div className='flex flex-col md:flex-row justify-center'>
           <div id='work-title' className='flex justify-center mb-16 md:mb-0'>
-            <h2 className='text-4xl font-extrabold text-white md:mb-22'>
+            <h2 className='h-fit text-4xl font-extrabold text-white md:mb-22'>
               Experiencia
             </h2>
           </div>
@@ -45,7 +46,7 @@ export default function Work () {
               {workData.map((job, index) => (
                 <li
                   key={index}
-                  className='group relative flex flex-col pb-8 pl-7 last:pb-0'
+                  className='li-item group relative flex flex-col pb-8 pl-7 last:pb-0'
                 >
                   <div className='absolute bottom-0 left-[calc(0.25rem-0.5px)] top-0 w-px bg-white/30 group-first:top-3'></div>
                   <div className='absolute left-0 top-2 h-2 w-2 rounded-full border border-jade-300 bg-jade-600'></div>
@@ -62,10 +63,10 @@ export default function Work () {
                 </li>
               ))}
             </ul>
-            <div className='hidden md:flex flex-col items-end justify-center w-full mt-12'>
+            <div className='hidden md:flex justify-end w-full mt-12'>
               <a
                 href='https://docs.google.com/document/d/119rL87biQUfklitcP0fOVYvQFW94zezUSvZMLK5W89Q/export?format=pdf'
-                className='text-white bg-jade-700 hover:bg-jade-800 focus:ring-1 focus:ring-jade-300 font-medium rounded-lg text-sm px-5 py-2.5 focus:outline-none'
+                className='download-cv-btn text-white bg-jade-700 hover:bg-jade-800 focus:ring-1 focus:ring-jade-300 font-medium rounded-lg text-sm px-5 py-2.5 focus:outline-none'
               >
                 Descargar CV
               </a>
