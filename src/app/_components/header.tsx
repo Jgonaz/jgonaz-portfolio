@@ -1,5 +1,7 @@
 'use client'
 
+import '../_styles/header.css'
+
 import WorkIcon from '../_assets/workIcon'
 import EducationIcon from '../_assets/educationIcon'
 import MailIcon from '../_assets/mailIcon'

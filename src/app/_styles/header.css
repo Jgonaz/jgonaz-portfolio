@@ -1,0 +1,17 @@
+@media (max-width: 768px) {
+  header.show-mobile-menu {
+    position: fixed;
+    background: var(--color-jade-50);
+    border-bottom-right-radius: 15px;
+    border-top-right-radius: 15px;
+    transition-property: all;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 10ms;
+
+    .header-link:hover {
+      color: var(--color-jade-50);
+      border-radius: 12px;
+      background: var(--color-jade-950);
+    }
+  }
+}

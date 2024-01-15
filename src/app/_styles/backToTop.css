@@ -1,0 +1,44 @@
+.back-to-top {
+  --offset: 50px;
+  position: sticky;
+  bottom: 20px;
+  margin-top: calc(100vh + var(--offset));
+
+  a {
+    cursor: pointer;
+    border-radius: 100%;
+    width: 40px;
+    height: 40px;
+    @media (min-width: 640px) {
+      width: 48px;
+      height: 48px;
+    }
+    @media (min-width: 1280px) {
+      width: 56px;
+      height: 56px;
+    }
+    svg.arrow-up {
+      fill: white;
+      width: 20px;
+      height: 20px;
+      @media (min-width: 640px) {
+        width: 24px;
+        height: 24px;
+      }
+      @media (min-width: 1280px) {
+        width: 32px;
+        height: 32px;
+      }
+    }
+  }
+
+  a:hover {
+    background-color: var(--color-jade-700);
+  }
+  a:active {
+    box-shadow: none;
+    background-color: var(--color-jade-600);
+    transform: translateY(0.25rem);
+    transition: all 0.05s;
+  }
+}

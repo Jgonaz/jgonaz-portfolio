@@ -1,5 +1,7 @@
 import Image from 'next/image'
 
+import '../../_styles/home.css'
+
 export default function Home () {
   return (
     <main

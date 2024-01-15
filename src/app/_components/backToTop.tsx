@@ -1,3 +1,5 @@
+import '../_styles/backToTop.css'
+
 export default function BackToTop () {
   return (
     <div className='back-to-top w-full flex justify-end z-30 px-12 pb-4'>
