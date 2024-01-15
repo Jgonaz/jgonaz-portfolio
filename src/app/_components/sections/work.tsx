@@ -30,10 +30,10 @@ export default function Work () {
   }, [])
   return (
     <section
-      className='bg-jade-900 relative z-30 pt-16 sm:pt-12 md:pt-8 lg:pt-4 xl:pt-0 '
+      className='bg-jade-900 relative z-30 pt-16 sm:pt-12 md:pt-8 lg:pt-4 xl:pt-0'
       id='work'
     >
-      <div className='container mx-auto  text-pretty gap-10 p-8 pt-0 sm:p-12 sm:pt-0 md:p-16 lg:p-20 xl:p-24'>
+      <div className='container mx-auto  text-pretty gap-10 px-8 sm:px-12 md:p-16 md:pb-0 lg:p-20 lg:pb-0 xl:p-24 xl:pb-0'>
         <div className='flex flex-col md:flex-row justify-center'>
           <div id='work-title' className='flex justify-center mb-16 md:mb-0'>
             <h2 className='text-4xl font-extrabold text-white md:mb-22'>
@@ -62,7 +62,7 @@ export default function Work () {
                 </li>
               ))}
             </ul>
-            <div className='w-full flex justify-center md:flex-col md:items-end mt-12'>
+            <div className='hidden md:flex flex-col items-end justify-center w-full mt-12'>
               <a
                 href='https://docs.google.com/document/d/119rL87biQUfklitcP0fOVYvQFW94zezUSvZMLK5W89Q/export?format=pdf'
                 className='text-white bg-jade-700 hover:bg-jade-800 focus:ring-1 focus:ring-jade-300 font-medium rounded-lg text-sm px-5 py-2.5 focus:outline-none'

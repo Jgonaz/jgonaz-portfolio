@@ -98,7 +98,7 @@ export default function Header () {
               </li>
               <li>
                 <a
-                  href='https://docs.google.com/document/d/119rL87biQUfklitcP0fOVYvQFW94zezUSvZMLK5W89Q/edit'
+                  href='https://docs.google.com/document/d/119rL87biQUfklitcP0fOVYvQFW94zezUSvZMLK5W89Q'
                   target='_blank'
                   className='header-link flex items-center gap-2 py-3 pr-4 pl-3 text-jade-900 hover:bg-gray-50 md:hover:bg-transparent md:hover:text-primary-700 md:p-0'
                 >
