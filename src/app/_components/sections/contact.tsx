@@ -1,9 +1,30 @@
+'use client'
+
 import SendIcon from '@/app/_assets/SendIcon'
 import GitHubIcon from '@/app/_assets/social/GithubIcon'
 import InstagramIcon from '@/app/_assets/social/InstagramIcon'
 import LinkedinIcon from '@/app/_assets/social/LinkedinIcon'
 
 export default function Contact () {
+  const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault()
+
+    const formData = new FormData(event.currentTarget)
+    const formProps = Object.fromEntries(formData)
+
+    const { from, subject, message } = formProps
+
+    const response = await fetch('/api/send', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({ from, subject, message })
+    })
+
+    const data = await response.json()
+    console.log(data)
+  }
   return (
     <section
       className='bg-jade-50 pt-16 sm:pt-12 md:pt-8 lg:pt-4 xl:pt-0 pb-12 md:pb-4'
@@ -17,18 +38,18 @@ export default function Contact () {
           <h2 className='text-4xl font-extrabold text-jade-800'>¿Hablamos?</h2>
         </div>
         <div className='w-full max-w-screen-md p-4 bg-white border border-gray-200 rounded-lg shadow sm:p-6 md:p-8'>
-          <form className='space-y-6' action='#'>
+          <form className='space-y-6' action='#' onSubmit={handleSubmit}>
             <div>
               <label
-                htmlFor='email_from'
+                htmlFor='from'
                 className='block mb-2 text-sm font-medium text-jade-900'
               >
                 De:
               </label>
               <input
-                type='email_from'
-                name='email_from'
-                id='email_from'
+                type='from'
+                name='from'
+                id='from'
                 className='bg-gray-50 border border-gray-300 text-jade-900 text-sm rounded-lg focus:ring-jade-900/50 focus:border-jade-900/50 focus:outline-none block w-full p-2.5'
                 placeholder='nombre@mail.com'
                 required
