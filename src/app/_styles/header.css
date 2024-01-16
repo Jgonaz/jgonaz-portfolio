@@ -2,7 +2,7 @@
   header.show-mobile-menu {
     position: absolute;
     backdrop-filter: blur(30px);
-    padding-bottom: 5rem;
+    height: 100vh;
     border-bottom-right-radius: 15px;
     border-top-right-radius: 15px;
     transition-property: all;

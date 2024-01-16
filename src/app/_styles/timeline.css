@@ -8,18 +8,32 @@
   }
 }
 
+@keyframes scrollScale {
+  from {
+    transform: scale(0.75) translateX(-3rem);
+  }
+
+  to {
+    transform: scale(1) translateX(0);
+  }
+}
+
 section.timeline {
   .download-cv-btn,
   #work-title h2,
   li * {
-    view-timeline-name: --image; /*Nombre del timeline*/
-    view-timeline-axis: block; /*Axis Vertical*/
+    view-timeline-name: --image;
+    view-timeline-axis: block;
 
     animation-timeline: --image;
-    animation-name: scrollShow; /*Nombre de la animación*/
-    animation-fill-mode: both; /*Dirección de la animación (ambos)*/
+    animation-name: scrollShow;
+    animation-fill-mode: both;
     animation-range: entry 20% cover 40%;
-    /*Rango de animación: Cuando el usuario está viendo el 'entry %' del contenido sobre el viewport, empieza la animación,
-    y cuando el usuario esté viendo el 'cover %', acaba la animación.*/
+  }
+  @media screen and (max-width: 450px) {
+    li p,
+    h3 {
+      animation-name: scrollShow, scrollScale;
+    }
   }
 }

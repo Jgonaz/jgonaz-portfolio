@@ -6,7 +6,7 @@ export default function Education () {
       className='timeline bg-jade-900 relative z-30 pt-16 sm:pt-12 md:pt-8 lg:pt-4 xl:pt-0 pb-12 md:pb-4'
       id='education'
     >
-      <div className='container mx-auto  text-pretty gap-10 p-8 pt-0 sm:p-12 sm:pt-0 md:p-16 lg:p-20 xl:p-24'>
+      <div className='container mx-auto text-pretty gap-10 p-8 pt-0 sm:p-12 sm:pt-0 md:p-16 lg:p-20 xl:p-24'>
         <div className='flex flex-col justify-center'>
           <div
             id='work-title'

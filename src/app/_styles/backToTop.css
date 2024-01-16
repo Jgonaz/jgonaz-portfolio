@@ -14,9 +14,11 @@
   --offset: 50px;
   position: sticky;
   bottom: 20px;
-  animation: backToTopBounce 1s infinite;
+  margin-top: calc(100vh + var(--offset));
+  display: inline;
 
   a {
+    animation: backToTopBounce 1s infinite;
     cursor: pointer;
     border-radius: 100%;
     width: 40px;

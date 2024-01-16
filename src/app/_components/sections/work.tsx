@@ -34,7 +34,7 @@ export default function Work () {
       className='timeline bg-jade-900 relative z-30 pt-16 sm:pt-12 md:pt-8 lg:pt-4 xl:pt-0'
       id='work'
     >
-      <div className='container mx-auto  text-pretty gap-10 px-8 sm:px-12 md:p-16 md:pb-0 lg:p-20 lg:pb-0 xl:p-24 xl:pb-0'>
+      <div className='container mx-auto text-pretty gap-10 px-8 sm:px-12 md:p-16 md:pb-0 lg:p-20 lg:pb-0 xl:p-24 xl:pb-0'>
         <div className='flex flex-col md:flex-row justify-center'>
           <div id='work-title' className='flex justify-center mb-16 md:mb-0'>
             <h2 className='h-fit text-4xl font-extrabold text-white md:mb-22'>

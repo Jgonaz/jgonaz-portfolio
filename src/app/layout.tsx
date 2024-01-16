@@ -19,7 +19,7 @@ export default function RootLayout ({
 }) {
   return (
     <html lang='es' style={{ scrollBehavior: 'smooth' }}>
-      <body className={onest.className}>
+      <body className={`${onest.className} bg-jade-50`}>
         <Header />
         {children}
         <Footer />
