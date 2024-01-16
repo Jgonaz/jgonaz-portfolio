@@ -1,3 +1,17 @@
+.home-h-screen {
+  /* equivalent to 100dvh in major browsers */
+  min-height: calc(
+    100vh - env(safe-area-inset-bottom, 0) - env(safe-area-inset-top, 0) - 60px
+  );
+}
+
+@supports (-webkit-touch-callout: none) {
+  .home-h-screen {
+    /* for ios safari 15, safe-area-inset-bottom is 0, so a special fix apply here */
+    min-height: calc(-webkit-fill-available - 60px);
+  }
+}
+
 .animate-gradient {
   background-size: 300%;
   -webkit-animation: animatedgradient 6s ease infinite alternate;

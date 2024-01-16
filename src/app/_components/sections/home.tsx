@@ -5,12 +5,11 @@ import '../../_styles/home.css'
 export default function Home () {
   return (
     <main
-      className='w-screen max-w-full
+      className='w-screen max-w-full home-h-screen
       top-0 z-[-2] bg-jade-50 bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(67,229,160,0.4),rgba(255,255,255,0))]'
-      style={{ height: 'calc(100vh - 60px)' }}
       id='home'
     >
-      <div className='h-screen container mx-auto p-8 sm:p-12 md:p-16 lg:p-20 xl:p-24 flex justify-center'>
+      <div className='container mx-auto p-8 sm:p-12 md:p-16 lg:p-20 xl:p-24 flex justify-center'>
         <div className='max-w-max mt-24'>
           <p className='text-center sm:text-start text-lg font-normal text-jade-900 lg:text-xl p-0 sm:px-4'>
             ¡Hola! Soy

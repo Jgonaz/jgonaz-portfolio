@@ -17,10 +17,6 @@
   --color-jade-950: #03301f;
 }
 
-.container {
-  max-width: 1200px;
-}
-
 /* tailwind.css */
 @layer utilities {
   .translate-y-2rem {
