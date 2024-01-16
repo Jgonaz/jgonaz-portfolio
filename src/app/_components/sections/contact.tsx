@@ -1,7 +1,7 @@
-import SendIcon from '@/app/_assets/sendIcon'
-import GitHubIcon from '@/app/_assets/social/githubIcon'
-import InstagramIcon from '@/app/_assets/social/instagramIcon'
-import LinkedinIcon from '@/app/_assets/social/linkedinIcon'
+import SendIcon from '@/app/_assets/SendIcon'
+import GitHubIcon from '@/app/_assets/social/GithubIcon'
+import InstagramIcon from '@/app/_assets/social/InstagramIcon'
+import LinkedinIcon from '@/app/_assets/social/LinkedinIcon'
 
 export default function Contact () {
   return (
@@ -30,7 +30,7 @@ export default function Contact () {
                 name='email_from'
                 id='email_from'
                 className='bg-gray-50 border border-gray-300 text-jade-900 text-sm rounded-lg focus:ring-jade-900/50 focus:border-jade-900/50 focus:outline-none block w-full p-2.5'
-                placeholder='correo@gmail.com'
+                placeholder='nombre@mail.com'
                 required
               />
             </div>
@@ -46,7 +46,7 @@ export default function Contact () {
                 name='subject'
                 id='subject'
                 className='bg-gray-50 border border-gray-300 text-jade-900 text-sm rounded-lg focus:ring-jade-900/50 focus:border-jade-900/50 focus:outline-none block w-full p-2.5'
-                placeholder='Propuesta de proyecto...'
+                placeholder='Propuesta sobre...'
                 required
               />
             </div>
@@ -61,7 +61,7 @@ export default function Contact () {
                 name='message'
                 id='message'
                 className='bg-gray-50 border border-gray-300 text-jade-900 text-sm rounded-lg focus:ring-jade-900/50 focus:border-jade-900/50 focus:outline-none block w-full p-2.5'
-                placeholder='¡Hola Jorge! He visto tu perfil en Linkedin y me gustaría hablar contigo sobre...'
+                placeholder='¡Hola Jorge! He visto tu perfil en Linkedin y me gustaría hablar contigo para...'
                 required
                 rows={3}
               />

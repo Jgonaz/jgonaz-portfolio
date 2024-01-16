@@ -2,26 +2,20 @@
 
 import '../_styles/header.css'
 
-import WorkIcon from '../_assets/workIcon'
-import EducationIcon from '../_assets/educationIcon'
-import MailIcon from '../_assets/mailIcon'
-import UserIcon from '../_assets/userIcon'
+import WorkIcon from '../_assets/WorkIcon'
+import EducationIcon from '../_assets/EducationIcon'
+import MailIcon from '../_assets/MailIcon'
+import UserIcon from '../_assets/UserIcon'
 
 export default function Header () {
   const toggleMobileMenu = () => {
     if (window.innerWidth <= 768) {
-      const header = document.getElementById('header') as HTMLDivElement
-      const menu = document.getElementById('mobile-menu') as HTMLDivElement
-      header.classList.toggle('show-mobile-menu')
-      menu.classList.toggle('opacity-0')
-      menu.classList.toggle('pointer-events-none')
+      document.querySelector('header')?.classList.toggle('show-mobile-menu')
+      document.querySelector('body')?.classList.toggle('overflow-hidden')
     }
   }
   return (
-    <header
-      className='bg-transparent absolute w-full z-40 transition-all'
-      id='header'
-    >
+    <header className='bg-transparent absolute w-full z-40 transition-all'>
       <nav className='px-4 md:px-6 py-2.5'>
         <div className='flex flex-wrap md:justify-center items-center mx-auto max-w-screen-xl'>
           <div className='flex items-center md:order-2'>

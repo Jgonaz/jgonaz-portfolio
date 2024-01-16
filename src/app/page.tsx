@@ -1,9 +1,9 @@
-import Home from './_components/sections/home'
-import Work from './_components/sections/work'
-import Education from './_components/sections/education'
-import Contact from './_components/sections/contact'
-import Waves from './_components/waves'
-import BackToTop from './_components/backToTop'
+import Home from './_components/sections/Home'
+import Work from './_components/sections/Work'
+import Education from './_components/sections/Education'
+import Contact from './_components/sections/Contact'
+import Waves from './_components/Waves'
+import BackToTop from './_components/BackToTop'
 
 export default function Page () {
   return (
