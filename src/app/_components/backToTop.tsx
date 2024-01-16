@@ -1,4 +1,4 @@
-import '../_styles/backToTop.css'
+import '@/app/_styles/backToTop.css'
 
 export default function BackToTop () {
   return (

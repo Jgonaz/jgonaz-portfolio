@@ -1,6 +1,6 @@
 import Image from 'next/image'
 
-import '../../_styles/home.css'
+import '@/app/_styles/home.css'
 
 export default function Home () {
   return (
@@ -9,7 +9,7 @@ export default function Home () {
       top-0 z-[-2] bg-jade-50 bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(67,229,160,0.4),rgba(255,255,255,0))]'
       id='home'
     >
-      <div className='container mx-auto p-8 sm:p-12 md:p-16 lg:p-20 xl:p-24 flex justify-center'>
+      <div className='container p-8 sm:p-12 md:p-16 lg:p-20 xl:p-24 flex justify-center'>
         <div className='max-w-max mt-24'>
           <p className='text-center sm:text-start text-lg font-normal text-jade-900 lg:text-xl p-0 sm:px-4'>
             ¡Hola! Soy

@@ -30,7 +30,7 @@ export default function Contact () {
       className='bg-jade-50 pt-16 sm:pt-12 md:pt-8 lg:pt-4 xl:pt-0 pb-12 md:pb-4'
       id='contact'
     >
-      <div className='container flex flex-col items-center justify-center mx-auto text-pretty gap-10 px-8 sm:px-12 md:p-16 lg:p-20 xl:p-24'>
+      <div className='container flex flex-col items-center justify-center text-pretty gap-10 px-8 sm:px-12 md:p-16 lg:p-20 xl:p-24'>
         <div
           id='contact-title'
           className='flex justify-center sm:justify-start'

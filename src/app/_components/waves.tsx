@@ -1,4 +1,4 @@
-import '../_styles/waves.css'
+import '@/app/_styles/waves.css'
 
 interface WavesProps {
   color1?: string

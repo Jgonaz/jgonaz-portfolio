@@ -1,11 +1,11 @@
 'use client'
 
-import '../_styles/header.css'
+import '@/app/_styles/header.css'
 
-import WorkIcon from '../_assets/WorkIcon'
-import EducationIcon from '../_assets/EducationIcon'
-import MailIcon from '../_assets/MailIcon'
-import UserIcon from '../_assets/UserIcon'
+import WorkIcon from '@/app/_assets/WorkIcon'
+import EducationIcon from '@/app/_assets/EducationIcon'
+import MailIcon from '@/app/_assets/MailIcon'
+import UserIcon from '@/app/_assets/UserIcon'
 
 export default function Header () {
   const toggleMobileMenu = () => {
