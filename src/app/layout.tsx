@@ -7,9 +7,8 @@ import Footer from '@/app/_components/Footer'
 const onest = Onest({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'Jorge González Azpillaga - Developer',
-  description:
-    'Professional portfolio. Made with NextJS v14, Tailwind & TypeScript - ©️ 2024'
+  title: 'Jorge González Azpillaga',
+  description: 'Porfolio profesional. Desarrollador Web Front-End.'
 }
 
 export default function RootLayout ({
