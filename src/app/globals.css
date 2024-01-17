@@ -17,6 +17,11 @@
   --color-jade-950: #03301f;
 }
 
+body {
+  -webkit-font-smoothing: antialiased; /* para Chrome, Safari */
+  -moz-osx-font-smoothing: grayscale; /* para Firefox */
+}
+
 /* tailwind.css */
 @layer utilities {
   .translate-y-2rem {

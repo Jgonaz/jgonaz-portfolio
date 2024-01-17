@@ -3,7 +3,7 @@ export default function Footer () {
     <footer className='bg-jade-800 text-sm text-jade-50'>
       <div className='container text-pretty py-6 lg:py-8 px-8 sm:px-12 md:px-16 lg:px-20 xl:px-24 flex items-center justify-between gap-1'>
         <div>
-          <p>Made with ♥️</p>
+          <p>Made with 💚</p>
           <p>NextJS, TailwindCSS & TypeScript.</p>
         </div>
         <div className='text-end'>
