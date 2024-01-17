@@ -2,10 +2,10 @@
 
 import { useState } from 'react'
 
-import SendIcon from '@/app/_assets/SendIcon'
-import GitHubIcon from '@/app/_assets/social/GithubIcon'
-import InstagramIcon from '@/app/_assets/social/InstagramIcon'
-import LinkedinIcon from '@/app/_assets/social/LinkedinIcon'
+import { SendIcon } from '@/app/_assets/Icons'
+import { GitHubIcon } from '@/app/_assets/Icons'
+import { InstagramIcon } from '@/app/_assets/Icons'
+import { LinkedinIcon } from '@/app/_assets/Icons'
 
 import Spinner from '@/app/_components/Spinner'
 
@@ -147,7 +147,7 @@ export default function Contact () {
                   target='_blank'
                   className='p-2 hover:scale-125 transition-all'
                 >
-                  <GitHubIcon fill={'#126945'} />
+                  <GitHubIcon height='22' width='22' fill={'#126945'} />
                   <span className='sr-only'>GitHub account</span>
                 </a>
                 <a
@@ -155,7 +155,7 @@ export default function Contact () {
                   target='_blank'
                   className='p-2 hover:scale-125 transition-all'
                 >
-                  <InstagramIcon fill='#126945' stroke='white' />
+                  <InstagramIcon fill='#126945' />
                   <span className='sr-only'>Instagram page</span>
                 </a>
               </div>

@@ -1,0 +1,33 @@
+@keyframes infinite-scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.infinite-slide {
+  height: 100px;
+  animation: infinite-scroll 60s linear infinite;
+  li {
+    transition: all 0.2s ease-in-out;
+    filter: grayscale(1);
+  }
+  li:nth-of-type(2n) {
+    transform: scale(1.25);
+  }
+  li:hover {
+    transform: scale(1.5);
+    filter: drop-shadow(0 0 0.15rem #fff);
+  }
+  .brighter {
+    filter: grayscale(1) brightness(2);
+  }
+  .brightest {
+    filter: grayscale(1) brightness(3);
+  }
+}
+.infinite-slide:hover {
+  animation-play-state: paused;
+}

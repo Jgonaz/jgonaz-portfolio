@@ -1,4 +1,5 @@
 import educationData from '@/app/_data/education.json'
+import InfiniteSlide from '@/app/_components/InfiniteSlide'
 
 export default function Education () {
   return (
@@ -22,7 +23,7 @@ export default function Education () {
               {educationData.map((education, index) => (
                 <li
                   key={index}
-                  className='group relative flex flex-col pb-8 pl-7 last:pb-0'
+                  className='timeline-item group relative flex flex-col pb-8 pl-7 last:pb-0'
                 >
                   <div className='absolute bottom-0 left-[calc(0.25rem-0.5px)] top-0 w-px bg-white/30 group-first:top-3'></div>
                   <div className='absolute left-0 top-2 h-2 w-2 rounded-full border border-jade-300 bg-jade-600'></div>
@@ -44,7 +45,7 @@ export default function Education () {
             {/* Desktop horizontal timeline */}
             <ul role='list' className='hidden sm:flex'>
               {educationData.map((education, index) => (
-                <li key={index} className='relative mb-6 sm:mb-0'>
+                <li key={index} className='timeline-item relative mb-6 sm:mb-0'>
                   <div className='flex items-center'>
                     <div className='absolute left-0 top-0 h-2 w-2 rounded-full border border-jade-300 bg-jade-600 z-10'></div>
                     <div
@@ -70,7 +71,10 @@ export default function Education () {
               ))}
             </ul>
           </div>
-          <div className='flex md:hidden justify-center w-full mt-12'>
+        </div>
+        <div className='slide-container mt-16 mg:pt-20 xl:mt-24'>
+          <InfiniteSlide />
+          <div className='flex md:hidden justify-center w-full mt-16'>
             <a
               href='https://docs.google.com/document/d/119rL87biQUfklitcP0fOVYvQFW94zezUSvZMLK5W89Q/export?format=pdf'
               className='download-cv-btn text-white bg-jade-700 hover:bg-jade-800 focus:ring-1 focus:ring-jade-300 font-medium rounded-lg text-sm px-5 py-2.5 focus:outline-none'

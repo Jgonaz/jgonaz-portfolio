@@ -18,10 +18,11 @@
   }
 }
 
-section.timeline {
+.timeline {
+  #work-title *,
   .download-cv-btn,
-  #work-title h2,
-  li * {
+  .slide-container,
+  .timeline-item * {
     view-timeline-name: --image;
     view-timeline-axis: block;
 
@@ -31,8 +32,8 @@ section.timeline {
     animation-range: entry 20% cover 40%;
   }
   @media screen and (max-width: 450px) {
-    li p,
-    h3 {
+    .timeline-item h3,
+    .timeline-item p {
       animation-name: scrollShow, scrollScale;
     }
   }

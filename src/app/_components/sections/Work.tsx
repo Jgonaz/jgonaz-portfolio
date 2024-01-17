@@ -46,7 +46,7 @@ export default function Work () {
               {workData.map((job, index) => (
                 <li
                   key={index}
-                  className='li-item group relative flex flex-col pb-8 pl-7 last:pb-0'
+                  className='timeline-item group relative flex flex-col pb-8 pl-7 last:pb-0'
                 >
                   <div className='absolute bottom-0 left-[calc(0.25rem-0.5px)] top-0 w-px bg-white/30 group-first:top-3'></div>
                   <div className='absolute left-0 top-2 h-2 w-2 rounded-full border border-jade-300 bg-jade-600'></div>
