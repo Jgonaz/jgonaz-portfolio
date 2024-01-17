@@ -14,7 +14,7 @@ export const EmailTemplate: React.FC<Readonly<EmailTemplateProps>> = ({
       El usuario <b>{user}</b> te ha enviado el siguiente mensaje:
     </p>
     <div>
-      <h1>{subject}</h1>
+      <h3>{subject}</h3>
       <p>{message}</p>
     </div>
   </div>
