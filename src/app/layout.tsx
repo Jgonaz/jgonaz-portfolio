@@ -9,7 +9,7 @@ const onest = Onest({ subsets: ['latin'] })
 export const metadata: Metadata = {
   title: 'Jorge González Azpillaga - Webdev',
   description: 'Porfolio profesional. Desarrollador Web Front-End.',
-  metadataBase: new URL('https://jgonaz.dev'),
+  metadataBase: new URL('https://www.jgonaz.dev'),
   openGraph: {
     images: [
       {
