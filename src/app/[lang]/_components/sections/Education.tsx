@@ -1,5 +1,5 @@
-import educationData from '@/app/_data/education.json'
-import InfiniteSlide from '@/app/_components/InfiniteSlide'
+import educationData from '@/app/[lang]/_data/education.json'
+import InfiniteSlide from '@/app/[lang]/_components/InfiniteSlide'
 
 export default function Education () {
   return (

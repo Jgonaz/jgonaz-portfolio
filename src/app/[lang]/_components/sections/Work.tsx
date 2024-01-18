@@ -1,7 +1,7 @@
 'use client'
-import '@/app/_styles/timeline.css'
+import '@/app/[lang]/_styles/timeline.css'
 import { useEffect } from 'react'
-import workData from '@/app/_data/work.json'
+import workData from '@/app/[lang]/_data/work.json'
 
 export default function Work () {
   useEffect(() => {

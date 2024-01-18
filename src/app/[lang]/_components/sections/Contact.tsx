@@ -2,12 +2,12 @@
 
 import { useState } from 'react'
 
-import { SendIcon } from '@/app/_assets/Icons'
-import { GitHubIcon } from '@/app/_assets/Icons'
-import { InstagramIcon } from '@/app/_assets/Icons'
-import { LinkedinIcon } from '@/app/_assets/Icons'
+import { SendIcon } from '@/app/[lang]/_assets/Icons'
+import { GitHubIcon } from '@/app/[lang]/_assets/Icons'
+import { InstagramIcon } from '@/app/[lang]/_assets/Icons'
+import { LinkedinIcon } from '@/app/[lang]/_assets/Icons'
 
-import Spinner from '@/app/_components/Spinner'
+import Spinner from '@/app/[lang]/_components/Spinner'
 
 export default function Contact () {
   const [isLoading, setLoading] = useState(false)

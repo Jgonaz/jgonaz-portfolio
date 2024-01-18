@@ -1,4 +1,4 @@
-import '@/app/_styles/spinner.css'
+import '@/app/[lang]/_styles/spinner.css'
 
 export default function Spinner () {
   return (

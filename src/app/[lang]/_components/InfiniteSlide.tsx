@@ -21,8 +21,8 @@ import {
   ViteJSIcon,
   VueIcon,
   WordPressIcon
-} from '@/app/_assets/Icons'
-import '@/app/_styles/infiniteSlide.css'
+} from '@/app/[lang]/_assets/Icons'
+import '@/app/[lang]/_styles/infiniteSlide.css'
 
 export default function InfiniteSlide () {
   return (
