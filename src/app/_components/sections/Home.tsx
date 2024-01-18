@@ -1,16 +1,15 @@
 import Image from 'next/image'
-
 import '@/app/_styles/home.css'
 
 export default function Home () {
   return (
     <main
-      className='w-screen max-w-full home-h-screen
+      className='w-screen max-w-full home-screen
       top-0 z-[-2] bg-jade-50 bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(67,229,160,0.4),rgba(255,255,255,0))]'
       id='home'
     >
-      <div className='container p-8 sm:p-12 md:p-16 lg:p-20 xl:p-24 flex justify-center'>
-        <div className='max-w-max mt-24'>
+      <div className='container p-8 sm:p-12 md:p-16 lg:p-20 xl:p-24 flex justify-center mobile-landscape:pt-4'>
+        <div className='home-screen-title max-w-max z-30'>
           <p className='text-center sm:text-start text-lg font-normal text-jade-900 lg:text-xl p-0 sm:px-4'>
             ¡Hola! Soy
           </p>
@@ -25,7 +24,7 @@ export default function Home () {
             y desarrollo aplicaciones web.
           </p>
         </div>
-        <div className='profile-photo absolute bottom-0 flex justify-center items-end w-full max-w-full min-w-[350px] h-[768px] z-20 translate-y-2rem sm:translate-y-4rem lg:translate-y-6rem'>
+        <div className='home-screen-photo absolute bottom-0 flex justify-center items-end w-full max-w-full min-w-[350px] h-[768px] z-20 translate-y-2rem sm:translate-y-4rem lg:translate-y-6rem'>
           <Image
             src='/profile.png'
             alt='Foto de perfil personal - Jgonaz'
@@ -33,13 +32,6 @@ export default function Home () {
             height={768}
             priority={true}
             sizes='100vw'
-            style={{
-              filter: 'drop-shadow(0px 0px 2px gray)',
-              objectFit: 'scale-down',
-              minWidth: '350px',
-              maxHeight: '65vh',
-              height: 'auto'
-            }}
           />
         </div>
       </div>

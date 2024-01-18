@@ -555,8 +555,8 @@ export const JavaScriptIcon: React.FC<JavaScriptIconProps> = ({
 
 export const MongoDbIcon: React.FC<MongoDbIconProps> = ({
   className,
-  height = '60',
-  width = '60'
+  height = '75',
+  width = '75'
 }) => {
   return (
     <svg

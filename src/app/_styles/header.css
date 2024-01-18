@@ -1,4 +1,4 @@
-header {
+header:not(.show-mobile-menu) {
   .header-link:hover {
     transform: scale(1.15);
   }

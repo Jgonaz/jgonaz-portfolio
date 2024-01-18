@@ -6,6 +6,7 @@ interface WavesProps {
   color3?: string
   color4?: string
   background?: string
+  className?: string
 }
 
 export default function Waves ({
@@ -13,10 +14,14 @@ export default function Waves ({
   color1,
   color2,
   color3,
-  color4
+  color4,
+  className = ''
 }: WavesProps) {
   return (
-    <div className='waves' style={{ backgroundColor: background }}>
+    <div
+      className={`waves ${className}`}
+      style={{ backgroundColor: background }}
+    >
       <div className='first-waves z-10'>
         <svg
           xmlns='http://www.w3.org/2000/svg'

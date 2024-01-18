@@ -2,7 +2,7 @@ import '@/app/_styles/backToTop.css'
 
 export default function BackToTop () {
   return (
-    <div className='back-to-top w-full z-30'>
+    <div className='back-to-top w-full z-40'>
       <div className='flex justify-end px-12 pb-4'>
         <a href='#' className='bg-jade-700 flex justify-center items-center'>
           <svg className='arrow-up' viewBox='0 0 24 24'>

@@ -1,14 +1,33 @@
-.home-h-screen {
-  /* equivalent to 100dvh in major browsers */
-  min-height: calc(
+.home-screen {
+  height: calc(
     100vh - env(safe-area-inset-bottom, 0) - env(safe-area-inset-top, 0) - 60px
   );
-}
+  @media only screen and (max-width: 768px) and (orientation: landscape) {
+    height: 100vh;
+  }
+  /* iOS Webkit Fix 100vh */
+  @supports (-webkit-touch-callout: none) {
+    height: calc(100vh - 180px);
+  }
 
-@supports (-webkit-touch-callout: none) {
-  .home-h-screen {
-    /* for ios safari 15, safe-area-inset-bottom is 0, so a special fix apply here */
-    min-height: calc(-webkit-fill-available - 60px);
+  .home-screen-title {
+    margin-top: 8vh;
+    filter: drop-shadow(0 0 0.15rem #fff);
+  }
+
+  .home-screen-photo {
+    img {
+      filter: drop-shadow(0px 0px 2px gray);
+      min-width: 350px;
+      min-height: 350px;
+      max-height: 65vh;
+      @media screen and (min-width: 640px) {
+        object-fit: scale-down;
+      }
+      @media only screen and (max-width: 768px) and (orientation: landscape) {
+        display: none;
+      }
+    }
   }
 }
 

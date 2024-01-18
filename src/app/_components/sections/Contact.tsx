@@ -110,7 +110,7 @@ export default function Contact () {
                 rows={3}
               />
             </div>
-            <div className='flex flex-col gap-2 sm:flex-row justify-between items-center'>
+            <div className='flex flex-col gap-2 xsm:flex-row justify-between items-center'>
               <div>
                 <button
                   type='submit'
@@ -133,31 +133,36 @@ export default function Contact () {
                   </div>
                 )}
               </div>
-              <div className='flex w-full justify-center sm:justify-end'>
-                <a
-                  href='https://linkedin.com/in/jgonzalez-azpillaga/'
-                  target='_blank'
-                  className='p-2 hover:scale-125 transition-all'
-                >
-                  <LinkedinIcon fill='#126945' stroke='white' />
-                  <span className='sr-only'>Linkedin page</span>
-                </a>
-                <a
-                  href='https://github.com/jgonaz'
-                  target='_blank'
-                  className='p-2 hover:scale-125 transition-all'
-                >
-                  <GitHubIcon height='22' width='22' fill={'#126945'} />
-                  <span className='sr-only'>GitHub account</span>
-                </a>
-                <a
-                  href='https://instagram.com/jorgedelnueve'
-                  target='_blank'
-                  className='p-2 hover:scale-125 transition-all'
-                >
-                  <InstagramIcon fill='#126945' />
-                  <span className='sr-only'>Instagram page</span>
-                </a>
+              <div className='w-full flex flex-col gap-2 sm:flex-row items-center xsm:items-end sm:items-center justify-center xsm:justify-end '>
+                <span className='mt-2 xsm:mt-0 bg-green-100 text-jade-800 border border-jade-800 border-opacity-50 text-xs font-medium px-2.5 py-0.5 rounded'>
+                  contacto@jgonaz.dev
+                </span>
+                <div className='flex'>
+                  <a
+                    href='https://linkedin.com/in/jgonzalez-azpillaga/'
+                    target='_blank'
+                    className='p-2 hover:scale-125 transition-all'
+                  >
+                    <LinkedinIcon fill='#126945' stroke='white' />
+                    <span className='sr-only'>Linkedin page</span>
+                  </a>
+                  <a
+                    href='https://github.com/jgonaz'
+                    target='_blank'
+                    className='p-2 hover:scale-125 transition-all'
+                  >
+                    <GitHubIcon height='22' width='22' fill={'#126945'} />
+                    <span className='sr-only'>GitHub account</span>
+                  </a>
+                  <a
+                    href='https://instagram.com/jorgedelnueve'
+                    target='_blank'
+                    className='p-2 hover:scale-125 transition-all'
+                  >
+                    <InstagramIcon fill='#126945' />
+                    <span className='sr-only'>Instagram page</span>
+                  </a>
+                </div>
               </div>
             </div>
           </form>

@@ -17,7 +17,7 @@ const config: Config = {
           md: '100%',
           lg: '1024px',
           xl: '1200px',
-          '2xl': '1200px'
+          '2xl': '1536px'
         }
       },
       spacing: {
@@ -51,8 +51,12 @@ const config: Config = {
       // => @media (min-width: 1024px) { ... }
       xl: '1280px',
       // => @media (min-width: 1280px) { ... }
-      '2xl': '1536px'
+      '2xl': '1536px',
       // => @media (min-width: 1536px) { ... }
+      'mobile-landscape': {
+        raw: '(max-width: 768px) and (orientation: landscape)'
+      }
+      // =>   @media only screen and (max-width: 768px) and (orientation: landscape) {
     }
   },
   plugins: []

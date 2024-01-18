@@ -26,7 +26,12 @@ import '@/app/_styles/infiniteSlide.css'
 
 export default function InfiniteSlide () {
   return (
-    <div className='w-full inline-flex flex-nowrap overflow-hidden [mask-image:_linear-gradient(to_right,transparent_0,_black_128px,_black_calc(100%-200px),transparent_100%)] border border-jade-50 border-opacity-35'>
+    <div
+      className='w-full inline-flex flex-nowrap overflow-hidden border border-jade-50 border-opacity-35
+    [mask-image:_linear-gradient(to_right,transparent_0,_black_128px,_black_calc(100%-50px),transparent_100%)] 
+    md:[mask-image:_linear-gradient(to_right,transparent_0,_black_128px,_black_calc(100%-100px),transparent_100%)] 
+    lg:[mask-image:_linear-gradient(to_right,transparent_0,_black_128px,_black_calc(100%-200px),transparent_100%)]'
+    >
       <ul className='flex items-center justify-center md:justify-start infinite-slide'>
         <li className='mx-12 brighter'>
           <JavaScriptIcon />
@@ -83,7 +88,7 @@ export default function InfiniteSlide () {
           <NodeJSIcon />
         </li>
         <li className='mx-12'>
-          <MongoDbIcon />
+          <MongoDbIcon className='mb-2' />
         </li>
         <li className='mx-12'>
           <VercelIcon fill='#fff' />
@@ -144,7 +149,7 @@ export default function InfiniteSlide () {
           <NodeJSIcon />
         </li>
         <li className='mx-12'>
-          <MongoDbIcon />
+          <MongoDbIcon className='mb-2' />
         </li>
         <li className='mx-12'>
           <VercelIcon fill='#fff' />
