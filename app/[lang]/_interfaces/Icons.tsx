@@ -145,3 +145,6 @@ interface UserIconProps {
 interface WorkIconProps {
   className?: string
 }
+interface LanguageIconProps {
+  className?: string
+}

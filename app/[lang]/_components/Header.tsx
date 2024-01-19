@@ -109,7 +109,7 @@ export default function Header () {
               </li>
               <li>
                 <LanguageSelector
-                  className='header-link transition-all h-full flex items-center gap-2 py-3 pr-4 pl-3 text-jade-900 md:p-0 uppercase outline-none focus:outline-none bg-transparent'
+                  className='header-link w-full uppercase transition-all h-full flex items-center gap-2 py-3 pr-4 pl-3 text-jade-900 md:p-0 outline-none focus:outline-none bg-transparent'
                   selectedLanguage={lang}
                   onLanguageChange={() => {
                     window.location.href = `/${lang === 'en' ? 'es' : 'en'}`
