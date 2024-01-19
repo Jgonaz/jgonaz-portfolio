@@ -39,8 +39,8 @@ export default function InfiniteSlide () {
         <li className='mx-12 brighter'>
           <AWSIcon fill='#fff' height='45' />
         </li>
-        <li className='mx-12 brighter'>
-          <AzureIcon fill='#fff' />
+        <li className='mx-12 brightest'>
+          <AzureIcon  />
         </li>
         <li className='mx-12'>
           <CSharpIcon />
@@ -100,8 +100,8 @@ export default function InfiniteSlide () {
         <li className='mx-12 brighter'>
           <AWSIcon fill='#fff' height='45' />
         </li>
-        <li className='mx-12 brighter'>
-          <AzureIcon fill='#fff' />
+        <li className='mx-12 brightest'>
+          <AzureIcon />
         </li>
         <li className='mx-12'>
           <CSharpIcon />

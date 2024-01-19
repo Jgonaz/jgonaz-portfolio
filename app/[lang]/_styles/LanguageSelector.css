@@ -1,0 +1,53 @@
+.language-selector {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  text-transform: uppercase;
+  position: relative;
+  width: 100%;
+  cursor: pointer;
+
+  select {
+    text-transform: uppercase;
+    width: 100%;
+    padding: 0 1rem; /* Añade padding a las opciones */
+    border: none;
+    outline: none;
+    background: transparent;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+    cursor: pointer;
+    option {
+      background-color: var(--color-jade-950);
+      color: var(--color-jade-50);
+    }
+  }
+  select::-ms-expand {
+    display: none;
+  }
+  select:focus,
+  select:focus-visible {
+    border: none;
+    box-shadow: none;
+    outline: none;
+  }
+  .arrow:after {
+    content: '\25BC'; /* Caracter de flecha hacia abajo ▼ */
+
+    content: '';
+    background-image: url('data:image/svg+xml;utf8,<svg fill="%2311563a" height="16px" width="16px" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 330 330" xml:space="preserve"><path id="XMLID_225_" d="M325.607,79.393c-5.857-5.857-15.355-5.858-21.213,0.001l-139.39,139.393L25.607,79.393c-5.857-5.857-15.355-5.858-21.213,0.001c-5.858,5.858-5.858,15.355,0,21.213l150.004,150c2.813,2.813,6.628,4.393,10.606,4.393s7.794-1.581,10.606-4.394l149.996-150C331.465,94.749,331.465,85.251,325.607,79.393z"/></svg>');
+    width: 16px;
+    height: 16px;
+    display: inline-block; /* Para asegurarse de que el SVG se muestre correctamente */
+
+    position: absolute;
+    top: 50%;
+    right: -2px;
+    transform: translateY(-50%) scale(0.75);
+    pointer-events: none;
+    @media (max-width: 768px) {
+      right: 15px;
+    }
+  }
+}

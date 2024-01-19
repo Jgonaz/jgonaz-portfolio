@@ -65,12 +65,12 @@ export default function Header () {
             className='opacity-0 md:opacity-100 pointer-events-none md:pointer-events-auto justify-center items-center w-full md:flex md:w-auto md:order-1'
             id='mobile-menu'
           >
-            <ul className='flex flex-col mt-4 font-medium md:flex-row md:space-x-8 md:mt-0'>
+            <ul className='flex flex-col gap-x-4 mt-4 font-medium md:flex-row md:mt-0'>
               <li>
                 <a
                   href='https://docs.google.com/document/d/119rL87biQUfklitcP0fOVYvQFW94zezUSvZMLK5W89Q'
                   target='_blank'
-                  className='header-link transition-all flex items-center gap-2 py-3 pr-4 pl-3 text-jade-900 hover:bg-gray-50 md:hover:bg-transparent md:hover:text-primary-700 md:p-0'
+                  className='header-link transition-all flex items-center gap-2 py-3 px-4 text-jade-900 md:py-0'
                 >
                   <UserIcon className='md:hidden' />
                   {dict?.header?.CV}
@@ -80,7 +80,7 @@ export default function Header () {
                 <a
                   onClick={toggleMobileMenu}
                   href='#work'
-                  className='header-link transition-all flex items-center gap-2 py-3 pr-4 pl-3 text-jade-900 hover:bg-gray-50 md:hover:bg-transparent md:hover:text-primary-700 md:p-0'
+                  className='header-link transition-all flex items-center gap-2 py-3 px-4 text-jade-900 md:py-0'
                   aria-current='page'
                 >
                   <WorkIcon className='md:hidden' />
@@ -91,7 +91,7 @@ export default function Header () {
                 <a
                   onClick={toggleMobileMenu}
                   href='#education'
-                  className='header-link transition-all flex items-center gap-2 py-3 pr-4 pl-3 text-jade-900 hover:bg-gray-50 md:hover:bg-transparent  md:hover:text-primary-700 md:p-0'
+                  className='header-link transition-all flex items-center gap-2 py-3 px-4 text-jade-900 md:py-0'
                 >
                   <EducationIcon className='md:hidden' />
                   {dict?.header?.education}
@@ -101,7 +101,7 @@ export default function Header () {
                 <a
                   onClick={toggleMobileMenu}
                   href='#contact'
-                  className='header-link transition-all flex items-center gap-2 py-3 pr-4 pl-3 text-jade-900 hover:bg-gray-50 md:hover:bg-transparent md:hover:text-primary-700 md:p-0'
+                  className='header-link transition-all flex items-center gap-2 py-3 px-4 text-jade-900 md:py-0'
                 >
                   <MailIcon className='md:hidden' />
                   {dict?.header?.contact}
@@ -109,7 +109,7 @@ export default function Header () {
               </li>
               <li>
                 <LanguageSelector
-                  className='header-link w-full uppercase transition-all h-full flex items-center gap-2 py-3 pr-4 pl-3 text-jade-900 md:p-0 outline-none focus:outline-none bg-transparent'
+                  className='header-link transition-all text-jade-900 py-3 md:py-0'
                   selectedLanguage={lang}
                   onLanguageChange={() => {
                     window.location.href = `/${lang === 'en' ? 'es' : 'en'}`
