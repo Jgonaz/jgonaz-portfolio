@@ -5,7 +5,7 @@ import TranslationContext from '@/app/[lang]/_contexts/TranslationContext'
 import { useEffect, useContext } from 'react'
 
 export default function Work () {
-  const dict = useContext(TranslationContext)
+  const { dict } = useContext(TranslationContext)
   useEffect(() => {
     if (window.innerWidth < 768) return
 
@@ -44,7 +44,7 @@ export default function Work () {
             </h2>
           </div>
           <div id='work-description' className='flex flex-col items-end'>
-            <ul role='list' className='md:mx-8 max-w-screen-md'>
+            <ul role='list' className='md:mx-8'>
               {dict?.work?.data.map(
                 (
                   job: {

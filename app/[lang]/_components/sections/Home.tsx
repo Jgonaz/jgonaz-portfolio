@@ -1,12 +1,14 @@
 'use client'
 
 import Image from 'next/image'
-import '@/app/[lang]/_styles/home.css'
-import TranslationContext from '@/app/[lang]/_contexts/TranslationContext'
 import { useContext } from 'react'
+import TranslationContext from '@/app/[lang]/_contexts/TranslationContext'
+import profileImage from '@/public/images/profile.png'
+
+import '@/app/[lang]/_styles/home.css'
 
 export default function Home () {
-  const dict = useContext(TranslationContext)
+  const { dict } = useContext(TranslationContext)
   return (
     <main
       className='w-screen max-w-full home-screen
@@ -31,7 +33,7 @@ export default function Home () {
         </div>
         <div className='home-screen-photo absolute bottom-0 flex justify-center items-end w-full max-w-full min-w-[350px] h-[768px] z-20 translate-y-2rem sm:translate-y-4rem lg:translate-y-6rem'>
           <Image
-            src='/profile.png'
+            src={profileImage}
             alt='Foto de perfil personal - Jgonaz'
             width={768}
             height={768}

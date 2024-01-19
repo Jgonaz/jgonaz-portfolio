@@ -38,7 +38,7 @@ export default async function RootLayout ({
   const dict = await getDictionary(lang)
   return (
     <html lang={lang}>
-      <TranslationProvider dict={dict}>
+      <TranslationProvider dict={dict} lang={lang}>
         <body className={onest.className}>
           <Header />
           {children}

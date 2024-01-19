@@ -2,14 +2,24 @@
 
 import { createContext } from 'react'
 
-const TranslationContext = createContext<Record<string, any> | null>(null)
-
-export const TranslationProvider: React.FC<{
+interface TranslationContextProps {
   dict: Record<string, any>
-  children: React.ReactNode
-}> = ({ children, dict }) => {
+  lang: string
+  children?: React.ReactNode
+}
+
+const TranslationContext = createContext<TranslationContextProps>({
+  dict: {},
+  lang: 'es'
+})
+
+export const TranslationProvider: React.FC<TranslationContextProps> = ({
+  dict,
+  lang,
+  children
+}) => {
   return (
-    <TranslationContext.Provider value={dict}>
+    <TranslationContext.Provider value={{ dict, lang }}>
       {children}
     </TranslationContext.Provider>
   )

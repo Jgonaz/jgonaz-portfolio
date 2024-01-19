@@ -5,13 +5,15 @@ import { useContext } from 'react'
 
 import '@/app/[lang]/_styles/header.css'
 
+import LanguageSelector from '@/app/[lang]/_components/LanguageSelector'
+
 import { WorkIcon } from '@/app/[lang]/_assets/Icons'
 import { EducationIcon } from '@/app/[lang]/_assets/Icons'
 import { MailIcon } from '@/app/[lang]/_assets/Icons'
 import { UserIcon } from '@/app/[lang]/_assets/Icons'
 
 export default function Header () {
-  const dict = useContext(TranslationContext)
+  const { dict, lang } = useContext(TranslationContext)
 
   const toggleMobileMenu = () => {
     if (window.innerWidth <= 768) {
@@ -32,7 +34,7 @@ export default function Header () {
               className='inline-flex items-center p-2 ml-1 text-sm text-jade-700 rounded-md md:hidden hover:bg-jade-100 focus:outline-none'
               aria-expanded='false'
             >
-              <span className='sr-only'>{dict?.header.openMainMenu}</span>
+              <span className='sr-only'>{dict?.header?.openMainMenu}</span>
               <svg
                 className='w-6 h-6'
                 fill='currentColor'
@@ -66,13 +68,23 @@ export default function Header () {
             <ul className='flex flex-col mt-4 font-medium md:flex-row md:space-x-8 md:mt-0'>
               <li>
                 <a
+                  href='https://docs.google.com/document/d/119rL87biQUfklitcP0fOVYvQFW94zezUSvZMLK5W89Q'
+                  target='_blank'
+                  className='header-link transition-all flex items-center gap-2 py-3 pr-4 pl-3 text-jade-900 hover:bg-gray-50 md:hover:bg-transparent md:hover:text-primary-700 md:p-0'
+                >
+                  <UserIcon className='md:hidden' />
+                  {dict?.header?.CV}
+                </a>
+              </li>
+              <li>
+                <a
                   onClick={toggleMobileMenu}
                   href='#work'
                   className='header-link transition-all flex items-center gap-2 py-3 pr-4 pl-3 text-jade-900 hover:bg-gray-50 md:hover:bg-transparent md:hover:text-primary-700 md:p-0'
                   aria-current='page'
                 >
                   <WorkIcon className='md:hidden' />
-                  {dict?.header.work}
+                  {dict?.header?.work}
                 </a>
               </li>
               <li>
@@ -82,7 +94,7 @@ export default function Header () {
                   className='header-link transition-all flex items-center gap-2 py-3 pr-4 pl-3 text-jade-900 hover:bg-gray-50 md:hover:bg-transparent  md:hover:text-primary-700 md:p-0'
                 >
                   <EducationIcon className='md:hidden' />
-                  {dict?.header.education}
+                  {dict?.header?.education}
                 </a>
               </li>
               <li>
@@ -92,18 +104,17 @@ export default function Header () {
                   className='header-link transition-all flex items-center gap-2 py-3 pr-4 pl-3 text-jade-900 hover:bg-gray-50 md:hover:bg-transparent md:hover:text-primary-700 md:p-0'
                 >
                   <MailIcon className='md:hidden' />
-                  {dict?.header.contact}
+                  {dict?.header?.contact}
                 </a>
               </li>
               <li>
-                <a
-                  href='https://docs.google.com/document/d/119rL87biQUfklitcP0fOVYvQFW94zezUSvZMLK5W89Q'
-                  target='_blank'
-                  className='header-link transition-all flex items-center gap-2 py-3 pr-4 pl-3 text-jade-900 hover:bg-gray-50 md:hover:bg-transparent md:hover:text-primary-700 md:p-0'
-                >
-                  <UserIcon className='md:hidden' />
-                  {dict?.header.CV}
-                </a>
+                <LanguageSelector
+                  className='header-link transition-all h-full flex items-center gap-2 py-3 pr-4 pl-3 text-jade-900 md:p-0 uppercase outline-none focus:outline-none bg-transparent'
+                  selectedLanguage={lang}
+                  onLanguageChange={() => {
+                    window.location.href = `/${lang === 'en' ? 'es' : 'en'}`
+                  }}
+                />
               </li>
             </ul>
           </div>

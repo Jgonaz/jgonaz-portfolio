@@ -1,7 +1,7 @@
 {
   "header": {
     "openMainMenu": "Open main menu",
-    "work": "Work",
+    "work": "Experience",
     "education": "Education",
     "contact": "Contact",
     "CV": "CV"
@@ -12,7 +12,7 @@
   },
   "downloadCV": "Download CV",
   "work": {
-    "title": "Work",
+    "title": "Experience",
     "data": [
       {
         "company": "Nyxell App S.L.",

@@ -6,7 +6,7 @@ import { useContext } from 'react'
 import InfiniteSlide from '@/app/[lang]/_components/InfiniteSlide'
 
 export default function Education () {
-  const dict = useContext(TranslationContext)
+  const { dict } = useContext(TranslationContext)
   return (
     <section
       className='timeline bg-jade-900 relative z-30 pt-16 sm:pt-12 md:pt-8 lg:pt-4 xl:pt-0 pb-12 md:pb-4'
@@ -24,7 +24,7 @@ export default function Education () {
           </div>
           <div id='work-description' className='flex'>
             {/* Mobile vertical timeline */}
-            <ul role='list' className='sm:hidden max-w-screen-md'>
+            <ul role='list' className='sm:hidden'>
               {dict?.education?.data.map(
                 (
                   education: {

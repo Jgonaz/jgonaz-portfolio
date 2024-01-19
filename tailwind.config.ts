@@ -17,7 +17,7 @@ const config: Config = {
           md: '100%',
           lg: '1024px',
           xl: '1200px',
-          '2xl': '1536px'
+          '2xl': '1200px'
         }
       },
       spacing: {

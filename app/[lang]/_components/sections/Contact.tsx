@@ -10,7 +10,7 @@ import { LinkedinIcon } from '@/app/[lang]/_assets/Icons'
 import Spinner from '@/app/[lang]/_components/Spinner'
 
 export default function Contact () {
-  const dict = useContext(TranslationContext)
+  const { dict } = useContext(TranslationContext)
 
   const [isLoading, setLoading] = useState(false)
   const [sentEmail, setSentEmail] = useState(false)
@@ -57,7 +57,7 @@ export default function Contact () {
           className='flex justify-center sm:justify-start'
         >
           <h2 className='text-4xl font-extrabold text-jade-800'>
-            {dict?.contact.shallWeTalk}
+            {dict?.contact?.shallWeTalk}
           </h2>
         </div>
         <div className='relative w-full max-w-screen-md p-4 bg-white border border-gray-200 rounded-lg shadow sm:p-6 md:p-8'>
@@ -68,7 +68,7 @@ export default function Contact () {
                 htmlFor='from'
                 className='block mb-2 text-sm font-medium text-jade-900'
               >
-                {dict?.contact.from}
+                {dict?.contact?.from}
               </label>
               <input
                 type='from'
@@ -85,7 +85,7 @@ export default function Contact () {
                 htmlFor='subject'
                 className='block mb-2 text-sm font-medium text-jade-900'
               >
-                {dict?.contact.subject}
+                {dict?.contact?.subject}
               </label>
               <input
                 type='subject'
@@ -102,7 +102,7 @@ export default function Contact () {
                 htmlFor='message'
                 className='block mb-2 text-sm font-medium text-jade-900'
               >
-                {dict?.contact.message}
+                {dict?.contact?.message}
               </label>
               <textarea
                 name='message'
