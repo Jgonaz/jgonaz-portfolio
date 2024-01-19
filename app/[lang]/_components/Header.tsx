@@ -1,5 +1,8 @@
 'use client'
 
+import TranslationContext from '@/app/[lang]/_contexts/TranslationContext'
+import { useContext } from 'react'
+
 import '@/app/[lang]/_styles/header.css'
 
 import { WorkIcon } from '@/app/[lang]/_assets/Icons'
@@ -8,6 +11,8 @@ import { MailIcon } from '@/app/[lang]/_assets/Icons'
 import { UserIcon } from '@/app/[lang]/_assets/Icons'
 
 export default function Header () {
+  const dict = useContext(TranslationContext)
+
   const toggleMobileMenu = () => {
     if (window.innerWidth <= 768) {
       document.querySelector('header')?.classList.toggle('show-mobile-menu')
@@ -27,7 +32,7 @@ export default function Header () {
               className='inline-flex items-center p-2 ml-1 text-sm text-jade-700 rounded-md md:hidden hover:bg-jade-100 focus:outline-none'
               aria-expanded='false'
             >
-              <span className='sr-only'>Abrir menú principal</span>
+              <span className='sr-only'>{dict?.header.openMainMenu}</span>
               <svg
                 className='w-6 h-6'
                 fill='currentColor'
@@ -67,7 +72,7 @@ export default function Header () {
                   aria-current='page'
                 >
                   <WorkIcon className='md:hidden' />
-                  Experiencia
+                  {dict?.header.work}
                 </a>
               </li>
               <li>
@@ -77,7 +82,7 @@ export default function Header () {
                   className='header-link transition-all flex items-center gap-2 py-3 pr-4 pl-3 text-jade-900 hover:bg-gray-50 md:hover:bg-transparent  md:hover:text-primary-700 md:p-0'
                 >
                   <EducationIcon className='md:hidden' />
-                  Formación
+                  {dict?.header.education}
                 </a>
               </li>
               <li>
@@ -87,7 +92,7 @@ export default function Header () {
                   className='header-link transition-all flex items-center gap-2 py-3 pr-4 pl-3 text-jade-900 hover:bg-gray-50 md:hover:bg-transparent md:hover:text-primary-700 md:p-0'
                 >
                   <MailIcon className='md:hidden' />
-                  Contacto
+                  {dict?.header.contact}
                 </a>
               </li>
               <li>
@@ -97,7 +102,7 @@ export default function Header () {
                   className='header-link transition-all flex items-center gap-2 py-3 pr-4 pl-3 text-jade-900 hover:bg-gray-50 md:hover:bg-transparent md:hover:text-primary-700 md:p-0'
                 >
                   <UserIcon className='md:hidden' />
-                  CV
+                  {dict?.header.CV}
                 </a>
               </li>
             </ul>

@@ -1,7 +1,12 @@
+'use client'
+
 import Image from 'next/image'
 import '@/app/[lang]/_styles/home.css'
+import TranslationContext from '@/app/[lang]/_contexts/TranslationContext'
+import { useContext } from 'react'
 
 export default function Home () {
+  const dict = useContext(TranslationContext)
   return (
     <main
       className='w-screen max-w-full home-screen
@@ -11,7 +16,7 @@ export default function Home () {
       <div className='container p-8 sm:p-12 md:p-16 lg:p-20 xl:p-24 flex justify-center mobile-landscape:pt-4'>
         <div className='home-screen-title max-w-max z-30'>
           <p className='text-center sm:text-start text-lg font-normal text-jade-900 lg:text-xl p-0 sm:px-4'>
-            ¡Hola! Soy
+            {dict?.home?.hi}
           </p>
           <h1
             className='text-4xl md:text-5xl lg:text-6xl text-wrap sm:text-nowrap text-center sm:text-start font-extrabold tracking-tight
@@ -21,7 +26,7 @@ export default function Home () {
             Jorge González Azpillaga,
           </h1>
           <p className='text-center sm:text-end text-lg font-normal text-jade-900 lg:text-xl p-0 sm:px-4'>
-            y desarrollo aplicaciones web.
+            {dict?.home?.andIDevelopWebApps}
           </p>
         </div>
         <div className='home-screen-photo absolute bottom-0 flex justify-center items-end w-full max-w-full min-w-[350px] h-[768px] z-20 translate-y-2rem sm:translate-y-4rem lg:translate-y-6rem'>

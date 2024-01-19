@@ -1,16 +1,16 @@
 {
   "header": {
-    "open-main-menu": "Open main menu",
+    "openMainMenu": "Open main menu",
     "work": "Work",
     "education": "Education",
     "contact": "Contact",
-    "cv": "CV"
+    "CV": "CV"
   },
   "home": {
-    "hi": "Hi! I'm",
-    "and-i-develop-web-apps": "and I develop web applications"
+    "hi": "Hi there! I'm",
+    "andIDevelopWebApps": "and I develop web applications"
   },
-  "download-cv": "Download CV",
+  "downloadCV": "Download CV",
   "work": {
     "title": "Work",
     "data": [
@@ -59,13 +59,16 @@
   },
   "contact": {
     "title": "Contact",
-    "shall-we-talk": "Shall we talk?",
+    "shallWeTalk": "Shall we talk?",
     "from": "From:",
     "subject": "Subject:",
     "message": "Message:",
-    "send-message": "Send message",
-    "message-sent": "Message sent",
-    "thank-you-message": "Thank you for your message! I will get back to you as soon as possible.",
-    "error-message": "An error has occurred. Please contact me through Linkedin."
+    "sendMessage": "Send message",
+    "messageSent": "Message sent",
+    "thankYouMessage": "Thank you for your message! I will get back to you as soon as possible.",
+    "errorMessage": "An error has occurred. Please contact me through Linkedin.",
+    "mailPlaceholder": "Your e-mail",
+    "subjectPlaceholder": "I wanted to make you a proposal about...",
+    "messagePlaceholder": "Hi Jorge! I have seen your profile on Linkedin and I would like to talk to you to..."
   }
 }

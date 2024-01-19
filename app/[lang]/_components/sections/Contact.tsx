@@ -1,6 +1,6 @@
 'use client'
-
-import { useState } from 'react'
+import TranslationContext from '@/app/[lang]/_contexts/TranslationContext'
+import { useState, useContext } from 'react'
 
 import { SendIcon } from '@/app/[lang]/_assets/Icons'
 import { GitHubIcon } from '@/app/[lang]/_assets/Icons'
@@ -10,6 +10,8 @@ import { LinkedinIcon } from '@/app/[lang]/_assets/Icons'
 import Spinner from '@/app/[lang]/_components/Spinner'
 
 export default function Contact () {
+  const dict = useContext(TranslationContext)
+
   const [isLoading, setLoading] = useState(false)
   const [sentEmail, setSentEmail] = useState(false)
   const [errorEmail, setErrorEmail] = useState(false)
@@ -54,7 +56,9 @@ export default function Contact () {
           id='contact-title'
           className='flex justify-center sm:justify-start'
         >
-          <h2 className='text-4xl font-extrabold text-jade-800'>¿Hablamos?</h2>
+          <h2 className='text-4xl font-extrabold text-jade-800'>
+            {dict?.contact.shallWeTalk}
+          </h2>
         </div>
         <div className='relative w-full max-w-screen-md p-4 bg-white border border-gray-200 rounded-lg shadow sm:p-6 md:p-8'>
           {isLoading && <Spinner />}
@@ -64,14 +68,14 @@ export default function Contact () {
                 htmlFor='from'
                 className='block mb-2 text-sm font-medium text-jade-900'
               >
-                De:
+                {dict?.contact.from}
               </label>
               <input
                 type='from'
                 name='from'
                 id='from'
                 className='bg-gray-50 border border-gray-300 text-jade-900 text-sm rounded-lg focus:ring-jade-900/50 focus:border-jade-900/50 focus:outline-none block w-full p-2.5'
-                placeholder='nombre@mail.com'
+                placeholder={dict?.contact?.mailPlaceholder}
                 disabled={sentEmail}
                 required
               />
@@ -81,14 +85,14 @@ export default function Contact () {
                 htmlFor='subject'
                 className='block mb-2 text-sm font-medium text-jade-900'
               >
-                Asunto:
+                {dict?.contact.subject}
               </label>
               <input
                 type='subject'
                 name='subject'
                 id='subject'
                 className='bg-gray-50 border border-gray-300 text-jade-900 text-sm rounded-lg focus:ring-jade-900/50 focus:border-jade-900/50 focus:outline-none block w-full p-2.5'
-                placeholder='Propuesta sobre...'
+                placeholder={dict?.contact?.subjectPlaceholder}
                 disabled={sentEmail}
                 required
               />
@@ -98,13 +102,13 @@ export default function Contact () {
                 htmlFor='message'
                 className='block mb-2 text-sm font-medium text-jade-900'
               >
-                Mensaje:
+                {dict?.contact.message}
               </label>
               <textarea
                 name='message'
                 id='message'
                 className='bg-gray-50 border border-gray-300 text-jade-900 text-sm rounded-lg focus:ring-jade-900/50 focus:border-jade-900/50 focus:outline-none block w-full p-2.5'
-                placeholder='¡Hola Jorge! He visto tu perfil en Linkedin y me gustaría hablar contigo para...'
+                placeholder={dict?.contact?.messagePlaceholder}
                 required
                 disabled={sentEmail}
                 rows={3}
@@ -120,15 +124,15 @@ export default function Contact () {
                   disabled={sentEmail}
                 >
                   <SendIcon className='mr-2' />
-                  {!sentEmail ? 'Enviar mensaje' : 'Mensaje enviado'}
+                  {!sentEmail
+                    ? dict?.contact?.sendMessage
+                    : dict?.contact?.messageSent}
                 </button>
                 {sentEmail && (
                   <div className='flex p-2'>
                     <span className='text-xs text-gray-500'>
-                      {!errorEmail &&
-                        '¡Gracias por tu mensaje! Te responderé lo antes posible.'}
-                      {errorEmail &&
-                        'Ha ocurrido un error. Por favor, ponte en contacto conmigo a través de Linkedin..'}
+                      {!errorEmail && dict?.contact?.thankYouMessage}
+                      {errorEmail && dict?.contact?.errorMessage}
                     </span>
                   </div>
                 )}

@@ -17,9 +17,14 @@
   --color-jade-950: #03301f;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
-  -webkit-font-smoothing: antialiased; /* para Chrome, Safari */
-  -moz-osx-font-smoothing: grayscale; /* para Firefox */
+  background-color: var(--color-jade-50);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 /* tailwind.css */

@@ -1,3 +1,7 @@
+import { getDictionary } from '@/app/i18n/get-dictionary'
+import { Locale } from '@/i18n-config'
+import { TranslationProvider } from '@/app/[lang]/_contexts/TranslationContext'
+
 import type { Metadata } from 'next'
 import { Onest } from 'next/font/google'
 import '@/app/[lang]/globals.css'
@@ -22,18 +26,25 @@ export const metadata: Metadata = {
   }
 }
 
-export default function RootLayout ({
-  children
+export default async function RootLayout ({
+  children,
+  params: { lang }
 }: {
   children: React.ReactNode
+  params: {
+    lang: Locale
+  }
 }) {
+  const dict = await getDictionary(lang)
   return (
-    <html lang='es' style={{ scrollBehavior: 'smooth' }}>
-      <body className={`${onest.className} bg-jade-50`}>
-        <Header />
-        {children}
-        <Footer />
-      </body>
+    <html lang={lang}>
+      <TranslationProvider dict={dict}>
+        <body className={onest.className}>
+          <Header />
+          {children}
+          <Footer />
+        </body>
+      </TranslationProvider>
     </html>
   )
 }

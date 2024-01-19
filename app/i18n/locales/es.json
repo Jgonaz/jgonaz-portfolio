@@ -1,16 +1,16 @@
 {
   "header": {
-    "open-main-menu": "Abrir menú principal",
+    "openMainMenu": "Abrir menú principal",
     "work": "Experiencia",
     "education": "Formación",
     "contact": "Contacto",
-    "cv": "CV"
+    "CV": "CV"
   },
   "home": {
     "hi": "¡Hola! Soy",
-    "and-i-develop-web-apps": "y desarrollo aplicaciones web"
+    "andIDevelopWebApps": "y desarrollo aplicaciones web"
   },
-  "download-cv": "Descargar CV",
+  "downloadCV": "Descargar CV",
   "work": {
     "title": "Experiencia",
     "data": [
@@ -59,13 +59,16 @@
   },
   "contact": {
     "title": "Contacto",
-    "shall-we-talk": "¿Hablamos?",
+    "shallWeTalk": "¿Hablamos?",
     "from": "De:",
     "subject": "Asunto:",
     "message": "Mensaje:",
-    "send-message": "Enviar mensaje",
-    "message-sent": "Mensaje enviado",
-    "thank-you-message": "¡Gracias por tu mensaje! Te responderé lo antes posible.",
-    "error-message": "Ha ocurrido un error. Por favor, ponte en contacto conmigo a través de Linkedin."
+    "sendMessage": "Enviar mensaje",
+    "messageSent": "Mensaje enviado",
+    "thankYouMessage": "¡Gracias por tu mensaje! Te responderé lo antes posible.",
+    "errorMessage": "Ha ocurrido un error. Por favor, ponte en contacto conmigo a través de Linkedin.",
+    "mailPlaceholder": "Tu correo electrónico",
+    "subjectPlaceholder": "Propuesta sobre...",
+    "messagePlaceholder": "¡Hola Jorge! He visto tu perfil en Linkedin y me gustaría hablar contigo para..."
   }
 }
