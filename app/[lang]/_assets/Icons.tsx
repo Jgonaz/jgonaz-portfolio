@@ -682,9 +682,10 @@ export const PiniaIcon: React.FC<IconProps> = ({
       xmlnsXlink='http://www.w3.org/1999/xlink'
       viewBox='0 0 319 477'
     >
+      <title>Pinia</title>
       <linearGradient id='a'>
-        <stop offset='0' stop-color='#52ce63' />
-        <stop offset='1' stop-color='#51a256' />
+        <stop offset='0' stopColor='#52ce63' />
+        <stop offset='1' stopColor='#51a256' />
       </linearGradient>
       <linearGradient
         id='b'
@@ -703,8 +704,8 @@ export const PiniaIcon: React.FC<IconProps> = ({
         y2='42.862855%'
       />
       <linearGradient id='d' x1='50%' x2='50%' y1='0%' y2='58.811243%'>
-        <stop offset='0' stop-color='#8ae99c' />
-        <stop offset='1' stop-color='#52ce63' />
+        <stop offset='0' stopColor='#8ae99c' />
+        <stop offset='1' stopColor='#52ce63' />
       </linearGradient>
       <linearGradient
         id='e'
@@ -713,10 +714,10 @@ export const PiniaIcon: React.FC<IconProps> = ({
         y1='17.472551%'
         y2='100%'
       >
-        <stop offset='0' stop-color='#ffe56c' />
-        <stop offset='1' stop-color='#ffc63a' />
+        <stop offset='0' stopColor='#ffe56c' />
+        <stop offset='1' stopColor='#ffc63a' />
       </linearGradient>
-      <g fill='none' fill-rule='evenodd' transform='translate(-34 -24)'>
+      <g fill='none' fillRule='evenodd' transform='translate(-34 -24)'>
         <g transform='matrix(.99254615 .12186934 -.12186934 .99254615 33.922073 .976691)'>
           <path
             d='m103.950535 258.274149c44.361599-4.360825 60.014503-40.391282 65.353094-94.699444s-30.93219-103.451001-46.020347-101.9678079c-15.088156 1.4831932-63.0385313 58.9051239-68.3771222 113.2132869-5.3385908 54.308162 4.6827754 87.814791 49.0443752 83.453965z'
@@ -750,9 +751,9 @@ export const PiniaIcon: React.FC<IconProps> = ({
           <path
             d='m73.1046985 58.2728794c6.7372416 4.9130333 14.3132632 6.6640587 22.7280649 5.2530761 8.4148016-1.4109825 14.5054466-5.2535769 18.2719346-11.527783'
             stroke='#000'
-            stroke-linecap='round'
-            stroke-linejoin='round'
-            stroke-width='6'
+            strokeLinecap='round'
+            strokeLinejoin='round'
+            strokeWidth='6'
             transform='matrix(.9998477 .01745241 -.01745241 .9998477 1.026464 -1.624794)'
           />
           <path
@@ -770,20 +771,20 @@ export const PiniaIcon: React.FC<IconProps> = ({
           <g fill='#fff'>
             <path
               d='m136 24.499438c0 10.2185232 8.282911 18.500562 18.501124 18.500562 10.217089 0 18.498876-8.2820388 18.498876-18.500562 0-10.2173992-8.281787-18.499438-18.498876-18.499438-10.218213 0-18.501124 8.2820388-18.501124 18.499438zm-6 0c0-13.5311954 10.96929-24.499438 24.501124-24.499438 13.530838 0 24.498876 10.9683711 24.498876 24.499438 0 13.5319607-10.967808 24.500562-24.498876 24.500562-13.532064 0-24.501124-10.9684728-24.501124-24.500562z'
-              fill-rule='nonzero'
+              fillRule='nonzero'
               stroke='#fff'
-              stroke-width='3'
+              strokeWidth='3'
             />
             <path
               d='m6 34.499438c0 10.2185232 8.2817873 18.500562 18.5 18.500562 10.2170889 0 18.5-8.2820388 18.5-18.500562 0-10.2173992-8.2829111-18.499438-18.5-18.499438-10.2182127 0-18.5 8.2820388-18.5 18.499438zm-6 0c0-13.531297 10.9682681-24.499438 24.5-24.499438 13.5309398 0 24.5 10.9684728 24.5 24.499438 0 13.5318591-10.96883 24.500562-24.5 24.500562-13.531962 0-24.5-10.9683711-24.5-24.500562z'
-              fill-rule='nonzero'
+              fillRule='nonzero'
               stroke='#fff'
-              stroke-width='3'
+              strokeWidth='3'
             />
             <path d='m24 31c0-3.865549 3.134451-7 7-7s7 3.134451 7 7-3.134451 7-7 7-7-3.134451-7-7z' />
           </g>
         </g>
-        <g stroke-linecap='round' stroke-width='11'>
+        <g strokeLinecap='round' strokeWidth='11'>
           <g stroke='#ecb732'>
             <path d='m70.5 377.5 74 77' />
             <path d='m134.5 386.5-47 50' />
@@ -949,6 +950,7 @@ export const ViteJSIcon: React.FC<IconProps> = ({
       viewBox='0 0 410 404'
       fill='none'
     >
+      <title>ViteJS</title>
       <path
         d='M399.641 59.5246L215.643 388.545C211.844 395.338 202.084 395.378 198.228 388.618L10.5817 59.5563C6.38087 52.1896 12.6802 43.2665 21.0281 44.7586L205.223 77.6824C206.398 77.8924 207.601 77.8904 208.776 77.6763L389.119 44.8058C397.439 43.2894 403.768 52.1434 399.641 59.5246Z'
         fill='url(#paint0_linear)'
@@ -966,8 +968,8 @@ export const ViteJSIcon: React.FC<IconProps> = ({
           y2='344'
           gradientUnits='userSpaceOnUse'
         >
-          <stop stop-color='#41D1FF' />
-          <stop offset='1' stop-color='#BD34FE' />
+          <stop stopColor='#41D1FF' />
+          <stop offset='1' stopColor='#BD34FE' />
         </linearGradient>
         <linearGradient
           id='paint1_linear'
@@ -977,9 +979,9 @@ export const ViteJSIcon: React.FC<IconProps> = ({
           y2='292.989'
           gradientUnits='userSpaceOnUse'
         >
-          <stop stop-color='#FFEA83' />
-          <stop offset='0.0833333' stop-color='#FFDD35' />
-          <stop offset='1' stop-color='#FFA800' />
+          <stop stopColor='#FFEA83' />
+          <stop offset='0.0833333' stopColor='#FFDD35' />
+          <stop offset='1' stopColor='#FFA800' />
         </linearGradient>
       </defs>
     </svg>
@@ -1029,6 +1031,7 @@ export const VueXIcon: React.FC<IconProps> = ({
       xmlns='http://www.w3.org/2000/svg'
       viewBox='1 1 2000 2000'
     >
+      <title>VueX</title>
       <path
         fill='none'
         d='M1112 2001H1V1h2000v2000h-889m38.237-1447.99c-.77 1.18-1.664 2.297-2.291 3.549-47.945 95.745-95.869 191.501-143.798 287.255-1.01 2.02-2.064 4.017-3.31 6.438-1.173-2.489-2.015-4.373-2.938-6.218-47.63-95.214-95.26-190.428-142.941-285.616-1.003-2.002-2.587-3.713-3.915-6.327-.823-2.322-1.412-4.762-2.505-6.95-48.156-96.41-96.376-192.788-144.48-289.224-1.774-3.554-3.707-5.019-7.853-5.016-146.473.119-292.945.099-439.418.11-1.747 0-3.495.165-5.95.288 1.239 2.598 2.116 4.52 3.06 6.41C369.14 488.218 484.395 718.722 599.62 949.24c8.607 17.219 17.02 34.535 25.386 52.532-.2.446-.386.9-.604 1.337-118.775 237.509-237.554 475.015-356.322 712.526-5.763 11.525-11.43 23.098-17.494 35.364h5.519c146.984 0 293.967-.015 440.951.093 3.53.003 5.117-1.215 6.608-4.211a373750.621 373750.621 0 0 1 170.568-342.434c12.85-25.765 25.993-51.385 38.913-77.116 14.678-29.233 29.246-58.521 43.882-87.775 13.615-27.213 27.254-54.413 40.892-81.614.854-1.703 1.792-3.364 3.03-5.678 1.14 2.012 1.98 3.347 2.68 4.752 49.488 99.11 98.926 198.246 148.454 297.336 48.778 97.592 97.657 195.134 146.42 292.733 1.395 2.791 2.79 4.019 6.203 4.016 147.15-.118 294.3-.101 441.45-.114 1.556 0 3.112-.182 5.074-.305-1.013-2.157-1.734-3.78-2.527-5.365-115.395-230.771-230.8-461.537-346.183-692.314-8.637-17.276-17.112-34.633-25.502-52.67.844-1.806 1.646-3.63 2.537-5.412 122.949-245.925 245.904-491.847 368.85-737.773.863-1.724 1.606-3.508 2.807-6.149h-141.096c-101.302 0-202.605.028-303.907-.096-4.231-.005-6.393 1.218-8.319 5.08-48.363 97.034-96.88 193.99-145.316 290.988-.887 1.777-1.107 3.886-2.337 6.038z'
@@ -1059,6 +1062,7 @@ export const WebpackIcon: React.FC<IconProps> = ({
       xmlns='http://www.w3.org/2000/svg'
       preserveAspectRatio='xMinYMin meet'
     >
+      <title>Webpack</title>
       <defs>
         <radialGradient fx='50%' fy='50%' id='a'>
           <stop stopColor='#93B4E7' offset='0%' />

@@ -12,6 +12,7 @@
 
 .back-to-top {
   --offset: 50px;
+  position: -webkit-sticky;
   position: sticky;
   bottom: 20px;
   margin-top: calc(100vh + var(--offset));

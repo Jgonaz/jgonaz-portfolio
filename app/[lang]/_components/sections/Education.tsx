@@ -15,14 +15,14 @@ export default function Education () {
       <div className='container text-pretty gap-10 p-8 pt-0 sm:p-12 sm:pt-0 md:p-16 lg:p-20 xl:p-24'>
         <div className='flex flex-col justify-center'>
           <div
-            id='work-title'
+            id='education-title'
             className='flex justify-center sm:justify-start mb-16 md:mb-0'
           >
             <h2 className='text-4xl font-extrabold text-white md:mb-8'>
               {dict?.education?.title}
             </h2>
           </div>
-          <div id='work-description' className='flex'>
+          <div id='education-description' className='flex'>
             {/* Mobile vertical timeline */}
             <ul role='list' className='sm:hidden'>
               {dict?.education?.data.map(

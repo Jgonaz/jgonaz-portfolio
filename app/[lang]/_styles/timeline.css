@@ -10,7 +10,7 @@
 
 @keyframes scrollScale {
   from {
-    transform: scale(0.75) translateX(-3rem);
+    transform: scale(0.8) translateX(-2.5rem);
   }
 
   to {
@@ -19,7 +19,8 @@
 }
 
 .timeline {
-  #work-title *,
+  #work-title h2,
+  #education-title h2,
   .download-cv-btn,
   .slide-container,
   .timeline-item * {
@@ -32,9 +33,11 @@
     animation-range: entry 20% cover 40%;
   }
   @media screen and (max-width: 450px) {
-    .timeline-item h3,
-    .timeline-item p {
-      animation-name: scrollShow, scrollScale;
+    .timeline-item {
+      h3,
+      p {
+        animation-name: scrollShow, scrollScale;
+      }
     }
   }
 }
