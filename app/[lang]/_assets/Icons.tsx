@@ -1,4 +1,12 @@
-export const AWSIcon: React.FC<AWSIconProps> = ({
+interface IconProps {
+  className?: string
+  fill?: string
+  stroke?: string
+  height?: string
+  width?: string
+}
+
+export const AWSIcon: React.FC<IconProps> = ({
   className,
   height = '50',
   width = '89',
@@ -26,7 +34,7 @@ export const AWSIcon: React.FC<AWSIconProps> = ({
   )
 }
 
-export const AzureIcon: React.FC<AzureIconProps> = ({
+export const AzureIcon: React.FC<IconProps> = ({
   className,
   height = '70',
   width = '60',
@@ -49,7 +57,7 @@ export const AzureIcon: React.FC<AzureIconProps> = ({
   )
 }
 
-export const CSharpIcon: React.FC<CSharpIconProps> = ({
+export const CSharpIcon: React.FC<IconProps> = ({
   className,
   height = '50',
   width = '56'
@@ -84,7 +92,7 @@ export const CSharpIcon: React.FC<CSharpIconProps> = ({
   )
 }
 
-export const CSS3Icon: React.FC<CSS3IconProps> = ({
+export const CSS3Icon: React.FC<IconProps> = ({
   className,
   height = '50',
   width = '44'
@@ -112,7 +120,7 @@ export const CSS3Icon: React.FC<CSS3IconProps> = ({
   )
 }
 
-export const DotnetIcon: React.FC<DotnetIconProps> = ({
+export const DotnetIcon: React.FC<IconProps> = ({
   className,
   height = '50',
   width = '56'
@@ -456,7 +464,7 @@ export const DotnetIcon: React.FC<DotnetIconProps> = ({
   )
 }
 
-export const GitIcon: React.FC<GitIconProps> = ({
+export const GitIcon: React.FC<IconProps> = ({
   className,
   height = '50',
   width = '50'
@@ -479,7 +487,7 @@ export const GitIcon: React.FC<GitIconProps> = ({
   )
 }
 
-export const GitHubIcon: React.FC<GitHubIconProps> = ({
+export const GitHubIcon: React.FC<IconProps> = ({
   className,
   height = '50',
   width = '50',
@@ -503,7 +511,7 @@ export const GitHubIcon: React.FC<GitHubIconProps> = ({
   )
 }
 
-export const Html5Icon: React.FC<Html5IconProps> = ({
+export const Html5Icon: React.FC<IconProps> = ({
   className,
   height = '50',
   width = '35.42'
@@ -530,7 +538,7 @@ export const Html5Icon: React.FC<Html5IconProps> = ({
   )
 }
 
-export const JavaScriptIcon: React.FC<JavaScriptIconProps> = ({
+export const JavaScriptIcon: React.FC<IconProps> = ({
   className,
   height = '50',
   width = '50'
@@ -553,7 +561,7 @@ export const JavaScriptIcon: React.FC<JavaScriptIconProps> = ({
   )
 }
 
-export const MongoDbIcon: React.FC<MongoDbIconProps> = ({
+export const MongoDbIcon: React.FC<IconProps> = ({
   className,
   height = '75',
   width = '75'
@@ -583,7 +591,7 @@ export const MongoDbIcon: React.FC<MongoDbIconProps> = ({
   )
 }
 
-export const NextJSIcon: React.FC<NextJSIconProps> = ({
+export const NextJSIcon: React.FC<IconProps> = ({
   className,
   height = '50',
   width = '50',
@@ -610,7 +618,7 @@ export const NextJSIcon: React.FC<NextJSIconProps> = ({
   )
 }
 
-export const NodeJSIcon: React.FC<NodeJSIconProps> = ({
+export const NodeJSIcon: React.FC<IconProps> = ({
   className,
   height = '50',
   width = '45'
@@ -633,7 +641,7 @@ export const NodeJSIcon: React.FC<NodeJSIconProps> = ({
   )
 }
 
-export const NotionIcon: React.FC<NotionIconProps> = ({
+export const NotionIcon: React.FC<IconProps> = ({
   className,
   height = '50',
   width = '47',
@@ -660,7 +668,141 @@ export const NotionIcon: React.FC<NotionIconProps> = ({
   )
 }
 
-export const ReactIcon: React.FC<ReactIconProps> = ({
+export const PiniaIcon: React.FC<IconProps> = ({
+  className,
+  height = '50',
+  width = '50'
+}) => {
+  return (
+    <svg
+      className={className}
+      height={height}
+      width={width}
+      xmlns='http://www.w3.org/2000/svg'
+      xmlnsXlink='http://www.w3.org/1999/xlink'
+      viewBox='0 0 319 477'
+    >
+      <linearGradient id='a'>
+        <stop offset='0' stop-color='#52ce63' />
+        <stop offset='1' stop-color='#51a256' />
+      </linearGradient>
+      <linearGradient
+        id='b'
+        x1='55.342075%'
+        x2='42.816933%'
+        xlinkHref='#a'
+        y1='0%'
+        y2='42.862855%'
+      />
+      <linearGradient
+        id='c'
+        x1='55.348642%'
+        x2='42.808103%'
+        xlinkHref='#a'
+        y1='0%'
+        y2='42.862855%'
+      />
+      <linearGradient id='d' x1='50%' x2='50%' y1='0%' y2='58.811243%'>
+        <stop offset='0' stop-color='#8ae99c' />
+        <stop offset='1' stop-color='#52ce63' />
+      </linearGradient>
+      <linearGradient
+        id='e'
+        x1='51.37763%'
+        x2='44.584719%'
+        y1='17.472551%'
+        y2='100%'
+      >
+        <stop offset='0' stop-color='#ffe56c' />
+        <stop offset='1' stop-color='#ffc63a' />
+      </linearGradient>
+      <g fill='none' fill-rule='evenodd' transform='translate(-34 -24)'>
+        <g transform='matrix(.99254615 .12186934 -.12186934 .99254615 33.922073 .976691)'>
+          <path
+            d='m103.950535 258.274149c44.361599-4.360825 60.014503-40.391282 65.353094-94.699444s-30.93219-103.451001-46.020347-101.9678079c-15.088156 1.4831932-63.0385313 58.9051239-68.3771222 113.2132869-5.3385908 54.308162 4.6827754 87.814791 49.0443752 83.453965z'
+            fill='url(#b)'
+            transform='matrix(.70710678 -.70710678 .70710678 .70710678 -80.496332 125.892944)'
+          />
+          <path
+            d='m275.876752 258.273992c44.3616 4.360826 53.167133-29.265322 47.828542-83.573485-5.338591-54.308162-52.073133-111.6105744-67.16129-113.0937675-15.088156-1.4831931-52.57477 47.5401275-47.236179 101.8482895s22.207328 90.458137 66.568927 94.818963z'
+            fill='url(#c)'
+            transform='matrix(.70710678 .70710678 -.70710678 .70710678 191.403399 -141.861963)'
+          />
+          <path
+            d='m188.370027 216.876305c39.941834 0 50.95265-38.251987 50.95265-97.89874 0-59.6467532-37.367733-118.10125956-50.95265-118.10125956s-52.04735 58.45450636-52.04735 118.10125956c0 59.646753 12.105516 97.89874 52.04735 97.89874z'
+            fill='url(#d)'
+          />
+        </g>
+        <path
+          d='m184.473473 501c83.118854 0 150.526527-24.145148 150.526527-133.645148s-67.407673-199.354852-150.526527-199.354852c-83.118855 0-150.473473 89.854852-150.473473 199.354852s67.354618 133.645148 150.473473 133.645148z'
+          fill='url(#e)'
+        />
+        <ellipse cx='260.5' cy='335' fill='#eaadcc' rx='21.5' ry='10' />
+        <ellipse
+          cx='102.5'
+          cy='329'
+          fill='#eaadcc'
+          rx='21.5'
+          ry='10'
+          transform='matrix(.99254615 .12186934 -.12186934 .99254615 40.859033 -10.039292)'
+        />
+        <g transform='matrix(-.99939083 .0348995 .0348995 .99939083 269.284825 271.027667)'>
+          <path
+            d='m73.1046985 58.2728794c6.7372416 4.9130333 14.3132632 6.6640587 22.7280649 5.2530761 8.4148016-1.4109825 14.5054466-5.2535769 18.2719346-11.527783'
+            stroke='#000'
+            stroke-linecap='round'
+            stroke-linejoin='round'
+            stroke-width='6'
+            transform='matrix(.9998477 .01745241 -.01745241 .9998477 1.026464 -1.624794)'
+          />
+          <path
+            d='m154.501124 3c-5.937545 0-11.312782 2.40629805-15.203644 6.29680621-3.89094 3.89058529-6.29748 9.26545449-6.29748 15.20263179 0 5.9376888 2.406488 11.3127422 6.297291 15.2034272 3.890886 3.8907673 9.266197 6.2971348 15.203833 6.2971348 5.937109 0 11.311896-2.4063889 15.202387-6.2972348 3.890299-3.8906535 6.296489-9.2656636 6.296489-15.2033272 0-5.9371521-2.406242-11.3119781-6.296677-15.20253181-3.890469-3.89058674-9.265181-6.29690619-15.202199-6.29690619z'
+            fill='#000'
+          />
+          <path
+            d='m154 21c0-3.865549 3.135362-7 6.999413-7 3.866399 0 7.000587 3.134451 7.000587 7s-3.134188 7-7.000587 7c-3.864051-.0011735-6.999413-3.134451-6.999413-7z'
+            fill='#fff'
+          />
+          <path
+            d='m24.5 13c-5.9375292 0-11.312426 2.406268-15.20299427 6.2967181-3.89069464 3.8905765-6.29700573 9.2654765-6.29700573 15.2027199 0 5.9377549 2.40625962 11.3128391 6.29681766 15.2035153 3.89059104 3.8907092 9.26556184 6.2970467 15.20318234 6.2970467 5.9371249 0 11.3122514-2.406419 15.2030371-6.2973229 3.8905441-3.8906623 6.2969629-9.2656416 6.2969629-15.2032391 0-5.937086-2.4064703-11.3118811-6.297151-15.2024437-3.890763-3.8906448-9.2658154-6.2969943-15.202849-6.2969943z'
+            fill='#000'
+          />
+          <g fill='#fff'>
+            <path
+              d='m136 24.499438c0 10.2185232 8.282911 18.500562 18.501124 18.500562 10.217089 0 18.498876-8.2820388 18.498876-18.500562 0-10.2173992-8.281787-18.499438-18.498876-18.499438-10.218213 0-18.501124 8.2820388-18.501124 18.499438zm-6 0c0-13.5311954 10.96929-24.499438 24.501124-24.499438 13.530838 0 24.498876 10.9683711 24.498876 24.499438 0 13.5319607-10.967808 24.500562-24.498876 24.500562-13.532064 0-24.501124-10.9684728-24.501124-24.500562z'
+              fill-rule='nonzero'
+              stroke='#fff'
+              stroke-width='3'
+            />
+            <path
+              d='m6 34.499438c0 10.2185232 8.2817873 18.500562 18.5 18.500562 10.2170889 0 18.5-8.2820388 18.5-18.500562 0-10.2173992-8.2829111-18.499438-18.5-18.499438-10.2182127 0-18.5 8.2820388-18.5 18.499438zm-6 0c0-13.531297 10.9682681-24.499438 24.5-24.499438 13.5309398 0 24.5 10.9684728 24.5 24.499438 0 13.5318591-10.96883 24.500562-24.5 24.500562-13.531962 0-24.5-10.9683711-24.5-24.500562z'
+              fill-rule='nonzero'
+              stroke='#fff'
+              stroke-width='3'
+            />
+            <path d='m24 31c0-3.865549 3.134451-7 7-7s7 3.134451 7 7-3.134451 7-7 7-7-3.134451-7-7z' />
+          </g>
+        </g>
+        <g stroke-linecap='round' stroke-width='11'>
+          <g stroke='#ecb732'>
+            <path d='m70.5 377.5 74 77' />
+            <path d='m134.5 386.5-47 50' />
+          </g>
+          <g stroke='#ecb732' transform='matrix(-1 0 0 1 298 377)'>
+            <path d='m.5.5 74 77' />
+            <path d='m64.5 9.5-47 50' />
+          </g>
+          <g stroke='#ffc73b' transform='matrix(0 1 -1 0 215 207)'>
+            <path d='m.5.5 49 49' />
+            <path d='m.5 10.5 49 49' transform='matrix(-1 0 0 1 50 0)' />
+          </g>
+        </g>
+      </g>
+    </svg>
+  )
+}
+
+export const ReactIcon: React.FC<IconProps> = ({
   className,
   height = '50',
   width = '44'
@@ -682,7 +824,7 @@ export const ReactIcon: React.FC<ReactIconProps> = ({
   )
 }
 
-export const SassIcon: React.FC<SassIconProps> = ({
+export const SassIcon: React.FC<IconProps> = ({
   className,
   height = '75',
   width = '60'
@@ -704,7 +846,7 @@ export const SassIcon: React.FC<SassIconProps> = ({
   )
 }
 
-export const SQLIcon: React.FC<SQLIconProps> = ({
+export const SQLIcon: React.FC<IconProps> = ({
   className,
   height = '50',
   width = '50'
@@ -727,7 +869,7 @@ export const SQLIcon: React.FC<SQLIconProps> = ({
   )
 }
 
-export const TailwindIcon: React.FC<TailwindIconProps> = ({
+export const TailwindIcon: React.FC<IconProps> = ({
   className,
   height = '50',
   width = '83.33'
@@ -749,7 +891,7 @@ export const TailwindIcon: React.FC<TailwindIconProps> = ({
   )
 }
 
-export const TypeScriptIcon: React.FC<TypeScriptIconProps> = ({
+export const TypeScriptIcon: React.FC<IconProps> = ({
   className,
   height = '50',
   width = '50'
@@ -772,7 +914,7 @@ export const TypeScriptIcon: React.FC<TypeScriptIconProps> = ({
   )
 }
 
-export const VercelIcon: React.FC<VercelIconProps> = ({
+export const VercelIcon: React.FC<IconProps> = ({
   className,
   height = '50',
   width = '50',
@@ -793,7 +935,7 @@ export const VercelIcon: React.FC<VercelIconProps> = ({
   )
 }
 
-export const ViteJSIcon: React.FC<ViteJSIconProps> = ({
+export const ViteJSIcon: React.FC<IconProps> = ({
   className,
   height = '50',
   width = '50'
@@ -803,36 +945,51 @@ export const ViteJSIcon: React.FC<ViteJSIconProps> = ({
       className={className}
       height={height}
       width={width}
-      preserveAspectRatio='xMidYMid'
       xmlns='http://www.w3.org/2000/svg'
-      viewBox='-1.871 -0.4069999999999627 259.721 257.849'
+      viewBox='0 0 410 404'
+      fill='none'
     >
-      <title>ViteJS</title>
-      <linearGradient id='a' x1='-.828%' x2='57.636%' y1='7.652%' y2='78.411%'>
-        <stop offset='0' stopColor='#41d1ff' />
-        <stop offset='1' stopColor='#bd34fe' />
-      </linearGradient>
-      <linearGradient id='b' x1='43.376%' x2='50.316%' y1='2.242%' y2='89.03%'>
-        <stop offset='0' stopColor='#ffea83' />
-        <stop offset='.083' stopColor='#ffdd35' />
-        <stop offset='1' stopColor='#ffa800' />
-      </linearGradient>
       <path
-        d='M255.153 37.938L134.897 252.976c-2.483 4.44-8.862 4.466-11.382.048L.875 37.958c-2.746-4.814 1.371-10.646 6.827-9.67l120.385 21.517a6.537 6.537 0 0 0 2.322-.004l117.867-21.483c5.438-.991 9.574 4.796 6.877 9.62z'
-        fill='url(#a)'
+        d='M399.641 59.5246L215.643 388.545C211.844 395.338 202.084 395.378 198.228 388.618L10.5817 59.5563C6.38087 52.1896 12.6802 43.2665 21.0281 44.7586L205.223 77.6824C206.398 77.8924 207.601 77.8904 208.776 77.6763L389.119 44.8058C397.439 43.2894 403.768 52.1434 399.641 59.5246Z'
+        fill='url(#paint0_linear)'
       />
       <path
-        d='M185.432.063L96.44 17.501a3.268 3.268 0 0 0-2.634 3.014l-5.474 92.456a3.268 3.268 0 0 0 3.997 3.378l24.777-5.718c2.318-.535 4.413 1.507 3.936 3.838l-7.361 36.047c-.495 2.426 1.782 4.5 4.151 3.78l15.304-4.649c2.372-.72 4.652 1.36 4.15 3.788l-11.698 56.621c-.732 3.542 3.979 5.473 5.943 2.437l1.313-2.028 72.516-144.72c1.215-2.423-.88-5.186-3.54-4.672l-25.505 4.922c-2.396.462-4.435-1.77-3.759-4.114l16.646-57.705c.677-2.35-1.37-4.583-3.769-4.113z'
-        fill='url(#b)'
+        d='M292.965 1.5744L156.801 28.2552C154.563 28.6937 152.906 30.5903 152.771 32.8664L144.395 174.33C144.198 177.662 147.258 180.248 150.51 179.498L188.42 170.749C191.967 169.931 195.172 173.055 194.443 176.622L183.18 231.775C182.422 235.487 185.907 238.661 189.532 237.56L212.947 230.446C216.577 229.344 220.065 232.527 219.297 236.242L201.398 322.875C200.278 328.294 207.486 331.249 210.492 326.603L212.5 323.5L323.454 102.072C325.312 98.3645 322.108 94.137 318.036 94.9228L279.014 102.454C275.347 103.161 272.227 99.746 273.262 96.1583L298.731 7.86689C299.767 4.27314 296.636 0.855181 292.965 1.5744Z'
+        fill='url(#paint1_linear)'
       />
+      <defs>
+        <linearGradient
+          id='paint0_linear'
+          x1='6.00017'
+          y1='32.9999'
+          x2='235'
+          y2='344'
+          gradientUnits='userSpaceOnUse'
+        >
+          <stop stop-color='#41D1FF' />
+          <stop offset='1' stop-color='#BD34FE' />
+        </linearGradient>
+        <linearGradient
+          id='paint1_linear'
+          x1='194.651'
+          y1='8.81818'
+          x2='236.076'
+          y2='292.989'
+          gradientUnits='userSpaceOnUse'
+        >
+          <stop stop-color='#FFEA83' />
+          <stop offset='0.0833333' stop-color='#FFDD35' />
+          <stop offset='1' stop-color='#FFA800' />
+        </linearGradient>
+      </defs>
     </svg>
   )
 }
 
-export const VueIcon: React.FC<VueIconProps> = ({
+export const VueIcon: React.FC<IconProps> = ({
   className,
   height = '50',
-  width = '44'
+  width = '50'
 }) => {
   return (
     <svg
@@ -859,8 +1016,74 @@ export const VueIcon: React.FC<VueIconProps> = ({
     </svg>
   )
 }
+export const VueXIcon: React.FC<IconProps> = ({
+  className,
+  height = '50',
+  width = '50'
+}) => {
+  return (
+    <svg
+      className={className}
+      height={height}
+      width={width}
+      xmlns='http://www.w3.org/2000/svg'
+      viewBox='1 1 2000 2000'
+    >
+      <path
+        fill='none'
+        d='M1112 2001H1V1h2000v2000h-889m38.237-1447.99c-.77 1.18-1.664 2.297-2.291 3.549-47.945 95.745-95.869 191.501-143.798 287.255-1.01 2.02-2.064 4.017-3.31 6.438-1.173-2.489-2.015-4.373-2.938-6.218-47.63-95.214-95.26-190.428-142.941-285.616-1.003-2.002-2.587-3.713-3.915-6.327-.823-2.322-1.412-4.762-2.505-6.95-48.156-96.41-96.376-192.788-144.48-289.224-1.774-3.554-3.707-5.019-7.853-5.016-146.473.119-292.945.099-439.418.11-1.747 0-3.495.165-5.95.288 1.239 2.598 2.116 4.52 3.06 6.41C369.14 488.218 484.395 718.722 599.62 949.24c8.607 17.219 17.02 34.535 25.386 52.532-.2.446-.386.9-.604 1.337-118.775 237.509-237.554 475.015-356.322 712.526-5.763 11.525-11.43 23.098-17.494 35.364h5.519c146.984 0 293.967-.015 440.951.093 3.53.003 5.117-1.215 6.608-4.211a373750.621 373750.621 0 0 1 170.568-342.434c12.85-25.765 25.993-51.385 38.913-77.116 14.678-29.233 29.246-58.521 43.882-87.775 13.615-27.213 27.254-54.413 40.892-81.614.854-1.703 1.792-3.364 3.03-5.678 1.14 2.012 1.98 3.347 2.68 4.752 49.488 99.11 98.926 198.246 148.454 297.336 48.778 97.592 97.657 195.134 146.42 292.733 1.395 2.791 2.79 4.019 6.203 4.016 147.15-.118 294.3-.101 441.45-.114 1.556 0 3.112-.182 5.074-.305-1.013-2.157-1.734-3.78-2.527-5.365-115.395-230.771-230.8-461.537-346.183-692.314-8.637-17.276-17.112-34.633-25.502-52.67.844-1.806 1.646-3.63 2.537-5.412 122.949-245.925 245.904-491.847 368.85-737.773.863-1.724 1.606-3.508 2.807-6.149h-141.096c-101.302 0-202.605.028-303.907-.096-4.231-.005-6.393 1.218-8.319 5.08-48.363 97.034-96.88 193.99-145.316 290.988-.887 1.777-1.107 3.886-2.337 6.038z'
+      />
+      <path
+        fill='#4FC08D'
+        d='M1376.859 1001.051c8.55 17.32 17.024 34.677 25.661 51.953 115.383 230.777 230.788 461.543 346.183 692.314.793 1.586 1.514 3.208 2.527 5.365-1.962.123-3.518.305-5.073.305-147.15.013-294.301-.004-441.451.114-3.414.003-4.808-1.225-6.203-4.016-48.763-97.6-97.642-195.14-146.42-292.733-49.528-99.09-98.966-198.226-148.453-297.336-.702-1.405-1.541-2.74-2.681-4.752-1.238 2.314-2.176 3.975-3.03 5.678-13.638 27.2-27.277 54.401-40.892 81.614-14.636 29.254-29.204 58.542-43.882 87.775-12.92 25.731-26.062 51.35-38.913 77.116a373750.621 373750.621 0 0 0-170.568 342.434c-1.491 2.996-3.079 4.214-6.608 4.211-146.984-.108-293.967-.093-440.951-.093h-5.52c6.066-12.266 11.732-23.84 17.495-35.364 118.768-237.511 237.547-475.017 356.322-712.526.218-.437.403-.89.962-1.873 1.434-2.402 2.609-4.219 3.57-6.142 72.7-145.364 145.38-290.738 218.1-436.092 1.089-2.175 2.673-4.102 4.026-6.144 1.312 1.846 2.896 3.557 3.899 5.559 47.68 95.188 95.311 190.402 142.941 285.616.923 1.845 1.765 3.73 2.938 6.218 1.246-2.42 2.3-4.419 3.31-6.438 47.929-95.754 95.853-191.51 143.798-287.255.627-1.252 1.521-2.37 2.955-3.486 1.833 2.064 3.117 4.007 4.151 6.074 72.635 145.215 145.246 290.442 217.893 435.65 1.095 2.19 2.6 4.174 3.914 6.254z'
+      />
+      <path
+        fill='#35495E'
+        d='M1376.938 1000.692c-1.393-1.72-2.898-3.705-3.993-5.894-72.647-145.21-145.258-290.436-217.893-435.65-1.034-2.068-2.318-4.01-3.801-6.174.216-2.116.436-4.225 1.323-6.002 48.436-96.997 96.953-193.954 145.316-290.987 1.926-3.863 4.088-5.086 8.319-5.08 101.302.123 202.605.095 303.907.095h141.096c-1.201 2.641-1.944 4.425-2.806 6.15-122.947 245.925-245.902 491.847-368.85 737.772-.892 1.781-1.694 3.606-2.618 5.77zM851.052 552.475c-1.345 2.426-2.93 4.353-4.017 6.528-72.721 145.354-145.4 290.728-218.1 436.092-.962 1.923-2.137 3.74-3.502 5.78-8.793-17.099-17.206-34.415-25.813-51.634-115.226-230.518-230.48-461.023-345.721-691.533-.945-1.889-1.822-3.81-3.061-6.41 2.455-.122 4.203-.287 5.95-.287 146.473-.011 292.945.009 439.418-.11 4.146-.003 6.08 1.462 7.852 5.016 48.105 96.436 96.325 192.814 144.481 289.224 1.093 2.188 1.682 4.628 2.513 7.334z'
+      />
+    </svg>
+  )
+}
 
-export const WordPressIcon: React.FC<WordPressIconProps> = ({
+export const WebpackIcon: React.FC<IconProps> = ({
+  className,
+  height = '50',
+  width = '50'
+}) => {
+  return (
+    <svg
+      className={className}
+      height={height}
+      width={width}
+      viewBox='0 0 256 296'
+      xmlns='http://www.w3.org/2000/svg'
+      preserveAspectRatio='xMinYMin meet'
+    >
+      <defs>
+        <radialGradient fx='50%' fy='50%' id='a'>
+          <stop stopColor='#93B4E7' offset='0%' />
+          <stop stopColor='#B9D1F8' offset='59.273%' />
+          <stop stopColor='#9CB6E0' offset='100%' />
+        </radialGradient>
+      </defs>
+      <path
+        d='M128.032.456L.298 74.203v147.495l127.734 73.748 127.735-73.748V74.203L128.032.456z'
+        fill='url(#a)'
+      />
+      <path
+        d='M128.034 75.263L64.69 111.834v73.144l63.344 36.572 63.344-36.572v-73.144l-63.344-36.571z'
+        fill='#6F95DB'
+      />
+      <path
+        d='M128 0L0 74.25l128 69.693 128-69.238L128 0zM128 153.509L0 221.38l128 73.793 127.544-74.249L128 153.51z'
+        fill='#FFF'
+        fillOpacity='.1'
+      />
+    </svg>
+  )
+}
+
+export const WordPressIcon: React.FC<IconProps> = ({
   className,
   height = '50',
   width = '50',
@@ -886,7 +1109,7 @@ export const WordPressIcon: React.FC<WordPressIconProps> = ({
 
 //////////////////////////////////////////////////////////////////////////////////////
 
-export const EducationIcon: React.FC<EducationIconProps> = ({ className }) => (
+export const EducationIcon: React.FC<IconProps> = ({ className }) => (
   <svg
     xmlns='http://www.w3.org/2000/svg'
     className={`icon icon-tabler icon-tabler-school ${className}`}
@@ -905,7 +1128,7 @@ export const EducationIcon: React.FC<EducationIconProps> = ({ className }) => (
   </svg>
 )
 
-export const InstagramIcon: React.FC<InstagramIconProps> = ({
+export const InstagramIcon: React.FC<IconProps> = ({
   className,
   fill,
   height = '22',
@@ -948,7 +1171,7 @@ export const InstagramIcon: React.FC<InstagramIconProps> = ({
   )
 }
 
-export const LinkedinIcon: React.FC<LinkedinIconProps> = ({
+export const LinkedinIcon: React.FC<IconProps> = ({
   className,
   fill,
   stroke,
@@ -976,7 +1199,7 @@ export const LinkedinIcon: React.FC<LinkedinIconProps> = ({
   )
 }
 
-export const MailIcon: React.FC<MailProps> = ({ className }) => (
+export const MailIcon: React.FC<IconProps> = ({ className }) => (
   <svg
     xmlns='http://www.w3.org/2000/svg'
     className={`icon icon-tabler icon-tabler-mail ${className}`}
@@ -995,7 +1218,7 @@ export const MailIcon: React.FC<MailProps> = ({ className }) => (
   </svg>
 )
 
-export const SendIcon: React.FC<SendProps> = ({ className }) => (
+export const SendIcon: React.FC<IconProps> = ({ className }) => (
   <svg
     xmlns='http://www.w3.org/2000/svg'
     className={`icon icon-tabler icon-tabler-mail ${className}`}
@@ -1014,7 +1237,7 @@ export const SendIcon: React.FC<SendProps> = ({ className }) => (
   </svg>
 )
 
-export const UserIcon: React.FC<UserIconProps> = ({ className }) => {
+export const UserIcon: React.FC<IconProps> = ({ className }) => {
   return (
     <svg
       xmlns='http://www.w3.org/2000/svg'
@@ -1036,7 +1259,7 @@ export const UserIcon: React.FC<UserIconProps> = ({ className }) => {
   )
 }
 
-export const WorkIcon: React.FC<WorkIconProps> = ({ className }) => {
+export const WorkIcon: React.FC<IconProps> = ({ className }) => {
   return (
     <svg
       xmlns='http://www.w3.org/2000/svg'
@@ -1057,7 +1280,7 @@ export const WorkIcon: React.FC<WorkIconProps> = ({ className }) => {
   )
 }
 
-export const LanguageIcon: React.FC<LanguageIconProps> = ({ className }) => {
+export const LanguageIcon: React.FC<IconProps> = ({ className }) => {
   return (
     <svg
       xmlns='http://www.w3.org/2000/svg'
@@ -1065,11 +1288,11 @@ export const LanguageIcon: React.FC<LanguageIconProps> = ({ className }) => {
       width='24'
       height='24'
       viewBox='0 0 24 24'
-      stroke-width='2'
+      strokeWidth='2'
       stroke='currentColor'
       fill='none'
-      stroke-linecap='round'
-      stroke-linejoin='round'
+      strokeLinecap='round'
+      strokeLinejoin='round'
     >
       <path stroke='none' d='M0 0h24v24H0z' fill='none' />
       <path d='M4 5h7' />

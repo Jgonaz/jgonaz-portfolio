@@ -9,7 +9,7 @@
 
 .infinite-slide {
   height: 100px;
-  animation: infinite-scroll 60s linear infinite;
+  animation: infinite-scroll 90s linear infinite;
   li {
     transition: all 0.2s ease-in-out;
     filter: grayscale(1);

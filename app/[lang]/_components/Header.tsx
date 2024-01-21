@@ -25,13 +25,13 @@ export default function Header () {
     <header className='bg-transparent absolute w-full z-40 transition-all'>
       <nav className='px-4 md:px-6 py-2.5'>
         <div className='flex flex-wrap md:justify-center items-center mx-auto max-w-screen-xl'>
-          <div className='flex items-center md:order-2'>
+          <div className='flex md:hidden w-full justify-between items-center md:order-2'>
             <button
               data-collapse-toggle='mobile-menu'
               aria-controls='mobile-menu'
               onClick={toggleMobileMenu}
               type='button'
-              className='inline-flex items-center p-2 ml-1 text-sm text-jade-700 rounded-md md:hidden hover:bg-jade-100 focus:outline-none'
+              className='inline-flex items-center p-2 ml-1 text-sm text-jade-700 rounded-md hover:bg-jade-100 focus:outline-none'
               aria-expanded='false'
             >
               <span className='sr-only'>{dict?.header?.openMainMenu}</span>
@@ -60,6 +60,15 @@ export default function Header () {
                 ></path>
               </svg>
             </button>
+            <div className='mr-4'>
+              <LanguageSelector
+                className='header-link transition-all text-jade-900 md:py-0'
+                selectedLanguage={lang}
+                onLanguageChange={() => {
+                  window.location.href = `/${lang === 'en' ? 'es' : 'en'}`
+                }}
+              />
+            </div>
           </div>
           <div
             className='opacity-0 md:opacity-100 pointer-events-none md:pointer-events-auto justify-center items-center w-full md:flex md:w-auto md:order-1'
@@ -107,7 +116,7 @@ export default function Header () {
                   {dict?.header?.contact}
                 </a>
               </li>
-              <li>
+              <li className='hidden md:block'>
                 <LanguageSelector
                   className='header-link transition-all text-jade-900 py-3 md:py-0'
                   selectedLanguage={lang}
