@@ -1,0 +1,121 @@
+/* aboutMe.css */
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(1rem);
+  }
+}
+/* aboutMe.css */
+@keyframes vector-entry-1 {
+  0% {
+    transform: translateY(7rem) scale(0.5);
+  }
+  100% {
+    transform: translateY(0) scale(1);
+  }
+}
+/* aboutMe.css */
+@keyframes vector-entry-2 {
+  0% {
+    transform: translateY(5rem) scale(0.25);
+  }
+  100% {
+    transform: translateY(0) scale(1);
+  }
+}
+/* backToTop.css */
+@keyframes backToTopBounce {
+  0%,
+  100% {
+    transform: translateY(-5%);
+    animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+  }
+  50% {
+    transform: none;
+    animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+  }
+}
+/* section.css, aboutMe.css */
+@keyframes scrollShow {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+/* section.css */
+@keyframes scrollScale {
+  from {
+    transform: scale(0.8) translateX(-2.5rem);
+  }
+
+  to {
+    transform: scale(1) translateX(0);
+  }
+}
+/* home.css */
+@keyframes fadeFromTop {
+  from {
+    opacity: 0;
+    transform: translateY(-1rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/* home.css */
+@keyframes fadeFromBottom {
+  from {
+    opacity: 0;
+    transform: translateY(1rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/* home.css */
+@keyframes animatedGradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+/* infiniteSlide.css */
+@keyframes infinite-scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+/* spinner.css */
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+/* waves.css */
+@keyframes move-forever {
+  0% {
+    transform: translate3d(-90px, 0, 0);
+  }
+  100% {
+    transform: translate3d(85px, 0, 0);
+  }
+}

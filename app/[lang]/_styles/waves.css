@@ -1,3 +1,5 @@
+@import './animations.css';
+
 .waves {
   height: 60px;
   width: 100%;
@@ -37,14 +39,5 @@
   .color4 {
     animation-delay: -8s;
     animation-duration: 20s;
-  }
-}
-
-@keyframes move-forever {
-  0% {
-    transform: translate3d(-90px, 0, 0);
-  }
-  100% {
-    transform: translate3d(85px, 0, 0);
   }
 }

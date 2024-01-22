@@ -1,6 +1,6 @@
 'use client'
 
-import '@/app/[lang]/_styles/timeline.css'
+import '@/app/[lang]/_styles/section.css'
 import TranslationContext from '@/app/[lang]/_contexts/TranslationContext'
 import { useEffect, useContext } from 'react'
 
@@ -33,12 +33,15 @@ export default function Work () {
   }, [])
   return (
     <section
-      className='timeline bg-jade-900 relative z-30 pt-16 sm:pt-12 md:pt-8 lg:pt-4 xl:pt-0'
+      className='section bg-jade-900 relative z-30 pt-16 sm:pt-12 md:pt-8 lg:pt-4 xl:pt-0'
       id='work'
     >
       <div className='container text-pretty gap-10 px-8 sm:px-12 md:p-16 md:pb-0 lg:p-20 lg:pb-0 xl:p-24 xl:pb-0'>
         <div className='flex flex-col md:flex-row justify-center'>
-          <div id='work-title' className='flex justify-center mb-16 md:mb-0'>
+          <div
+            id='work-title'
+            className='section-title flex justify-center mb-16 md:mb-0'
+          >
             <h2 className='h-fit text-4xl font-extrabold text-white md:mb-22'>
               {dict?.work?.title}
             </h2>

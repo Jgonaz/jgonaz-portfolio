@@ -1,0 +1,74 @@
+@import './animations.css';
+
+.separator {
+  margin-top: 2rem;
+  margin-bottom: 1.5rem;
+  opacity: 0.35;
+  width: 100%;
+}
+
+.about-me-vectors {
+  position: relative;
+  view-timeline-name: --vector-container;
+  view-timeline-axis: block;
+  animation-name: scrollShow;
+  animation-timeline: --vector-container;
+  animation-fill-mode: both;
+  animation-range: entry 20% cover 40%;
+
+  .icon-container {
+    position: absolute;
+    view-timeline-name: --vector-items;
+    view-timeline-axis: block;
+    animation-timeline: --vector-items;
+    animation-fill-mode: both;
+
+    svg {
+      animation: bounce 2s infinite;
+    }
+  }
+  .icon-container:nth-of-type(even) {
+    animation-range: entry 10% cover 50%;
+    animation-name: vector-entry-1;
+  }
+  .icon-container:nth-of-type(odd) {
+    animation-range: entry 30% cover 100%;
+    animation-name: vector-entry-2;
+  }
+
+  .aboutme-sports {
+    top: 70px;
+    left: 65px;
+    svg {
+      animation-delay: 0.25s;
+    }
+  }
+  .aboutme-music {
+    top: 0;
+    left: 95px;
+    svg {
+      animation-delay: 0.75s;
+    }
+  }
+  .aboutme-travel {
+    top: 115px;
+    left: 10px;
+    svg {
+      animation-delay: 0.5s;
+    }
+  }
+  .aboutme-video {
+    top: 110px;
+    right: 30px;
+    svg {
+      animation-delay: 1s;
+    }
+  }
+  .aboutme-landscape {
+    top: 0px;
+    right: 70px;
+    svg {
+      animation-delay: 1.25s;
+    }
+  }
+}

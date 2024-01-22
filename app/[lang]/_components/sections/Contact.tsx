@@ -2,10 +2,10 @@
 import TranslationContext from '@/app/[lang]/_contexts/TranslationContext'
 import { useState, useContext } from 'react'
 
-import { SendIcon } from '@/app/[lang]/_assets/Icons'
-import { GitHubIcon } from '@/app/[lang]/_assets/Icons'
-import { InstagramIcon } from '@/app/[lang]/_assets/Icons'
-import { LinkedinIcon } from '@/app/[lang]/_assets/Icons'
+import { SendIcon } from '@/app/[lang]/_assets/MenuIcons'
+import { GitHubIcon } from '@/app/[lang]/_assets/TechnologiesIcons'
+import { InstagramIcon } from '@/app/[lang]/_assets/MenuIcons'
+import { LinkedinIcon } from '@/app/[lang]/_assets/MenuIcons'
 
 import Spinner from '@/app/[lang]/_components/Spinner'
 

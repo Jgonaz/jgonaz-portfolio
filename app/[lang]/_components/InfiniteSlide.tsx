@@ -24,7 +24,7 @@ import {
   VueXIcon,
   WordPressIcon,
   WebpackIcon
-} from '@/app/[lang]/_assets/Icons'
+} from '@/app/[lang]/_assets/TechnologiesIcons'
 import '@/app/[lang]/_styles/infiniteSlide.css'
 
 export default function InfiniteSlide () {

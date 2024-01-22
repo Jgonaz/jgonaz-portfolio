@@ -1,8 +1,8 @@
+@import './animations.css';
+
 #home-screen {
   /*  Default => 100dvh - 60px (waves) */
-  height: calc(
-    100vh - env(safe-area-inset-bottom, 0) - env(safe-area-inset-top, 0) - 60px
-  );
+  height: calc(100vh - 60px);
   /* iOS Webkit Fix 100vh - 60px (waves) - 120px (navbar) */
   @supports (-webkit-touch-callout: none) {
     height: calc(100vh - 180px);
@@ -64,38 +64,4 @@
   -webkit-animation: animatedGradient 6s ease infinite alternate;
   -moz-animation: animatedGradient 6s ease infinite alternate;
   animation: animatedGradient 6s ease infinite alternate;
-}
-
-@keyframes fadeFromTop {
-  from {
-    opacity: 0;
-    transform: translateY(-1rem);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes fadeFromBottom {
-  from {
-    opacity: 0;
-    transform: translateY(1rem);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes animatedGradient {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
 }

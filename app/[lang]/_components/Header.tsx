@@ -7,10 +7,10 @@ import '@/app/[lang]/_styles/header.css'
 
 import LanguageSelector from '@/app/[lang]/_components/LanguageSelector'
 
-import { WorkIcon } from '@/app/[lang]/_assets/Icons'
-import { EducationIcon } from '@/app/[lang]/_assets/Icons'
-import { MailIcon } from '@/app/[lang]/_assets/Icons'
-import { UserIcon } from '@/app/[lang]/_assets/Icons'
+import { CVIcon, WorkIcon } from '@/app/[lang]/_assets/MenuIcons'
+import { EducationIcon } from '@/app/[lang]/_assets/MenuIcons'
+import { MailIcon } from '@/app/[lang]/_assets/MenuIcons'
+import { UserIcon } from '@/app/[lang]/_assets/MenuIcons'
 
 export default function Header () {
   const { dict, lang } = useContext(TranslationContext)
@@ -81,7 +81,7 @@ export default function Header () {
                   target='_blank'
                   className='header-link transition-all flex items-center gap-2 py-3 px-4 text-jade-900 md:py-0'
                 >
-                  <UserIcon className='md:hidden' />
+                  <CVIcon className='md:hidden' />
                   {dict?.header?.CV}
                 </a>
               </li>
@@ -104,6 +104,16 @@ export default function Header () {
                 >
                   <EducationIcon className='md:hidden' />
                   {dict?.header?.education}
+                </a>
+              </li>
+              <li>
+                <a
+                  onClick={toggleMobileMenu}
+                  href='#about-me'
+                  className='header-link transition-all flex items-center gap-2 py-3 px-4 text-jade-900 md:py-0'
+                >
+                  <UserIcon className='md:hidden' />
+                  {dict?.header?.aboutMe}
                 </a>
               </li>
               <li>

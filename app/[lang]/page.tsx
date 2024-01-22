@@ -1,6 +1,7 @@
 import Home from '@/app/[lang]/_components/sections/Home'
 import Work from '@/app/[lang]/_components/sections/Work'
 import Education from '@/app/[lang]/_components/sections/Education'
+import AboutMe from '@/app/[lang]/_components/sections/AboutMe'
 import Contact from '@/app/[lang]/_components/sections/Contact'
 import Waves from '@/app/[lang]/_components/Waves'
 import BackToTop from '@/app/[lang]/_components/BackToTop'
@@ -20,6 +21,7 @@ export default function Page () {
 
       <Work />
       <Education />
+      <AboutMe />
 
       <Waves
         background='var(--color-jade-900)'

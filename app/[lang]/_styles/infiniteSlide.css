@@ -1,3 +1,5 @@
+@import './animations.css';
+
 .infinite-slide {
   height: 100px;
   animation: infinite-scroll 90s linear infinite;
@@ -21,13 +23,4 @@
 }
 .infinite-slide:hover {
   animation-play-state: paused;
-}
-
-@keyframes infinite-scroll {
-  from {
-    transform: translateX(0);
-  }
-  to {
-    transform: translateX(-50%);
-  }
 }

@@ -3,6 +3,7 @@
     "openMainMenu": "Open main menu",
     "work": "Experience",
     "education": "Education",
+    "aboutMe": "About me",
     "contact": "Contact",
     "CV": "CV"
   },
@@ -56,6 +57,12 @@
         "description": "Training program focused on the installation, maintenance, and management of computer equipment and networks, ideal for starting a technical career in the IT and telecommunications sector."
       }
     ]
+  },
+  "aboutMe": {
+    "title": "About Me",
+    "description1": "From Andalusian roots, I was born in Jerez and raised in Seville, places I visit less often than I would like. Despite not being fond of the cold, I live in Zaragoza, although it's not uncommon to find me in Valencia, where my partner lives. On my travels, my faithful companion, my laptop, is always with me.    ",
+    "description2": "An enthusiast of music and audiovisual content editing, an area that helps me combine my creativity and technical skills. I define myself as an extroverted person, always ready to meet new people and explore places to discover.",
+    "description3": "From an early age, I have been fascinated by any device with a screen, a curiosity that eventually turned into my vocation and, later, my professional career. Today, I have the privilege of dedicating myself to what I am most passionate about: creating and bringing my code to life, merging technology and creativity."
   },
   "contact": {
     "title": "Contact",
