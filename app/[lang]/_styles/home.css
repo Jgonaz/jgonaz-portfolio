@@ -1,35 +1,69 @@
-.home-screen {
+#home-screen {
+  /*  Default => 100dvh - 60px (waves) */
   height: calc(
     100vh - env(safe-area-inset-bottom, 0) - env(safe-area-inset-top, 0) - 60px
   );
-  @media only screen and (max-width: 768px) and (orientation: landscape) {
-    height: 100vh;
-  }
-  /* iOS Webkit Fix 100vh */
+  /* iOS Webkit Fix 100vh - 60px (waves) - 120px (navbar) */
   @supports (-webkit-touch-callout: none) {
     height: calc(100vh - 180px);
   }
-
-  .home-screen-title {
-    margin-top: 8vh;
-    filter: drop-shadow(0 0 0.15rem #fff);
+  /* Mobile landscape (no photo) */
+  @media only screen and (max-width: 1024px) and (orientation: landscape) {
+    min-height: calc(100vh - 140px);
+    #home-screen-photo {
+      display: none;
+    }
   }
 
-  .home-screen-photo {
+  #home-screen-title {
+    margin-top: 6vh;
+    filter: drop-shadow(0 0 0.15rem #fff);
+    > * {
+      animation-duration: 0.25s;
+      animation-fill-mode: both;
+      animation-timing-function: ease-in-out;
+    }
+    .anim-first {
+      animation-delay: 0.25s;
+      animation-name: fadeFromTop;
+      @media only screen and (min-width: 768px) {
+        animation-name: fadeFromBottom;
+      }
+    }
+    .anim-second {
+      animation-delay: 0.5s;
+      animation-name: fadeFromTop;
+      @media only screen and (min-width: 768px) {
+        animation-name: fadeFromBottom;
+      }
+    }
+    .anim-third {
+      animation-delay: 0.75s;
+      animation-name: fadeFromTop;
+      @media only screen and (min-width: 768px) {
+        animation-name: fadeFromBottom;
+      }
+    }
+  }
+  #home-screen-photo {
     img {
       filter: drop-shadow(0px 0px 2px gray);
       min-width: 350px;
       min-height: 350px;
       max-width: 768px;
       max-height: 65vh;
-      @media screen and (min-width: 576px) {
+      @media screen and (min-width: 480px) {
         object-fit: scale-down;
-      }
-      @media only screen and (max-width: 768px) and (orientation: landscape) {
-        display: none;
       }
     }
   }
+}
+
+.animate-gradient {
+  background-size: 300%;
+  -webkit-animation: animatedGradient 6s ease infinite alternate;
+  -moz-animation: animatedGradient 6s ease infinite alternate;
+  animation: animatedGradient 6s ease infinite alternate;
 }
 
 @keyframes fadeFromTop {
@@ -54,35 +88,6 @@
   }
 }
 
-.home-screen-title {
-  > * {
-    animation-duration: 0.25s;
-    animation-fill-mode: both;
-    animation-timing-function: ease-in-out;
-  }
-  .anim-first {
-    animation-delay: 0.25s;
-    animation-name: fadeFromTop;
-    @media only screen and (min-width: 768px) {
-      animation-name: fadeFromBottom;
-    }
-  }
-  .anim-second {
-    animation-delay: 0.5s;
-    animation-name: fadeFromTop;
-    @media only screen and (min-width: 768px) {
-      animation-name: fadeFromBottom;
-    }
-  }
-  .anim-third {
-    animation-delay: 0.75s;
-    animation-name: fadeFromTop;
-    @media only screen and (min-width: 768px) {
-      animation-name: fadeFromBottom;
-    }
-  }
-}
-
 @keyframes animatedGradient {
   0% {
     background-position: 0% 50%;
@@ -93,11 +98,4 @@
   100% {
     background-position: 0% 50%;
   }
-}
-
-.animate-gradient {
-  background-size: 300%;
-  -webkit-animation: animatedGradient 6s ease infinite alternate;
-  -moz-animation: animatedGradient 6s ease infinite alternate;
-  animation: animatedGradient 6s ease infinite alternate;
 }

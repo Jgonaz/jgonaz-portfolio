@@ -9,14 +9,14 @@ import '@/app/[lang]/_styles/home.css'
 
 export default function Home () {
   const { dict } = useContext(TranslationContext)
+
   return (
     <main
-      className='w-screen max-w-full home-screen
-      top-0 z-[-2] bg-jade-50 bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(67,229,160,0.4),rgba(255,255,255,0))]'
-      id='home'
+      id='home-screen'
+      className='w-screen max-w-full top-0 z-[-2] bg-jade-50 bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(67,229,160,0.4),rgba(255,255,255,0))]'
     >
       <div className='container p-8 sm:p-12 md:p-16 lg:p-20 xl:p-24 flex justify-center mobile-landscape:pt-4'>
-        <div className='home-screen-title max-w-max z-30'>
+        <div id='home-screen-title' className='max-w-max z-30'>
           <p className='anim-first text-center sm:text-start text-lg font-normal text-jade-900 lg:text-xl p-0 sm:px-4'>
             {dict?.home?.hi}
           </p>
@@ -33,7 +33,10 @@ export default function Home () {
             {dict?.home?.andIDevelopWebApps}
           </p>
         </div>
-        <div className='home-screen-photo absolute bottom-0 flex justify-center items-end w-full max-w-full min-w-[350px] h-[768px] z-20 translate-y-2rem sm:translate-y-4rem lg:translate-y-6rem'>
+        <div
+          id='home-screen-photo'
+          className='absolute bottom-0 flex justify-center items-end w-full max-w-full min-w-[350px] h-[768px] z-20 md:translate-y-4rem lg:translate-y-6rem'
+        >
           <Image
             className='anim-first'
             src={profileImage}

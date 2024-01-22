@@ -1,5 +1,5 @@
 import { i18n } from '@/i18n-config'
-import '@/app/[lang]/_styles/LanguageSelector.css'
+import '@/app/[lang]/_styles/languageSelector.css'
 
 interface LanguageSelectorProps {
   className: string

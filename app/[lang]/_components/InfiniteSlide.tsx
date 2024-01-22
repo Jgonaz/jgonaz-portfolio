@@ -81,11 +81,11 @@ export default function InfiniteSlide () {
         <li className='mx-8 md:mx-12 brighter'>
           <VueIcon className='mt-2' height='55' width='55' />
         </li>
-        <li className='mx-8 md:mx-12 brighter'>
-          <VueXIcon />
-        </li>
         <li className='mx-8 md:mx-12'>
           <PiniaIcon />
+        </li>
+        <li className='mx-8 md:mx-12 brighter'>
+          <VueXIcon />
         </li>
         <li className='mx-8 md:mx-12 brighter'>
           <ReactIcon />
@@ -151,11 +151,11 @@ export default function InfiniteSlide () {
         <li className='mx-8 md:mx-12 brighter'>
           <VueIcon className='mt-2' height='55' width='55' />
         </li>
-        <li className='mx-8 md:mx-12 brighter'>
-          <VueXIcon />
-        </li>
         <li className='mx-8 md:mx-12'>
           <PiniaIcon />
+        </li>
+        <li className='mx-8 md:mx-12 brighter'>
+          <VueXIcon />
         </li>
         <li className='mx-8 md:mx-12 brighter'>
           <ReactIcon />
