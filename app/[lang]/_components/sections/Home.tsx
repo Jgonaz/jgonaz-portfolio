@@ -4,36 +4,35 @@ import Image from 'next/image'
 import { useContext, useEffect } from 'react'
 import TranslationContext from '@/app/[lang]/_contexts/TranslationContext'
 import profileImage from '@/public/images/profile.png'
-
+import { isMobile } from '@/app/utils/utils'
 import '@/app/[lang]/_styles/home.css'
 
 export default function Home () {
   const { dict } = useContext(TranslationContext)
   useEffect(() => {
-    /* Fix in-app-browser 100vh bug */
-    if (
-      navigator.userAgent.includes('FBAN') ||
-      navigator.userAgent.includes('FBAV') ||
-      navigator.userAgent.includes('Instagram') ||
-      navigator.userAgent.includes('TikTok') ||
-      navigator.userAgent.includes('LinkedIn')
-    ) {
-      const heightPX = window.innerHeight
-      document.documentElement.style.setProperty(
-        '--max-height-px',
-        `${heightPX - 60}px`
-      )
-      document.documentElement.style.setProperty(
-        '--min-height-px',
-        `${heightPX - 60}px`
-      )
-
-      const homeScreenPhoto = document.getElementById('home-screen-photo')
-      if (homeScreenPhoto) {
-        homeScreenPhoto.style.top = `${
-          heightPX - homeScreenPhoto.offsetHeight
-        }px`
+    /* Fix 100vh bug at mobiles or native in-app browsers */
+    if (isMobile()) {
+      const staticHomeScreenHeight = () => {
+        const heightPX = window.innerHeight
+        document.documentElement.style.setProperty(
+          '--max-height-px',
+          `${heightPX - 60}px`
+        )
+        document.documentElement.style.setProperty(
+          '--min-height-px',
+          `${heightPX - 60}px`
+        )
+        const homeScreenPhoto = document.getElementById('home-screen-photo')
+        if (homeScreenPhoto) {
+          homeScreenPhoto.style.top = `${
+            heightPX - homeScreenPhoto.offsetHeight
+          }px`
+        }
       }
+      staticHomeScreenHeight()
+      screen.orientation.addEventListener('change', () => {
+        staticHomeScreenHeight()
+      })
     }
   }, [])
   return (
