@@ -2,7 +2,11 @@
 
 #home-screen {
   /* Fix instagram native in-app browser 100vh bug / Default => 100dvh - 60px (waves) */
-  height: var(--height-px, calc(100vh - 60px));
+  height: calc(100vh - 60px);
+
+  /* Fix in-app-browser 100vh bug */
+  max-height: var(--max-height-px);
+  min-height: var(--min-height-px);
 
   /* iOS Webkit Fix 100vh - 60px (waves) - 120px (navbar) */
   @supports (-webkit-touch-callout: none) {

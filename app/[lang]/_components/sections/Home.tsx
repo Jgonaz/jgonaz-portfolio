@@ -10,22 +10,23 @@ import '@/app/[lang]/_styles/home.css'
 export default function Home () {
   const { dict } = useContext(TranslationContext)
   useEffect(() => {
-    const isInFacebookBrowser: boolean =
-      navigator.userAgent.includes('FBAN') ||
-      navigator.userAgent.includes('FBAV')
-    const isInInstagramBrowser: boolean =
-      navigator.userAgent.includes('Instagram')
-    const isInTikTokBrowser: boolean = navigator.userAgent.includes('TikTok')
     /* Fix in-app-browser 100vh bug */
-    if (isInFacebookBrowser || isInInstagramBrowser || isInTikTokBrowser) {
-      const adjustHeight = () => {
-        const heightPX = window.innerHeight
-        document.documentElement.style.setProperty(
-          '--height-px',
-          `${heightPX - 60}px`
-        )
-      }
-      adjustHeight()
+    if (
+      navigator.userAgent.includes('FBAN') ||
+      navigator.userAgent.includes('FBAV') ||
+      navigator.userAgent.includes('Instagram') ||
+      navigator.userAgent.includes('TikTok') ||
+      navigator.userAgent.includes('LinkedIn')
+    ) {
+      const heightPX = window.innerHeight
+      document.documentElement.style.setProperty(
+        '--max-height-px',
+        `${heightPX - 60}px`
+      )
+      document.documentElement.style.setProperty(
+        '--min-height-px',
+        `${heightPX - 60}px`
+      )
     }
   }, [])
   return (

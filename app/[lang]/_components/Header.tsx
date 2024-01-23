@@ -76,17 +76,22 @@ export default function Header () {
           >
             <ul className='flex flex-col gap-x-4 mt-4 font-medium md:flex-row md:mt-0'>
               <li>
+                {/* Mobile => Download CV */}
                 <a
-                  href={`https://docs.google.com/document/d/119rL87biQUfklitcP0fOVYvQFW94zezUSvZMLK5W89Q${
-                    window.innerWidth < 768 ? '/export?format=pdf' : ''
-                  }`}
+                  href={`https://docs.google.com/document/d/119rL87biQUfklitcP0fOVYvQFW94zezUSvZMLK5W89Q/export?format=pdf`}
                   target='_blank'
-                  className='header-link transition-all flex items-center gap-2 py-3 px-4 text-jade-900 md:py-0'
+                  className='md:hidden header-link transition-all flex items-center gap-2 py-3 px-4 text-jade-900 md:py-0'
                 >
-                  <CVIcon className='md:hidden scale-90' />
-                  {window.innerWidth < 768
-                    ? dict?.downloadCV
-                    : dict?.header?.CV}
+                  <CVIcon className='scale-90' />
+                  {dict?.downloadCV}
+                </a>
+                {/* Desktop => Google Document */}
+                <a
+                  href={`https://docs.google.com/document/d/119rL87biQUfklitcP0fOVYvQFW94zezUSvZMLK5W89Q`}
+                  target='_blank'
+                  className='hidden md:flex header-link transition-all items-center gap-2 py-3 px-4 text-jade-900 md:py-0'
+                >
+                  {dict?.header?.CV}
                 </a>
               </li>
               <li>
