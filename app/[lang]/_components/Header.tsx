@@ -16,7 +16,7 @@ export default function Header () {
   const { dict, lang } = useContext(TranslationContext)
 
   const toggleMobileMenu = () => {
-    if (window.innerWidth <= 768) {
+    if (window.innerWidth < 768) {
       document.querySelector('header')?.classList.toggle('show-mobile-menu')
       document.querySelector('body')?.classList.toggle('overflow-hidden')
     }
@@ -77,12 +77,16 @@ export default function Header () {
             <ul className='flex flex-col gap-x-4 mt-4 font-medium md:flex-row md:mt-0'>
               <li>
                 <a
-                  href='https://docs.google.com/document/d/119rL87biQUfklitcP0fOVYvQFW94zezUSvZMLK5W89Q'
+                  href={`https://docs.google.com/document/d/119rL87biQUfklitcP0fOVYvQFW94zezUSvZMLK5W89Q${
+                    window.innerWidth < 768 ? '/export?format=pdf' : ''
+                  }`}
                   target='_blank'
                   className='header-link transition-all flex items-center gap-2 py-3 px-4 text-jade-900 md:py-0'
                 >
-                  <CVIcon className='md:hidden' />
-                  {dict?.header?.CV}
+                  <CVIcon className='md:hidden scale-90' />
+                  {window.innerWidth < 768
+                    ? dict?.downloadCV
+                    : dict?.header?.CV}
                 </a>
               </li>
               <li>

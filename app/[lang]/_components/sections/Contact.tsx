@@ -54,7 +54,7 @@ export default function Contact () {
       <div className='container flex flex-col items-center justify-center text-pretty gap-10 px-8 sm:px-12 md:p-16 lg:p-20 xl:p-24'>
         <div
           id='contact-title'
-          className='flex justify-center sm:justify-start'
+          className='flex justify-center md:justify-start'
         >
           <h2 className='text-4xl font-extrabold text-jade-800'>
             {dict?.contact?.shallWeTalk}

@@ -9,14 +9,14 @@ export default function Education () {
   const { dict } = useContext(TranslationContext)
   return (
     <section
-      className='section bg-jade-900 relative z-30 pt-16 sm:pt-12 md:pt-8 lg:pt-4 xl:pt-0 pb-12 md:pb-4'
+      className='section bg-jade-900 relative z-30 pt-16 sm:pt-12 md:pt-8 lg:pt-4 xl:pt-0'
       id='education'
     >
       <div className='container text-pretty gap-10 px-8 sm:px-12 md:p-16 md:pb-0 lg:p-20 lg:pb-0 xl:p-24 xl:pb-0'>
         <div className='flex flex-col justify-center'>
           <div
             id='education-title'
-            className='section-title flex justify-center sm:justify-start mb-16 md:mb-0'
+            className='section-title flex justify-center md:justify-start mb-16 md:mb-0'
           >
             <h2 className='text-4xl font-extrabold text-white md:mb-8'>
               {dict?.education?.title}
@@ -102,14 +102,6 @@ export default function Education () {
         </div>
         <div className='slide-container mt-16 mg:pt-20 xl:mt-24'>
           <InfiniteSlide />
-          <div className='flex md:hidden justify-center w-full mt-16'>
-            <a
-              href='https://docs.google.com/document/d/119rL87biQUfklitcP0fOVYvQFW94zezUSvZMLK5W89Q/export?format=pdf'
-              className='download-cv-btn text-white bg-jade-700 hover:bg-jade-800 focus:ring-1 focus:ring-jade-300 font-medium rounded-lg text-sm px-5 py-2.5 focus:outline-none'
-            >
-              {dict?.downloadCV}
-            </a>
-          </div>
         </div>
       </div>
     </section>

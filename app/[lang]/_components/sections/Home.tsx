@@ -1,7 +1,7 @@
 'use client'
 
 import Image from 'next/image'
-import { useContext } from 'react'
+import { useContext, useEffect } from 'react'
 import TranslationContext from '@/app/[lang]/_contexts/TranslationContext'
 import profileImage from '@/public/images/profile.png'
 
@@ -9,7 +9,25 @@ import '@/app/[lang]/_styles/home.css'
 
 export default function Home () {
   const { dict } = useContext(TranslationContext)
-
+  useEffect(() => {
+    const isInFacebookBrowser: boolean =
+      navigator.userAgent.includes('FBAN') ||
+      navigator.userAgent.includes('FBAV')
+    const isInInstagramBrowser: boolean =
+      navigator.userAgent.includes('Instagram')
+    const isInTikTokBrowser: boolean = navigator.userAgent.includes('TikTok')
+    /* Fix in-app-browser 100vh bug */
+    if (isInFacebookBrowser || isInInstagramBrowser || isInTikTokBrowser) {
+      const adjustHeight = () => {
+        const heightPX = window.innerHeight
+        document.documentElement.style.setProperty(
+          '--height-px',
+          `${heightPX - 60}px`
+        )
+      }
+      adjustHeight()
+    }
+  }, [])
   return (
     <main
       id='home-screen'

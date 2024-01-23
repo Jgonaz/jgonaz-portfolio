@@ -23,7 +23,7 @@
     animation-timeline: --vector-items;
     animation-fill-mode: both;
 
-    svg {
+    img {
       animation: bounce 2s infinite;
     }
   }
@@ -39,35 +39,35 @@
   .aboutme-sports {
     top: 70px;
     left: 65px;
-    svg {
+    img {
       animation-delay: 0.25s;
     }
   }
   .aboutme-music {
     top: 0;
     left: 95px;
-    svg {
+    img {
       animation-delay: 0.75s;
     }
   }
   .aboutme-travel {
     top: 115px;
     left: 10px;
-    svg {
+    img {
       animation-delay: 0.5s;
     }
   }
   .aboutme-video {
     top: 110px;
     right: 30px;
-    svg {
+    img {
       animation-delay: 1s;
     }
   }
   .aboutme-landscape {
     top: 0px;
     right: 70px;
-    svg {
+    img {
       animation-delay: 1.25s;
     }
   }

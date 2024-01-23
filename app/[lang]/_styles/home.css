@@ -1,8 +1,9 @@
 @import './animations.css';
 
 #home-screen {
-  /*  Default => 100dvh - 60px (waves) */
-  height: calc(100vh - 60px);
+  /* Fix instagram native in-app browser 100vh bug / Default => 100dvh - 60px (waves) */
+  height: var(--height-px, calc(100vh - 60px));
+
   /* iOS Webkit Fix 100vh - 60px (waves) - 120px (navbar) */
   @supports (-webkit-touch-callout: none) {
     height: calc(100vh - 180px);
