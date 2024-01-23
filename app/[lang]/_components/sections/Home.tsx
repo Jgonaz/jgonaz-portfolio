@@ -12,6 +12,7 @@ export default function Home () {
   useEffect(() => {
     /* Fix 100vh bug at mobiles or native in-app browsers */
     if (isMobile()) {
+      document.getElementById('home-screen')?.classList.add('is-mobile')
       const staticHomeScreenHeight = () => {
         const heightPX = window.innerHeight
         document.documentElement.style.setProperty(

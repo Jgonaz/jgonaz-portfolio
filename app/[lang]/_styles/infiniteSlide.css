@@ -20,7 +20,7 @@
   .brightest {
     filter: grayscale(1) brightness(3);
   }
-}
-.infinite-slide:hover {
-  animation-play-state: paused;
+  &:hover {
+    animation-play-state: paused;
+  }
 }

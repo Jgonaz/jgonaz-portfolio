@@ -56,7 +56,7 @@ const config: Config = {
       'mobile-landscape': {
         raw: '(max-width: 768px) and (orientation: landscape)'
       }
-      // =>   @media only screen and (max-width: 768px) and (orientation: landscape) {
+      // =>   @media (max-width: 768px) and (orientation: landscape) {
     }
   },
   plugins: []

@@ -19,15 +19,15 @@ header:not(.show-mobile-menu) {
       opacity: 1;
       pointer-events: all;
       li {
-        border-top: 0.5px solid #11563a3b;
+        &:first-child {
+          border-top: 0.5px solid #11563a3b;
+        }
+        border-bottom: 0.5px solid #11563a3b;
         a.header-link:hover {
           color: var(--color-jade-50);
           border-radius: 12px;
           background: var(--color-jade-950);
         }
-      }
-      li:last-child {
-        border-bottom: 0.5px solid #11563a3b;
       }
     }
   }

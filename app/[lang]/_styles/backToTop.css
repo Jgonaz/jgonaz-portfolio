@@ -14,6 +14,7 @@
     border-radius: 100%;
     width: 40px;
     height: 40px;
+    transition: all 0.25s;
     @media (min-width: 640px) {
       width: 48px;
       height: 48px;
@@ -35,15 +36,15 @@
         height: 32px;
       }
     }
-  }
 
-  a:hover {
-    background-color: var(--color-jade-700);
-  }
-  a:active {
-    box-shadow: none;
-    background-color: var(--color-jade-600);
-    transform: translateY(0.25rem);
-    transition: all 0.05s;
+    &:hover {
+      background-color: var(--color-jade-600);
+    }
+    &:active {
+      box-shadow: none;
+      background-color: var(--color-jade-600);
+      transform: translateY(0.25rem);
+      transition: all 0.05s;
+    }
   }
 }

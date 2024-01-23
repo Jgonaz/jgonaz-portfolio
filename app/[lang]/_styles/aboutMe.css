@@ -22,57 +22,55 @@
     view-timeline-axis: block;
     animation-timeline: --vector-items;
     animation-fill-mode: both;
-
+    &:nth-of-type(even) {
+      animation-range: entry 10% cover 50%;
+      animation-name: vector-entry-1;
+    }
+    &:nth-of-type(odd) {
+      animation-range: entry 30% cover 100%;
+      animation-name: vector-entry-2;
+    }
+    &.aboutme-sports {
+      top: 70px;
+      left: 65px;
+      img {
+        animation-delay: 0.25s;
+      }
+    }
+    &.aboutme-music {
+      top: 0;
+      left: 95px;
+      img {
+        animation-delay: 0.75s;
+      }
+    }
+    &.aboutme-travel {
+      top: 115px;
+      left: 10px;
+      img {
+        animation-delay: 0.5s;
+      }
+    }
+    &.aboutme-video {
+      top: 110px;
+      right: 30px;
+      img {
+        animation-delay: 1s;
+      }
+    }
+    &.aboutme-landscape {
+      top: 0px;
+      right: 70px;
+      img {
+        animation-delay: 1.25s;
+      }
+    }
     img {
       animation: bounce 2s infinite;
       max-width: unset;
       @media (max-width: 400px) {
         max-width: 325px;
       }
-    }
-  }
-  .icon-container:nth-of-type(even) {
-    animation-range: entry 10% cover 50%;
-    animation-name: vector-entry-1;
-  }
-  .icon-container:nth-of-type(odd) {
-    animation-range: entry 30% cover 100%;
-    animation-name: vector-entry-2;
-  }
-
-  .aboutme-sports {
-    top: 70px;
-    left: 65px;
-    img {
-      animation-delay: 0.25s;
-    }
-  }
-  .aboutme-music {
-    top: 0;
-    left: 95px;
-    img {
-      animation-delay: 0.75s;
-    }
-  }
-  .aboutme-travel {
-    top: 115px;
-    left: 10px;
-    img {
-      animation-delay: 0.5s;
-    }
-  }
-  .aboutme-video {
-    top: 110px;
-    right: 30px;
-    img {
-      animation-delay: 1s;
-    }
-  }
-  .aboutme-landscape {
-    top: 0px;
-    right: 70px;
-    img {
-      animation-delay: 1.25s;
     }
   }
 }

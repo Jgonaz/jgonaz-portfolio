@@ -13,17 +13,21 @@
   }
 
   /* Mobile landscape (no photo) */
-  @media only screen and (max-width: 768px) and (orientation: landscape) {
-    height: calc(100vh - 140px);
-    #home-screen-photo {
-      display: none;
+  &.is-mobile {
+    @media (orientation: landscape) {
+      height: calc(100vh - 140px);
+      #home-screen-photo {
+        display: none;
+      }
     }
   }
   /* iPad/Tablet landscape (no photo) -Fallback if isMobile() doesnt catch Safari- */
-  @supports (-webkit-touch-callout: none) and (orientation: landscape) {
-    height: calc(100vh - 140px);
-    #home-screen-photo {
-      display: none;
+  @supports (-webkit-touch-callout: none) {
+    @media (orientation: landscape) {
+      height: calc(100vh - 140px);
+      #home-screen-photo {
+        display: none;
+      }
     }
   }
 
@@ -38,21 +42,21 @@
     .anim-first {
       animation-delay: 0.25s;
       animation-name: fadeFromTop;
-      @media only screen and (min-width: 768px) {
+      @media (min-width: 768px) {
         animation-name: fadeFromBottom;
       }
     }
     .anim-second {
       animation-delay: 0.5s;
       animation-name: fadeFromTop;
-      @media only screen and (min-width: 768px) {
+      @media (min-width: 768px) {
         animation-name: fadeFromBottom;
       }
     }
     .anim-third {
       animation-delay: 0.75s;
       animation-name: fadeFromTop;
-      @media only screen and (min-width: 768px) {
+      @media (min-width: 768px) {
         animation-name: fadeFromBottom;
       }
     }
