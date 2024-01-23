@@ -1,3 +1,4 @@
+import { GoogleAnalytics } from '@next/third-parties/google'
 import { getDictionary } from '@/app/i18n/get-dictionary'
 import { Locale } from '@/i18n-config'
 import { TranslationProvider } from '@/app/[lang]/_contexts/TranslationContext'
@@ -47,6 +48,11 @@ export default async function RootLayout ({
           {children}
           <Footer />
         </body>
+        {process.env.NODE_ENV === 'production' && (
+          <GoogleAnalytics
+            gaId={process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID || ''}
+          />
+        )}
       </TranslationProvider>
     </html>
   )

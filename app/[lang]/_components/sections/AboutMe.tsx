@@ -44,7 +44,6 @@ export default function AboutMe () {
           <div className='flex justify-center items-center mb-8 md:mb-0'>
             <div className='about-me-vectors'>
               <img
-                style={{ maxWidth: 'unset' }}
                 src={aboutMeImage.src}
                 alt='About me vector'
                 width='350'

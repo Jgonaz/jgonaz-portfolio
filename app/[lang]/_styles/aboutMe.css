@@ -25,6 +25,10 @@
 
     img {
       animation: bounce 2s infinite;
+      max-width: unset;
+      @media (max-width: 400px) {
+        max-width: 325px;
+      }
     }
   }
   .icon-container:nth-of-type(even) {
