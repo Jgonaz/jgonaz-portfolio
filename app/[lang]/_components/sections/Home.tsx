@@ -27,6 +27,13 @@ export default function Home () {
         '--min-height-px',
         `${heightPX - 60}px`
       )
+
+      const homeScreenPhoto = document.getElementById('home-screen-photo')
+      if (homeScreenPhoto) {
+        homeScreenPhoto.style.top = `${
+          heightPX - homeScreenPhoto.offsetHeight
+        }px`
+      }
     }
   }, [])
   return (
