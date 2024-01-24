@@ -15,6 +15,12 @@
   animation-timeline: --vector-container;
   animation-fill-mode: both;
   animation-range: entry 20% cover 40%;
+  img {
+    max-width: unset;
+    @media (max-width: 400px) {
+      max-width: 325px;
+    }
+  }
 
   .icon-container {
     position: absolute;
@@ -22,6 +28,9 @@
     view-timeline-axis: block;
     animation-timeline: --vector-items;
     animation-fill-mode: both;
+    img {
+      animation: bounce 2s infinite;
+    }
     &:nth-of-type(even) {
       animation-range: entry 10% cover 50%;
       animation-name: vector-entry-1;
@@ -63,13 +72,6 @@
       right: 70px;
       img {
         animation-delay: 1.25s;
-      }
-    }
-    img {
-      animation: bounce 2s infinite;
-      max-width: unset;
-      @media (max-width: 400px) {
-        max-width: 325px;
       }
     }
   }
