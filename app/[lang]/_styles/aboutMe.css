@@ -41,11 +41,11 @@
       top: 70px;
       left: 65px;
       @media (max-width: 450px) {
-        top: 15px;
-        left: 35px;
+        top: 25px;
+        left: 30px;
       }
       img {
-        animation: bounce-1 2s infinite;
+        animation: bounce-1 2.25s infinite;
         animation-delay: 0.25s;
       }
     }
@@ -53,11 +53,11 @@
       top: 0;
       left: 95px;
       @media (max-width: 450px) {
-        top: -25px;
+        top: -35px;
         left: 60px;
       }
       img {
-        animation: bounce-2 1.25s infinite;
+        animation: bounce-2 1.5s infinite;
         animation-delay: 0.75s;
       }
     }
@@ -65,11 +65,11 @@
       top: 115px;
       left: 10px;
       @media (max-width: 450px) {
-        top: 60px;
+        top: 65px;
         left: -5px;
       }
       img {
-        animation: bounce-1 1.5s infinite;
+        animation: bounce-1 1.75s infinite;
         animation-delay: 0.5s;
       }
     }
@@ -81,7 +81,7 @@
         right: 5px;
       }
       img {
-        animation: bounce-2 1.75s infinite;
+        animation: bounce-2 2s infinite;
         animation-delay: 1s;
       }
     }
