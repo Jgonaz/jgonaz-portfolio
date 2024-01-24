@@ -7,7 +7,8 @@ export const isMobile = () => {
     navigator.userAgent.includes('FBAV') ||
     navigator.userAgent.includes('Instagram') ||
     navigator.userAgent.includes('TikTok') ||
-    navigator.userAgent.includes('LinkedIn')
+    navigator.userAgent.includes('LinkedIn') ||
+    navigator.userAgent.includes('Notion')
 
   return isMobile
 }

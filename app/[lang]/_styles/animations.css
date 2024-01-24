@@ -1,8 +1,17 @@
 /* aboutMe.css */
-@keyframes bounce {
+@keyframes bounce-1 {
   0%,
   100% {
-    transform: translateY(0);
+    transform: translateY(-0.5rem);
+  }
+  50% {
+    transform: translateY(0.5rem);
+  }
+}
+@keyframes bounce-2 {
+  0%,
+  100% {
+    transform: translateY(-1);
   }
   50% {
     transform: translateY(1rem);

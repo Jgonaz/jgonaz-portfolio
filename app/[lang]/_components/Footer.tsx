@@ -8,7 +8,7 @@ export default function Footer () {
         </div>
         <div className='text-end'>
           <a
-            href='https://www.linkedin.com/in/jgonzalez-azpillaga/'
+            href='https://www.linkedin.com/in/jgonaz/'
             className='hover:underline mr-2'
             target='_blank'
           >

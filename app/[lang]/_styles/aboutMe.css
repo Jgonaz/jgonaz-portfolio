@@ -7,7 +7,7 @@
   width: 100%;
 }
 
-.about-me-vectors {
+#about-me-vectors {
   position: relative;
   view-timeline-name: --vector-container;
   view-timeline-axis: block;
@@ -15,10 +15,11 @@
   animation-timeline: --vector-container;
   animation-fill-mode: both;
   animation-range: entry 20% cover 40%;
+
   img {
     max-width: unset;
-    @media (max-width: 400px) {
-      max-width: 325px;
+    @media (max-width: 450px) {
+      max-width: 250px;
     }
   }
 
@@ -28,9 +29,6 @@
     view-timeline-axis: block;
     animation-timeline: --vector-items;
     animation-fill-mode: both;
-    img {
-      animation: bounce 2s infinite;
-    }
     &:nth-of-type(even) {
       animation-range: entry 10% cover 50%;
       animation-name: vector-entry-1;
@@ -42,35 +40,60 @@
     &.aboutme-sports {
       top: 70px;
       left: 65px;
+      @media (max-width: 450px) {
+        top: 15px;
+        left: 35px;
+      }
       img {
+        animation: bounce-1 2s infinite;
         animation-delay: 0.25s;
       }
     }
     &.aboutme-music {
       top: 0;
       left: 95px;
+      @media (max-width: 450px) {
+        top: -25px;
+        left: 60px;
+      }
       img {
+        animation: bounce-2 1.25s infinite;
         animation-delay: 0.75s;
       }
     }
     &.aboutme-travel {
       top: 115px;
       left: 10px;
+      @media (max-width: 450px) {
+        top: 60px;
+        left: -5px;
+      }
       img {
+        animation: bounce-1 1.5s infinite;
         animation-delay: 0.5s;
       }
     }
     &.aboutme-video {
       top: 110px;
       right: 30px;
+      @media (max-width: 450px) {
+        top: 75px;
+        right: 5px;
+      }
       img {
+        animation: bounce-2 1.75s infinite;
         animation-delay: 1s;
       }
     }
     &.aboutme-landscape {
       top: 0px;
       right: 70px;
+      @media (max-width: 450px) {
+        top: -20px;
+        right: 20px;
+      }
       img {
+        animation: bounce-1 2.5s infinite;
         animation-delay: 1.25s;
       }
     }

@@ -143,7 +143,7 @@ export default function Contact () {
                 </span>
                 <div className='flex'>
                   <a
-                    href='https://linkedin.com/in/jgonzalez-azpillaga/'
+                    href='https://linkedin.com/in/jgonaz/'
                     target='_blank'
                     className='p-2 hover:scale-125 transition-all'
                   >

@@ -9,7 +9,7 @@
   min-height: var(--min-height-px);
   /* Fix iOS 100vh bug (Fallback if isMobile() doesnt catch Safari) */
   @supports (-webkit-touch-callout: none) {
-    height: calc(100vh - 180px);
+    height: calc(100vh - 150px);
   }
 
   /* Mobile landscape (no photo) */

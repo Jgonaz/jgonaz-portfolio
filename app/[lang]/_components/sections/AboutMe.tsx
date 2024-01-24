@@ -42,7 +42,7 @@ export default function AboutMe () {
             </div>
           </div>
           <div className='flex justify-center items-center mb-8 md:mb-0'>
-            <div className='about-me-vectors'>
+            <div id='about-me-vectors'>
               <img
                 src={aboutMeImage.src}
                 alt='About me vector'
