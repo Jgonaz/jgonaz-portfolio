@@ -16,6 +16,12 @@
     "title": "Experiencia",
     "data": [
       {
+        "company": "Hiberus #h",
+        "duration": "2024-Actualidad",
+        "position": "Senior Front-End Developer",
+        "description": "Una de las principales compañías de consultoría tecnológica con un capital cien por cien privado de origen español. Especializados en la prestación de servicios de consultoría de negocio, desarrollo tecnológico, transformación digital y outsourcing. Referentes a nivel nacional para múltiples entidades públicas y privadas en las que hoy, gracias a su trabajo, se consideran su socio principal a la hora de resolver (de la mano de la tecnología) sus necesidades vinculadas a negocio y procesos."
+      },
+      {
         "company": "Nyxell App S.L.",
         "duration": "2022-2023",
         "position": "Senior Front-End Developer",

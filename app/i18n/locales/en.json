@@ -16,6 +16,12 @@
     "title": "Experience",
     "data": [
       {
+        "company": "Hiberus #h",
+        "duration": "2024-Present",
+        "position": "Senior Front-End Developer",
+        "description": "One of the leading technology consulting companies with one hundred percent private capital of Spanish origin. Specialized in providing business consulting services, technological development, digital transformation, and outsourcing. National references for multiple public and private entities, which today, thanks to their work, consider them as their main partner in solving (with the help of technology) their business and process-related needs."
+      },
+      {
         "company": "Nyxell App S.L.",
         "duration": "2022-2023",
         "position": "Senior Front-End Developer",
