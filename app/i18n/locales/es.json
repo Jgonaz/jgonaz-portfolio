@@ -16,31 +16,31 @@
     "title": "Experiencia",
     "data": [
       {
-        "company": "Hiberus #h",
+        "company": "Grupo El Corte Inglés",
         "duration": "2024-Actualidad",
-        "position": "Senior Front-End Developer",
-        "description": "Una de las principales compañías de consultoría tecnológica con un capital cien por cien privado de origen español. Especializados en la prestación de servicios de consultoría de negocio, desarrollo tecnológico, transformación digital y outsourcing. Referentes a nivel nacional para múltiples entidades públicas y privadas en las que hoy, gracias a su trabajo, se consideran su socio principal a la hora de resolver (de la mano de la tecnología) sus necesidades vinculadas a negocio y procesos."
+        "position": "Senior Front-End Developer en Hiberus #h",
+        "description": "El Corte Inglés es reconocido como uno de los ecommerce más grandes del país, destacando por su amplia gama de productos que incluyen moda, electrónica, hogar y alimentación. Su plataforma de comercio electrónico combina la tradición y la innovación, ofreciendo una experiencia de compra excepcional a clientes de toda España.."
       },
       {
-        "company": "Nyxell App S.L.",
+        "company": "Nyxell App",
         "duration": "2022-2023",
-        "position": "Senior Front-End Developer",
+        "position": "Senior Front-End Developer en NyxellApp S.L.",
         "description": "Marketplace innovador dedicado a la venta de entradas de ocio nocturno. Nyxell fusiona rapidez, seguridad y simplicidad para ofrecer una experiencia de compra excepcional. Enfocada en una atención al cliente personalizada, proporciona soporte integral desde la compra hasta el acceso a través de nuestros embajadores de marca."
       },
       {
-        "company": "Trackglobe S.L. (Grupo Barrabés)",
+        "company": "Grupo Barrabés",
         "duration": "2019-2022",
-        "position": "Agile Front-End Developer",
+        "position": "Agile Front-End Developer en Trackglobe S.L.",
         "description": "Empresa tecnológica dinámica, parte del Grupo Barrabés, líder en ecommerce y consultoría de innovación, y del Grupo BTS, un operador internacional de telecomunicaciones. En plena expansión tanto nacional como internacional, Trackglobe combina la experiencia en ecommerce de Barrabés con la fortaleza en telecomunicaciones de BTS, posicionándose como un referente en el sector tecnológico."
       },
       {
-        "company": "Integra Tecnología",
+        "company": "EFOR Internet & Tecnología",
         "duration": "2017-2019",
-        "position": ".NET FullStack Developer",
+        "position": ".NET FullStack Developer en Integra Tecnología",
         "description": "Consultora tecnológica de prestigio, con un enfoque especializado en la transformación digital y soluciones tecnológicas innovadoras. Fundada en 1986 en Aragón, Integra ha evolucionado desde sus raíces en formación e informática hasta convertirse en un líder en el sector tecnológico a nivel nacional. Su trayectoria está marcada por el desarrollo de proyectos transversales, la obtención de las máximas certificaciones técnicas y la formación de alianzas estratégicas que subrayan su compromiso con la innovación continua."
       },
       {
-        "company": "Hipercor S.A. (Grupo El Corte Inglés)",
+        "company": "Hipercor S.A.",
         "duration": "2013-2014",
         "position": "Técnico en prácticas, mantenimiento sist. hardware",
         "description": "Parte de la reconocida cadena de supermercados del grupo El Corte Inglés, HiperCor se destaca por su amplia gama de productos de alta calidad en alimentación, moda, electrónica y hogar. En mi rol como técnico en prácticas, adquirí experiencia clave en mantenimiento y reparación de hardware. Esta etapa me brindó habilidades fundamentales en solución de problemas y soporte técnico esenciales para mi desarrollo profesional."

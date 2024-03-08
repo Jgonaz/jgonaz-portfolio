@@ -16,31 +16,31 @@
     "title": "Experience",
     "data": [
       {
-        "company": "Hiberus #h",
+        "company": "El Corte Inglés Group",
         "duration": "2024-Present",
-        "position": "Senior Front-End Developer",
-        "description": "One of the leading technology consulting companies with one hundred percent private capital of Spanish origin. Specialized in providing business consulting services, technological development, digital transformation, and outsourcing. National references for multiple public and private entities, which today, thanks to their work, consider them as their main partner in solving (with the help of technology) their business and process-related needs."
+        "position": "Senior Front-End Developer at Hiberus #h",
+        "description": "El Corte Inglés is recognized as one of the country's largest ecommerce platforms, known for its extensive range of products including fashion, electronics, home goods, and groceries. Its ecommerce platform blends tradition with innovation, providing an exceptional shopping experience to customers across Spain.        "
       },
       {
-        "company": "Nyxell App S.L.",
+        "company": "Nyxell App",
         "duration": "2022-2023",
-        "position": "Senior Front-End Developer",
+        "position": "Senior Front-End Developer at NyxellApp S.L.",
         "description": "Innovative marketplace dedicated to the sale of nightlife tickets. Nyxell combines speed, security, and simplicity to offer an exceptional shopping experience. Focused on personalized customer service, it provides comprehensive support from purchase to access through our brand ambassadors."
       },
       {
-        "company": "Trackglobe S.L. (Barrabés Group)",
+        "company": "Barrabés Group",
         "duration": "2019-2022",
-        "position": "Agile Front-End Developer",
+        "position": "Agile Front-End Developer at Trackglobe S.L.",
         "description": "Dynamic technology company, part of the Barrabés Group, a leader in e-commerce and innovation consulting, and the BTS Group, an international telecommunications operator. In full expansion both nationally and internationally, Trackglobe combines Barrabés' e-commerce experience with BTS' telecommunications strength, positioning itself as a reference in the technology sector."
       },
       {
-        "company": "Integra Tecnología",
+        "company": "EFOR Internet & Tecnología",
         "duration": "2017-2019",
-        "position": ".NET FullStack Developer",
+        "position": ".NET FullStack Developer at Integra Tecnología",
         "description": "Prestigious technology consulting firm, with a specialized focus on digital transformation and innovative technological solutions. Founded in 1986 in Aragon, Integra has evolved from its roots in training and computer science to become a leader in the national technology sector. Its trajectory is marked by the development of cross-cutting projects, the attainment of the highest technical certifications, and the formation of strategic alliances that underline its commitment to continuous innovation."
       },
       {
-        "company": "Hipercor S.A. (El Corte Inglés Group)",
+        "company": "Hipercor S.A.",
         "duration": "2013-2014",
         "position": "Intern, hardware system maintenance",
         "description": "Part of the renowned supermarket chain of the El Corte Inglés group, HiperCor stands out for its wide range of high-quality products in food, fashion, electronics, and home. In my role as an intern, I gained key experience in hardware maintenance and repair. This stage provided me with fundamental skills in problem-solving and essential technical support for my professional development."
