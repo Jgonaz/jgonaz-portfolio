@@ -16,7 +16,10 @@
   }
   @media screen and (max-width: 450px) {
     .timeline-item {
-      h3,
+      h3 {
+        animation-name: scrollShow, scrollScale;
+        text-wrap: balance;
+      }
       p {
         animation-name: scrollShow, scrollScale;
       }
