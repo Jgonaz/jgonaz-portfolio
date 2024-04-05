@@ -15,7 +15,7 @@ export const metadata: Metadata = {
   title:
     process.env.NODE_ENV === 'development'
       ? '[DEV] Jorge González Azpillaga'
-      : 'Jorge González Azpillaga - Webdev',
+      : 'Jorge González Azpillaga - Web developer',
   description: 'Porfolio profesional. Desarrollador Web Front-End.',
   metadataBase: new URL('https://www.jgonaz.dev'),
   openGraph: {
