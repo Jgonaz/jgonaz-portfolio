@@ -14,11 +14,16 @@ export default function Contact () {
 
   const [isLoading, setLoading] = useState(false)
   const [sentEmail, setSentEmail] = useState(false)
-  const [errorEmail, setErrorEmail] = useState(false)
+  const [errorMessage, setErrorMessage] = useState<string | null>(null)
+
+  const fallbackErrorMessage =
+    dict?.contact?.errorMessage ??
+    'Ha ocurrido un error al enviar el correo. Por favor, ponte en contacto conmigo a traves de Linkedin.'
 
   const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault()
     setLoading(true)
+    setErrorMessage(null)
 
     const formData = new FormData(event.currentTarget)
     const formProps = Object.fromEntries(formData)
@@ -26,23 +31,36 @@ export default function Contact () {
 
     const delay = new Promise(resolve => setTimeout(resolve, 2000))
 
-    const [response] = await Promise.all([
-      fetch('/api/send', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({ from, subject, message })
-      }),
-      delay
-    ])
+    try {
+      const [response] = await Promise.all([
+        fetch('/api/send', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({ from, subject, message })
+        }),
+        delay
+      ])
 
-    const data = await response.json()
+      const data = await response.json().catch(() => ({}))
 
-    setLoading(false)
-    setSentEmail(true)
-    if (!response.ok) {
-      setErrorEmail(data.message)
+      if (!response.ok) {
+        const apiMessage =
+          typeof data?.message === 'string' ? data.message : fallbackErrorMessage
+
+        setSentEmail(false)
+        setErrorMessage(apiMessage)
+        return
+      }
+
+      setSentEmail(true)
+    } catch(e) {
+      console.error('Error in handleSubmit:', e)
+      setSentEmail(false)
+      setErrorMessage(fallbackErrorMessage)
+    } finally {
+      setLoading(false)
     }
   }
 
@@ -76,7 +94,7 @@ export default function Contact () {
                 id='from'
                 className='bg-gray-50 border border-gray-300 text-jade-900 text-sm rounded-lg focus:ring-jade-900/50 focus:border-jade-900/50 focus:outline-none block w-full p-2.5'
                 placeholder={dict?.contact?.mailPlaceholder}
-                disabled={sentEmail}
+                disabled={isLoading || sentEmail}
                 required
               />
             </div>
@@ -93,7 +111,7 @@ export default function Contact () {
                 id='subject'
                 className='bg-gray-50 border border-gray-300 text-jade-900 text-sm rounded-lg focus:ring-jade-900/50 focus:border-jade-900/50 focus:outline-none block w-full p-2.5'
                 placeholder={dict?.contact?.subjectPlaceholder}
-                disabled={sentEmail}
+                disabled={isLoading || sentEmail}
                 required
               />
             </div>
@@ -110,7 +128,7 @@ export default function Contact () {
                 className='bg-gray-50 border border-gray-300 text-jade-900 text-sm rounded-lg focus:ring-jade-900/50 focus:border-jade-900/50 focus:outline-none block w-full p-2.5'
                 placeholder={dict?.contact?.messagePlaceholder}
                 required
-                disabled={sentEmail}
+                disabled={isLoading || sentEmail}
                 rows={3}
               />
             </div>
@@ -121,18 +139,22 @@ export default function Contact () {
                   className={`flex items-center justify-center w-full sm:w-fit text-white bg-jade-700 hover:bg-jade-800 focus:ring-4 focus:outline-none focus:ring-jade-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center text-nowrap ${
                     sentEmail ? 'opacity-50' : ''
                   }`}
-                  disabled={sentEmail}
+                  disabled={isLoading || sentEmail}
                 >
                   <SendIcon className='mr-2' />
                   {!sentEmail
                     ? dict?.contact?.sendMessage
                     : dict?.contact?.messageSent}
                 </button>
-                {sentEmail && (
+                {(sentEmail || errorMessage) && (
                   <div className='flex p-2'>
-                    <span className='text-xs text-gray-500'>
-                      {!errorEmail && dict?.contact?.thankYouMessage}
-                      {errorEmail && dict?.contact?.errorMessage}
+                    <span
+                      className={`text-xs ${
+                        errorMessage ? 'text-red-600' : 'text-gray-500'
+                      }`}
+                    >
+                      {sentEmail && !errorMessage && dict?.contact?.thankYouMessage}
+                      {errorMessage}
                     </span>
                   </div>
                 )}

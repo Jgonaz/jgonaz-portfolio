@@ -43,7 +43,7 @@ export default async function RootLayout ({
   return (
     <html lang={locale}>
       <TranslationProvider dict={dict} lang={locale}>
-        <body className={onest.className}>
+        <body className={onest.className} suppressHydrationWarning>
           <Header />
           {children}
           <Footer />
