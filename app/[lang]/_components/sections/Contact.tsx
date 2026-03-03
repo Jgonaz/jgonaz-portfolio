@@ -139,7 +139,7 @@ export default function Contact () {
               </div>
               <div className='w-full flex flex-col gap-2 sm:flex-row items-center xsm:items-end sm:items-center justify-center xsm:justify-end '>
                 <span className='mt-2 xsm:mt-0 bg-green-100 text-jade-800 border border-jade-800 border-opacity-50 text-xs font-medium px-2.5 py-0.5 rounded'>
-                  contacto@jgonaz.dev
+                  jgonaz.dev@gmail.com
                 </span>
                 <div className='flex'>
                   <a
