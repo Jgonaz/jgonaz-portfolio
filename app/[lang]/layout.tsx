@@ -32,17 +32,17 @@ export const metadata: Metadata = {
 
 export default async function RootLayout ({
   children,
-  params: { lang }
+  params
 }: {
   children: React.ReactNode
-  params: {
-    lang: Locale
-  }
+  params: Promise<{ lang: string }>
 }) {
-  const dict = await getDictionary(lang)
+  const { lang } = await params
+  const locale = lang as Locale
+  const dict = await getDictionary(locale)
   return (
-    <html lang={lang}>
-      <TranslationProvider dict={dict} lang={lang}>
+    <html lang={locale}>
+      <TranslationProvider dict={dict} lang={locale}>
         <body className={onest.className}>
           <Header />
           {children}
