@@ -14,7 +14,7 @@ export default function Footer () {
           >
             <span>Jorge González.</span>
           </a>
-          <p className='mr-2'>© 2024. All Rights Reserved.</p>
+          <p className='mr-2'>© 2026. All Rights Reserved.</p>
         </div>
       </div>
     </footer>
