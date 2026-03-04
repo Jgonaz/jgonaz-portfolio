@@ -9,7 +9,13 @@
   },
   "home": {
     "hi": "Hi there! I'm",
-    "andIDevelopWebApps": "and I develop web applications"
+    "andIDevelopWebApps": "and I develop modern web applications",
+    "rotatingPhrases": [
+      "and I develop modern web applications",
+      "and I build AI-powered solutions",
+      "and I design intuitive user interfaces",
+      "and I turn ideas into digital products"
+    ]
   },
   "downloadCV": "Download CV",
   "work": {

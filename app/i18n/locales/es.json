@@ -9,7 +9,13 @@
   },
   "home": {
     "hi": "¡Hola! Soy",
-    "andIDevelopWebApps": "y desarrollo aplicaciones web"
+    "andIDevelopWebApps": "y desarrollo aplicaciones web modernas",
+    "rotatingPhrases": [
+      "y desarrollo aplicaciones web modernas",
+      "y construyo soluciones impulsadas por IA",
+      "y diseño interfaces de usuario intuitivas",
+      "y convierto ideas en productos digitales"
+    ]
   },
   "downloadCV": "Descargar CV",
   "work": {
@@ -66,9 +72,9 @@
   },
   "aboutMe": {
     "title": "Sobre mí",
-    "description1": "De raíces andaluzas, nací en Jerez y me crié en Sevilla, a donde voy menos de lo que me gustaría. A pesar de no hacerme al frío, vivo en Zaragoza, aunque no es raro encontrarme por Valencia, donde vive mi pareja. En mis viajes, nunca falta mi compañero fiel: mi portátil.",
-    "description2": "Entusiasta de la música, el deporte y la edición de contenido audiovisual, área que me ayuda a combinar mi creatividad y habilidad técnica. Me defino como una persona extrovertida, siempre dispuesta a conocer nuevas personas y explorar lugares por descubrir.",
-    "description3": "Desde temprana edad, he estado fascinado por cualquier dispositivo con una pantalla, una curiosidad que eventualmente se transformó en mi vocación y, luego, en mi carrera profesional. Hoy, tengo el privilegio de dedicarme a lo que más me apasiona: crear y dar vida a mi código, fusionando tecnología y creatividad."
+    "description1": "De raíces andaluzas, nací en Jerez y crecí en Sevilla, a donde voy menos de lo que me gustaría. Actualmente vivo en Valencia con mi pareja, y allá donde vaya siempre me acompaña mi portátil.",
+    "description2": "Soy desarrollador front-end y un apasionado de la tecnología en constante evolución. En los últimos años he incorporado la inteligencia artificial de forma intensiva a mi flujo de trabajo, utilizando asistentes de programación y agentes de código, así como herramientas de generación y edición de imagen y vídeo. Para mí, la IA no es solo una tendencia, sino una extensión natural del proceso creativo y técnico.",
+    "description3": "Desde pequeño me ha fascinado cualquier dispositivo con una pantalla, una curiosidad que con el tiempo se transformó en vocación y después en mi carrera profesional. Hoy tengo el privilegio de dedicarme a lo que más me gusta: construir experiencias digitales y dar vida a ideas a través del código."
   },
   "contact": {
     "title": "Contacto",

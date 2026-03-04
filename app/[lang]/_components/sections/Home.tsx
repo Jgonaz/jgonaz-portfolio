@@ -1,7 +1,7 @@
 'use client'
 
 import Image from 'next/image'
-import { useContext, useEffect } from 'react'
+import { useContext, useEffect, useMemo, useState } from 'react'
 import TranslationContext from '@/app/[lang]/_contexts/TranslationContext'
 import profileImage from '@/public/images/profile.png'
 import { isMobile } from '@/app/utils/utils'
@@ -9,6 +9,12 @@ import '@/app/[lang]/_styles/home.css'
 
 export default function Home () {
   const { dict } = useContext(TranslationContext)
+  const rotatingPhrases = useMemo(
+    () => dict?.home?.rotatingPhrases ?? [dict?.home?.andIDevelopWebApps ?? ''],
+    [dict]
+  )
+  const [activePhraseIndex, setActivePhraseIndex] = useState(0)
+
   useEffect(() => {
     /* Fix 100vh bug at mobiles or native in-app browsers */
     if (isMobile()) {
@@ -36,6 +42,15 @@ export default function Home () {
       })
     }
   }, [])
+
+  useEffect(() => {
+    if (rotatingPhrases.length <= 1) return
+    const interval = setInterval(() => {
+      setActivePhraseIndex(prevIndex => (prevIndex + 1) % rotatingPhrases.length)
+    }, 2800)
+    return () => clearInterval(interval)
+  }, [rotatingPhrases])
+
   return (
     <main
       id='home-screen'
@@ -56,7 +71,9 @@ export default function Home () {
             </h1>
           </div>
           <p className='anim-third text-center sm:text-end text-lg font-normal text-jade-900 lg:text-xl p-0 sm:px-4'>
-            {dict?.home?.andIDevelopWebApps}
+            <span key={activePhraseIndex} className='home-rotating-phrase'>
+              {rotatingPhrases[activePhraseIndex]}
+            </span>
           </p>
         </div>
         <div

@@ -1,17 +1,12 @@
 import {
-  AzureIcon,
-  AWSIcon,
   CSharpIcon,
-  CSS3Icon,
   DotnetIcon,
   GitIcon,
   GitHubIcon,
-  Html5Icon,
   JavaScriptIcon,
   MongoDbIcon,
   NextJSIcon,
   NodeJSIcon,
-  NotionIcon,
   ReactIcon,
   SassIcon,
   SQLIcon,
@@ -20,10 +15,14 @@ import {
   VercelIcon,
   ViteJSIcon,
   PiniaIcon,
+  OpenAIIcon,
+  ClaudeIcon,
+  GitHubCopilotIcon,
+  SupabaseIcon,
+  OllamaIcon,
+  PlaywrightIcon,
+  NuxtIcon,
   VueIcon,
-  VueXIcon,
-  WordPressIcon,
-  WebpackIcon
 } from '@/app/[lang]/_assets/TechnologiesIcons'
 import '@/app/[lang]/_styles/infiniteSlide.css'
 
@@ -37,58 +36,28 @@ export default function InfiniteSlide () {
     >
       <ul className='flex items-center justify-center md:justify-start infinite-slide'>
         <li className='mx-8 md:mx-12 brighter'>
-          <JavaScriptIcon />
-        </li>
-        <li className='mx-8 md:mx-12 brighter'>
-          <AWSIcon fill='#fff' height='45' />
-        </li>
-        <li className='mx-8 md:mx-12 brightest'>
-          <AzureIcon />
-        </li>
-        <li className='mx-8 md:mx-12'>
-          <CSharpIcon />
-        </li>
-        <li className='mx-8 md:mx-12 brighter'>
-          <DotnetIcon />
-        </li>
-        <li className='mx-8 md:mx-12 brighter'>
-          <SQLIcon />
-        </li>
-        <li className='mx-8 md:mx-12 brighter'>
-          <TypeScriptIcon />
-        </li>
-        <li className='mx-8 md:mx-12'>
-          <WordPressIcon fill='#fff' />
-        </li>
-        <li className='mx-8 md:mx-12'>
-          <NotionIcon fill='#fff' />
-        </li>
-        <li className='mx-8 md:mx-12'>
-          <WebpackIcon />
+          <SassIcon />
         </li>
         <li className='mx-8 md:mx-12 brighter'>
           <TailwindIcon />
         </li>
         <li className='mx-8 md:mx-12 brighter'>
-          <SassIcon />
+          <JavaScriptIcon />
         </li>
         <li className='mx-8 md:mx-12 brighter'>
-          <GitIcon />
+          <TypeScriptIcon />
         </li>
-        <li className='mx-8 md:mx-12'>
-          <GitHubIcon fill='#fff' />
+        <li className='mx-8 md:mx-12 brighter'>
+          <ReactIcon />
         </li>
         <li className='mx-8 md:mx-12 brighter'>
           <VueIcon className='mt-2' height='55' width='55' />
         </li>
+        <li className='mx-8 md:mx-12 brighter'>
+          <NuxtIcon />
+        </li>
         <li className='mx-8 md:mx-12'>
           <PiniaIcon />
-        </li>
-        <li className='mx-8 md:mx-12 brighter'>
-          <VueXIcon />
-        </li>
-        <li className='mx-8 md:mx-12 brighter'>
-          <ReactIcon />
         </li>
         <li className='mx-8 md:mx-12'>
           <NextJSIcon fill='#fff' />
@@ -97,68 +66,71 @@ export default function InfiniteSlide () {
           <ViteJSIcon />
         </li>
         <li className='mx-8 md:mx-12 brighter'>
+          <PlaywrightIcon />
+        </li>
+        <li className='mx-8 md:mx-12'>
+          <OllamaIcon fill='#fff' />
+        </li>
+        <li className='mx-8 md:mx-12'>
+          <OpenAIIcon fill='#fff' />
+        </li>
+        <li className='mx-8 md:mx-12 brighter'>
+          <ClaudeIcon />
+        </li>
+        <li className='mx-8 md:mx-12 brighter'>
           <NodeJSIcon />
         </li>
         <li className='mx-8 md:mx-12'>
           <MongoDbIcon className='mb-2' />
+        </li>
+        <li className='mx-8 md:mx-12 brighter'>
+          <SQLIcon />
+        </li>
+        <li className='mx-8 md:mx-12'>
+          <CSharpIcon />
+        </li>
+        <li className='mx-8 md:mx-12 brighter'>
+          <DotnetIcon />
+        </li>
+        <li className='mx-8 md:mx-12'>
+          <SupabaseIcon />
+        </li>
+        <li className='mx-8 md:mx-12 brighter'>
+          <GitIcon />
+        </li>
+        <li className='mx-8 md:mx-12'>
+          <GitHubIcon fill='#fff' />
+        </li>
+        <li className='mx-8 md:mx-12'>
+          <GitHubCopilotIcon fill='#fff' />
         </li>
         <li className='mx-8 md:mx-12'>
           <VercelIcon fill='#fff' />
         </li>
         {/* Duplicate the list items to make the slide infinite */}
         <li className='mx-8 md:mx-12 brighter'>
-          <JavaScriptIcon />
-        </li>
-        <li className='mx-8 md:mx-12 brighter'>
-          <AWSIcon fill='#fff' height='45' />
-        </li>
-        <li className='mx-8 md:mx-12 brightest'>
-          <AzureIcon />
-        </li>
-        <li className='mx-8 md:mx-12'>
-          <CSharpIcon />
-        </li>
-        <li className='mx-8 md:mx-12 brighter'>
-          <DotnetIcon />
-        </li>
-        <li className='mx-8 md:mx-12 brighter'>
-          <SQLIcon />
-        </li>
-        <li className='mx-8 md:mx-12 brighter'>
-          <TypeScriptIcon />
-        </li>
-        <li className='mx-8 md:mx-12'>
-          <WordPressIcon fill='#fff' />
-        </li>
-        <li className='mx-8 md:mx-12'>
-          <NotionIcon fill='#fff' />
-        </li>
-        <li className='mx-8 md:mx-12'>
-          <WebpackIcon />
+          <SassIcon />
         </li>
         <li className='mx-8 md:mx-12 brighter'>
           <TailwindIcon />
         </li>
         <li className='mx-8 md:mx-12 brighter'>
-          <SassIcon />
+          <JavaScriptIcon />
         </li>
         <li className='mx-8 md:mx-12 brighter'>
-          <GitIcon />
+          <TypeScriptIcon />
         </li>
-        <li className='mx-8 md:mx-12'>
-          <GitHubIcon fill='#fff' />
+        <li className='mx-8 md:mx-12 brighter'>
+          <ReactIcon />
         </li>
         <li className='mx-8 md:mx-12 brighter'>
           <VueIcon className='mt-2' height='55' width='55' />
         </li>
+        <li className='mx-8 md:mx-12 brighter'>
+          <NuxtIcon />
+        </li>
         <li className='mx-8 md:mx-12'>
           <PiniaIcon />
-        </li>
-        <li className='mx-8 md:mx-12 brighter'>
-          <VueXIcon />
-        </li>
-        <li className='mx-8 md:mx-12 brighter'>
-          <ReactIcon />
         </li>
         <li className='mx-8 md:mx-12'>
           <NextJSIcon fill='#fff' />
@@ -167,10 +139,43 @@ export default function InfiniteSlide () {
           <ViteJSIcon />
         </li>
         <li className='mx-8 md:mx-12 brighter'>
+          <PlaywrightIcon />
+        </li>
+        <li className='mx-8 md:mx-12'>
+          <OllamaIcon fill='#fff' />
+        </li>
+        <li className='mx-8 md:mx-12'>
+          <OpenAIIcon fill='#fff' />
+        </li>
+        <li className='mx-8 md:mx-12 brighter'>
+          <ClaudeIcon />
+        </li>
+        <li className='mx-8 md:mx-12 brighter'>
           <NodeJSIcon />
         </li>
         <li className='mx-8 md:mx-12'>
           <MongoDbIcon className='mb-2' />
+        </li>
+        <li className='mx-8 md:mx-12 brighter'>
+          <SQLIcon />
+        </li>
+        <li className='mx-8 md:mx-12'>
+          <CSharpIcon />
+        </li>
+        <li className='mx-8 md:mx-12 brighter'>
+          <DotnetIcon />
+        </li>
+        <li className='mx-8 md:mx-12'>
+          <SupabaseIcon />
+        </li>
+        <li className='mx-8 md:mx-12 brighter'>
+          <GitIcon />
+        </li>
+        <li className='mx-8 md:mx-12'>
+          <GitHubIcon fill='#fff' />
+        </li>
+        <li className='mx-8 md:mx-12'>
+          <GitHubCopilotIcon fill='#fff' />
         </li>
         <li className='mx-8 md:mx-12'>
           <VercelIcon fill='#fff' />
