@@ -3,11 +3,12 @@
 import '@/app/[lang]/_styles/section.css'
 import TranslationContext from '@/app/[lang]/_contexts/TranslationContext'
 import { useEffect, useContext } from 'react'
+import { CV_URL_PDF, MOBILE_BREAKPOINT } from '@/app/utils/constants'
 
 export default function Work () {
   const { dict } = useContext(TranslationContext)
   useEffect(() => {
-    if (window.innerWidth < 768) return
+    if (window.innerWidth < MOBILE_BREAKPOINT) return
 
     const handleScroll = () => {
       const div = document.getElementById('work-title') as HTMLDivElement
@@ -80,9 +81,17 @@ export default function Work () {
                 )
               )}
             </ul>
+            <div className='flex md:hidden justify-center w-full mt-8'>
+              <a
+                href={CV_URL_PDF}
+                className='download-cv-btn text-white bg-jade-700 hover:bg-jade-800 focus:ring-1 focus:ring-jade-300 font-medium rounded-lg text-sm px-5 py-2.5 focus:outline-none'
+              >
+                {dict?.downloadCV}
+              </a>
+            </div>
             <div className='hidden md:flex justify-end w-full mt-12'>
               <a
-                href='https://docs.google.com/document/d/119rL87biQUfklitcP0fOVYvQFW94zezUSvZMLK5W89Q/export?format=pdf'
+                href={CV_URL_PDF}
                 className='download-cv-btn text-white bg-jade-700 hover:bg-jade-800 focus:ring-1 focus:ring-jade-300 font-medium rounded-lg text-sm px-5 py-2.5 focus:outline-none'
               >
                 {dict?.downloadCV}

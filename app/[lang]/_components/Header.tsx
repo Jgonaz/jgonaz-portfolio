@@ -11,12 +11,13 @@ import { CVIcon, WorkIcon } from '@/app/[lang]/_assets/MenuIcons'
 import { EducationIcon } from '@/app/[lang]/_assets/MenuIcons'
 import { MailIcon } from '@/app/[lang]/_assets/MenuIcons'
 import { UserIcon } from '@/app/[lang]/_assets/MenuIcons'
+import { CV_URL_DOC, MOBILE_BREAKPOINT } from '@/app/utils/constants'
 
 export default function Header () {
   const { dict, lang } = useContext(TranslationContext)
 
   const toggleMobileMenu = () => {
-    if (window.innerWidth < 768) {
+    if (window.innerWidth < MOBILE_BREAKPOINT) {
       document.querySelector('header')?.classList.toggle('show-mobile-menu')
       document.querySelector('body')?.classList.toggle('overflow-hidden')
     }
@@ -78,7 +79,7 @@ export default function Header () {
               <li>
                 {/* Mobile => Download CV */}
                 <a
-                  href={`https://docs.google.com/document/d/119rL87biQUfklitcP0fOVYvQFW94zezUSvZMLK5W89Q/export?format=pdf`}
+                  href={CV_URL_DOC}
                   target='_blank'
                   className='md:hidden header-link transition-all flex items-center gap-2 py-3 px-4 text-jade-900 md:py-0'
                 >
@@ -87,7 +88,7 @@ export default function Header () {
                 </a>
                 {/* Desktop => Google Document */}
                 <a
-                  href={`https://docs.google.com/document/d/119rL87biQUfklitcP0fOVYvQFW94zezUSvZMLK5W89Q`}
+                  href={CV_URL_DOC}
                   target='_blank'
                   className='hidden md:flex header-link transition-all items-center gap-2 py-3 px-4 text-jade-900 md:py-0'
                 >

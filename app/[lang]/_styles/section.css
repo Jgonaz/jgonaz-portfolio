@@ -1,6 +1,11 @@
 @import './animations.css';
 
 .section {
+  .download-cv-btn {
+    margin-top: 2px;
+    margin-bottom: 2px;
+  }
+
   .section-title,
   .section-content p,
   .download-cv-btn,

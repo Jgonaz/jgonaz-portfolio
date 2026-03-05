@@ -1,3 +1,5 @@
+import { LINKEDIN_URL } from '@/app/utils/constants'
+
 export default function Footer () {
   return (
     <footer className='bg-jade-800 text-sm text-jade-50'>
@@ -8,7 +10,7 @@ export default function Footer () {
         </div>
         <div className='text-end'>
           <a
-            href='https://www.linkedin.com/in/jgonaz/'
+            href={LINKEDIN_URL}
             className='hover:underline mr-2'
             target='_blank'
           >

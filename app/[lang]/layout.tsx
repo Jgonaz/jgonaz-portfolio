@@ -8,6 +8,7 @@ import { Onest } from 'next/font/google'
 import '@/app/[lang]/globals.css'
 import Header from '@/app/[lang]/_components/Header'
 import Footer from '@/app/[lang]/_components/Footer'
+import { SITE_URL } from '@/app/utils/constants'
 
 const onest = Onest({ subsets: ['latin'] })
 
@@ -17,7 +18,7 @@ export const metadata: Metadata = {
       ? '[DEV] Jorge González Azpillaga'
       : 'Jorge González Azpillaga - Web developer',
   description: 'Porfolio profesional. Desarrollador Web Front-End.',
-  metadataBase: new URL('https://www.jgonaz.dev'),
+  metadataBase: new URL(SITE_URL),
   openGraph: {
     images: [
       {

@@ -8,6 +8,13 @@ import { InstagramIcon } from '@/app/[lang]/_assets/MenuIcons'
 import { LinkedinIcon } from '@/app/[lang]/_assets/MenuIcons'
 
 import Spinner from '@/app/[lang]/_components/Spinner'
+import {
+  CONTACT_EMAIL,
+  FORM_SUBMIT_DELAY_MS,
+  GITHUB_URL,
+  INSTAGRAM_URL,
+  LINKEDIN_URL
+} from '@/app/utils/constants'
 
 export default function Contact () {
   const { dict } = useContext(TranslationContext)
@@ -29,7 +36,9 @@ export default function Contact () {
     const formProps = Object.fromEntries(formData)
     const { from, subject, message } = formProps
 
-    const delay = new Promise(resolve => setTimeout(resolve, 2000))
+    const delay = new Promise(resolve =>
+      setTimeout(resolve, FORM_SUBMIT_DELAY_MS)
+    )
 
     try {
       const [response] = await Promise.all([
@@ -161,11 +170,11 @@ export default function Contact () {
               </div>
               <div className='w-full flex flex-col gap-2 sm:flex-row items-center xsm:items-end sm:items-center justify-center xsm:justify-end '>
                 <span className='mt-2 xsm:mt-0 bg-green-100 text-jade-800 border border-jade-800 border-opacity-50 text-xs font-medium px-2.5 py-0.5 rounded'>
-                  jgonaz.dev@gmail.com
+                  {CONTACT_EMAIL}
                 </span>
                 <div className='flex'>
                   <a
-                    href='https://linkedin.com/in/jgonaz/'
+                    href={LINKEDIN_URL}
                     target='_blank'
                     className='p-2 hover:scale-125 transition-all'
                   >
@@ -173,7 +182,7 @@ export default function Contact () {
                     <span className='sr-only'>Linkedin page</span>
                   </a>
                   <a
-                    href='https://github.com/jgonaz'
+                    href={GITHUB_URL}
                     target='_blank'
                     className='p-2 hover:scale-125 transition-all'
                   >
@@ -181,7 +190,7 @@ export default function Contact () {
                     <span className='sr-only'>GitHub account</span>
                   </a>
                   <a
-                    href='https://instagram.com/jorgedelnueve'
+                    href={INSTAGRAM_URL}
                     target='_blank'
                     className='p-2 hover:scale-125 transition-all'
                   >
