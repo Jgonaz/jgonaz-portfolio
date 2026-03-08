@@ -1,4 +1,5 @@
 import { GoogleAnalytics } from '@next/third-parties/google'
+import { SpeedInsights } from '@vercel/speed-insights/next'
 import { getDictionary } from '@/app/i18n/get-dictionary'
 import { Locale } from '@/i18n-config'
 import { TranslationProvider } from '@/app/[lang]/_contexts/TranslationContext'
@@ -48,6 +49,7 @@ export default async function RootLayout ({
           <Header />
           {children}
           <Footer />
+          <SpeedInsights />
         </body>
         {process.env.NODE_ENV === 'production' && (
           <GoogleAnalytics
