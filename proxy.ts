@@ -8,14 +8,7 @@ export function proxy (request: NextRequest) {
 
   // // `/_next/` and `/api/` are ignored by the watcher, but we need to ignore files in `public` manually.
   // // If you have one
-  if (
-    [
-      //'/manifest.json',
-      '/favicon.ico'
-      // Your other files in `public`
-    ].includes(pathname)
-  )
-    return
+  if (['/favicon.ico', '/opengraph-image.jpg'].includes(pathname)) return
 
   const pathnameIsMissingLocale = i18n.locales.every(
     locale => !pathname.startsWith(`/${locale}/`) && pathname !== `/${locale}`
@@ -34,6 +27,8 @@ export function proxy (request: NextRequest) {
 }
 
 export const config = {
-  // Matcher ignoring `/_next/` and `/api/`
-  matcher: ['/((?!api|_next/static|_next/image|images|favicon.ico).*)']
+  // Matcher ignoring `/_next/`, `/api/`, and public assets.
+  matcher: [
+    '/((?!api|_next/static|_next/image|images|favicon.ico|opengraph-image.jpg).*)'
+  ]
 }
