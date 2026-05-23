@@ -1,6 +1,7 @@
 'use client'
 
 import TranslationContext from '@/app/[lang]/_contexts/TranslationContext'
+import Image from 'next/image'
 import { useContext } from 'react'
 
 import '@/app/[lang]/_styles/aboutMe.css'
@@ -43,27 +44,27 @@ export default function AboutMe () {
           </div>
           <div className='flex justify-center items-center mb-8 md:mb-0'>
             <div id='about-me-vectors'>
-              <img
-                src={aboutMeImage.src}
+              <Image
+                src={aboutMeImage}
                 alt='About me vector'
-                width='350'
-                height='350'
+                width={350}
+                height={350}
               />
               <div className='icon-container aboutme-sports'>
-                <img src={aboutMeSports.src} alt='About me - Sports vector' />
+                <Image src={aboutMeSports} alt='About me - Sports vector' />
               </div>
               <div className='icon-container aboutme-music'>
-                <img src={aboutMeMusic.src} alt='About me - Music vector' />
+                <Image src={aboutMeMusic} alt='About me - Music vector' />
               </div>
               <div className='icon-container aboutme-travel'>
-                <img src={aboutMeTravel.src} alt='About me - Travel vector' />
+                <Image src={aboutMeTravel} alt='About me - Travel vector' />
               </div>
               <div className='icon-container aboutme-video'>
-                <img src={aboutMeVideo.src} alt='About me - Video vector' />
+                <Image src={aboutMeVideo} alt='About me - Video vector' />
               </div>
               <div className='icon-container aboutme-landscape'>
-                <img
-                  src={aboutMeLandscape.src}
+                <Image
+                  src={aboutMeLandscape}
                   alt='About me - Landscape vector'
                 />
               </div>

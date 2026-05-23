@@ -1,5 +1,7 @@
 import { EmailTemplate } from '@/app/[lang]/_components/templates/EmailTemplate'
-import { Resend } from 'resend'
+import { CONTACT_EMAIL } from '@/app/utils/constants'
+import { render } from '@react-email/render'
+import nodemailer from 'nodemailer'
 
 type SendPayload = {
   from: string
@@ -7,10 +9,10 @@ type SendPayload = {
   message: string
 }
 
-const CONTACT_TO = 'jgonaz.dev@gmail.com'
-const DEFAULT_FROM = 'jgonaz.dev <onboarding@resend.dev>'
 const ERROR_MESSAGE =
   'Ha ocurrido un error al enviar el correo. Por favor, ponte en contacto conmigo a traves de Linkedin.'
+
+export const runtime = 'nodejs'
 
 function isValidPayload (data: unknown): data is SendPayload {
   if (!data || typeof data !== 'object') return false
@@ -26,6 +28,26 @@ function isValidPayload (data: unknown): data is SendPayload {
   )
 }
 
+function getSmtpConfig () {
+  const { SMTP_HOST, SMTP_USER, SMTP_PASS } = process.env
+
+  if (!SMTP_HOST || !SMTP_USER || !SMTP_PASS) return null
+
+  const port = Number(process.env.SMTP_PORT ?? 587)
+
+  if (!Number.isInteger(port) || port <= 0) return null
+
+  return {
+    host: SMTP_HOST,
+    port,
+    secure: process.env.SMTP_SECURE === 'true' || port === 465,
+    auth: {
+      user: SMTP_USER,
+      pass: SMTP_PASS
+    }
+  }
+}
+
 export async function POST (req: Request) {
   try {
     const body: unknown = await req.json()
@@ -34,27 +56,34 @@ export async function POST (req: Request) {
       return Response.json({ message: 'Invalid payload' }, { status: 400 })
     }
 
-    if (!process.env.RESEND_API_KEY) {
+    const smtpConfig = getSmtpConfig()
+
+    if (!smtpConfig) {
       return Response.json({ message: ERROR_MESSAGE }, { status: 500 })
     }
 
     const { from, subject, message } = body
-    const resend = new Resend(process.env.RESEND_API_KEY)
-
-    const response = await resend.emails.send({
-      from: process.env.RESEND_FROM ?? DEFAULT_FROM,
-      to: [CONTACT_TO],
+    const email = EmailTemplate({
+      user: from,
       subject,
-      react: EmailTemplate({
-        user: from,
-        subject,
-        message
-      })
+      message
+    })
+    const html = await render(email)
+    const text = await render(email, { plainText: true })
+    const transporter = nodemailer.createTransport(smtpConfig)
+
+    const response = await transporter.sendMail({
+      from: process.env.SMTP_FROM ?? process.env.SMTP_USER,
+      to: process.env.CONTACT_TO ?? CONTACT_EMAIL,
+      replyTo: from,
+      subject,
+      html,
+      text
     })
 
-    return Response.json(response)
-  } catch(e) {
-    console.error('Error sending email:', e)
-    return Response.json({ message: e || ERROR_MESSAGE }, { status: 500 })
+    return Response.json({ message: 'Email sent', messageId: response.messageId })
+  } catch (error) {
+    console.error('Error sending email:', error)
+    return Response.json({ message: ERROR_MESSAGE }, { status: 500 })
   }
 }

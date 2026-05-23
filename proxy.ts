@@ -3,7 +3,7 @@ import type { NextRequest } from 'next/server'
 
 import { i18n } from './i18n-config'
 
-export function middleware (request: NextRequest) {
+export function proxy (request: NextRequest) {
   const pathname = request.nextUrl.pathname
 
   // // `/_next/` and `/api/` are ignored by the watcher, but we need to ignore files in `public` manually.

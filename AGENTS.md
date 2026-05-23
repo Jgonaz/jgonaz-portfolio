@@ -8,7 +8,7 @@ Esta guía define la forma estándar de trabajo para agentes en este repositorio
 - Lenguaje: TypeScript.
 - Estilos: Tailwind CSS + archivos CSS por sección/componente.
 - i18n: Rutas por idioma en `app/[lang]` con diccionarios en `app/i18n/locales`.
-- API de contacto: `app/api/send/route.ts` con Resend.
+- API de contacto: `app/api/send/route.ts` con SMTP mediante Nodemailer.
 
 ## Estructura del repositorio
 - `app/[lang]/`: Ruta principal localizada.
@@ -17,17 +17,23 @@ Esta guía define la forma estándar de trabajo para agentes en este repositorio
 - `app/i18n/`: Carga de diccionarios y archivos de traducción.
 - `app/api/send/route.ts`: Endpoint para envío de correo.
 - `public/images/`: Recursos estáticos.
-- `middleware.ts`: Redirección y control de locale.
+- `proxy.ts`: Redirección y control de locale.
 
 ## Desarrollo local
-- Instalar dependencias: `npm install`
-- Levantar entorno de desarrollo: `npm run dev`
-- Ejecutar linter: `npm run lint`
-- Compilar: `npm run build`
-- Ejecutar build de producción: `npm run start`
+- Instalar dependencias: `pnpm install`
+- Levantar entorno de desarrollo: `pnpm dev`
+- Ejecutar linter: `pnpm lint`
+- Compilar: `pnpm build`
+- Ejecutar build de producción: `pnpm start`
 
 ## Variables de entorno
-- `RESEND_API_KEY`: Obligatoria para el envío de correos desde el formulario.
+- `SMTP_HOST`: Obligatoria para el envío de correos desde el formulario.
+- `SMTP_PORT`: Opcional, usa `587` por defecto.
+- `SMTP_SECURE`: Opcional, usar `true` para SMTP sobre TLS directo. También se activa automáticamente con puerto `465`.
+- `SMTP_USER`: Obligatoria para autenticación SMTP.
+- `SMTP_PASS`: Obligatoria para autenticación SMTP.
+- `SMTP_FROM`: Opcional, remitente verificado para los correos salientes. Si no se define, se usa `SMTP_USER`.
+- `CONTACT_TO`: Opcional, destinatario del formulario. Si no se define, se usa el email público del portfolio.
 - `NEXT_PUBLIC_GA_MEASUREMENT_ID`: Opcional, usada en producción para Google Analytics.
 
 ## Convenciones de código
@@ -42,7 +48,7 @@ Esta guía define la forma estándar de trabajo para agentes en este repositorio
 - Cualquier nueva clave traducible debe añadirse en:
   - `app/i18n/locales/es.json`
   - `app/i18n/locales/en.json`
-- Verificar que las rutas sigan funcionando con la lógica de `middleware.ts`.
+- Verificar que las rutas sigan funcionando con la lógica de `proxy.ts`.
 
 ## API y seguridad
 - No exponer secretos en código fuente.
@@ -56,10 +62,10 @@ Esta guía define la forma estándar de trabajo para agentes en este repositorio
 4. Documentar cambios de comportamiento en `README.md` o este archivo.
 
 ## Checklist de validación
-- `npm run lint` sin errores.
-- `npm run build` sin errores.
+- `pnpm lint` sin errores.
+- `pnpm build` sin errores.
 - Render correcto en `/es` y `/en`.
-- Endpoint de contacto funcional con `RESEND_API_KEY` configurada.
+- Endpoint de contacto funcional con credenciales SMTP configuradas.
 
 ## Politica de commits
 - En cada commit, la primera linea del mensaje debe seguir Conventional Commits (por ejemplo: `fix: ...`, `feat: ...`, `docs: ...`).
