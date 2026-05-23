@@ -1,8 +1,6 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import 'tailwindcss';
 
-:root {
+@theme {
   --color-jade-50: #effef7;
   --color-jade-75: #e4fef3;
   --color-jade-100: #dafeef;
@@ -15,6 +13,41 @@
   --color-jade-800: #126945;
   --color-jade-900: #11563a;
   --color-jade-950: #03301f;
+
+  --breakpoint-xsm: 450px;
+  --spacing-22: 5.5rem;
+}
+
+@custom-variant mobile-landscape {
+  @media (max-width: 768px) and (orientation: landscape) {
+    @slot;
+  }
+}
+
+@layer components {
+  .container {
+    width: 100%;
+    margin-inline: auto;
+    padding-inline: 1rem;
+  }
+
+  @media (min-width: 1024px) {
+    .container {
+      max-width: 1024px;
+    }
+  }
+
+  @media (min-width: 1280px) {
+    .container {
+      max-width: 1200px;
+    }
+  }
+
+  @media (min-width: 1536px) {
+    .container {
+      max-width: 1200px;
+    }
+  }
 }
 
 html {

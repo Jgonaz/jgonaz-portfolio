@@ -5,7 +5,7 @@ import TranslationContext from '@/app/[lang]/_contexts/TranslationContext'
 import { useEffect, useContext } from 'react'
 import { CV_URL_PDF, MOBILE_BREAKPOINT } from '@/app/utils/constants'
 
-export default function Work () {
+export default function Work() {
   const { dict } = useContext(TranslationContext)
   useEffect(() => {
     if (window.innerWidth < MOBILE_BREAKPOINT) return
@@ -34,21 +34,21 @@ export default function Work () {
   }, [])
   return (
     <section
-      className='section bg-jade-900 relative z-30 pt-16 sm:pt-12 md:pt-8 lg:pt-4 xl:pt-0'
-      id='work'
+      className="section bg-jade-900 relative z-30 pt-16 sm:pt-12 md:pt-8 lg:pt-4 xl:pt-0"
+      id="work"
     >
-      <div className='container text-pretty gap-10 px-8 sm:px-12 md:p-16 md:pb-0 lg:p-20 lg:pb-0 xl:p-24 xl:pb-0'>
-        <div className='flex flex-col md:flex-row justify-center'>
+      <div className="container text-pretty gap-10 px-8 sm:px-12 md:p-16 md:pb-0 lg:p-20 lg:pb-0 xl:p-24 xl:pb-0">
+        <div className="flex flex-col md:flex-row justify-center">
           <div
-            id='work-title'
-            className='section-title flex justify-center mb-16 md:mb-0'
+            id="work-title"
+            className="section-title flex justify-center mb-16 md:mb-0"
           >
-            <h2 className='h-fit text-4xl font-extrabold text-white md:mb-22'>
+            <h2 className="h-fit text-4xl font-extrabold text-white md:mb-22">
               {dict?.work?.title}
             </h2>
           </div>
-          <div id='work-description' className='flex flex-col items-end'>
-            <ul role='list' className='md:mx-8'>
+          <div id="work-description" className="flex flex-col items-end">
+            <ul role="list" className="md:mx-8">
               {dict?.work?.data.map(
                 (
                   job: {
@@ -61,38 +61,34 @@ export default function Work () {
                 ) => (
                   <li
                     key={index}
-                    className='timeline-item group relative flex flex-col pb-8 pl-7 last:pb-0'
+                    className="timeline-item group relative flex flex-col pb-8 pl-7 last:pb-0"
                   >
-                    <div className='absolute bottom-0 left-[calc(0.25rem-0.5px)] top-0 w-px bg-white/30 group-first:top-3'></div>
-                    <div className='absolute left-0 top-2 h-2 w-2 rounded-full border border-jade-300 bg-jade-600'></div>
-                    <p className='order-first font-semibold text-jade-200'>
+                    <div className="absolute bottom-0 left-[calc(0.25rem-0.5px)] top-0 w-px bg-white/30 group-first:top-3"></div>
+                    <div className="absolute left-0 top-2 h-2 w-2 rounded-full border border-jade-300 bg-jade-600"></div>
+                    <p className="order-first font-semibold text-jade-200">
                       {job.company}
                     </p>
-                    <p className='mt-2 text-sm/4 text-jade-500'>
-                      {job.duration}
-                    </p>
-                    <h3 className='mt-2 text-sm/6 font-semibold text-white'>
+                    <p className="mt-2 text-sm/4 text-jade-500">{job.duration}</p>
+                    <h3 className="mt-2 text-sm/6 font-semibold text-white">
                       {job.position}
                     </h3>
-                    <p className='mt-0.5 text-sm/6 text-zinc-300'>
-                      {job.description}
-                    </p>
+                    <p className="mt-0.5 text-sm/6 text-zinc-300">{job.description}</p>
                   </li>
                 )
               )}
             </ul>
-            <div className='flex md:hidden justify-center w-full mt-8'>
+            <div className="flex md:hidden justify-center w-full mt-8">
               <a
                 href={CV_URL_PDF}
-                className='download-cv-btn text-white bg-jade-700 hover:bg-jade-800 focus:ring-1 focus:ring-jade-300 font-medium rounded-lg text-sm px-5 py-2.5 focus:outline-none'
+                className="download-cv-btn text-white bg-jade-700 hover:bg-jade-800 focus:ring-1 focus:ring-jade-300 font-medium rounded-lg text-sm px-5 py-2.5 focus:outline-hidden"
               >
                 {dict?.downloadCV}
               </a>
             </div>
-            <div className='hidden md:flex justify-end w-full mt-12'>
+            <div className="hidden md:flex justify-end w-full mt-12">
               <a
                 href={CV_URL_PDF}
-                className='download-cv-btn text-white bg-jade-700 hover:bg-jade-800 focus:ring-1 focus:ring-jade-300 font-medium rounded-lg text-sm px-5 py-2.5 focus:outline-none'
+                className="download-cv-btn text-white bg-jade-700 hover:bg-jade-800 focus:ring-1 focus:ring-jade-300 font-medium rounded-lg text-sm px-5 py-2.5 focus:outline-hidden"
               >
                 {dict?.downloadCV}
               </a>

@@ -6,7 +6,7 @@ Esta guía define la forma estándar de trabajo para agentes en este repositorio
 - Proyecto: Portafolio personal.
 - Framework: Next.js (App Router).
 - Lenguaje: TypeScript.
-- Estilos: Tailwind CSS + archivos CSS por sección/componente.
+- Estilos: Tailwind CSS v4 + archivos CSS por sección/componente.
 - i18n: Rutas por idioma en `app/[lang]` con diccionarios en `app/i18n/locales`.
 - API de contacto: `app/api/send/route.ts` con SMTP mediante Nodemailer.
 
@@ -14,6 +14,7 @@ Esta guía define la forma estándar de trabajo para agentes en este repositorio
 - `app/[lang]/`: Ruta principal localizada.
 - `app/[lang]/_components/`: Componentes compartidos y secciones.
 - `app/[lang]/_styles/`: Estilos CSS por bloques visuales.
+- `app/[lang]/globals.css`: Import de Tailwind, tokens de tema y variantes CSS-first.
 - `app/i18n/`: Carga de diccionarios y archivos de traducción.
 - `app/api/send/route.ts`: Endpoint para envío de correo.
 - `public/images/`: Recursos estáticos.
