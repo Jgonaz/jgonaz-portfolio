@@ -9,7 +9,9 @@
       "unrs-resolver"
     ],
     "overrides": {
-      "next>postcss": "8.5.15"
+      "next>postcss": "8.5.15",
+      "minimatch@3.1.5>brace-expansion": "1.1.16",
+      "minimatch@10.2.5>brace-expansion": "5.0.7"
     }
   },
   "scripts": {
