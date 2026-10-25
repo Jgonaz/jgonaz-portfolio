@@ -1,0 +1,3 @@
+# Archivos no versionados que bin/worktree copia del checkout principal.
+.env
+.env.local

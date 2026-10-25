@@ -38,3 +38,6 @@ next-env.d.ts
 .env
 
 .vercel
+
+# Historial local de conversaciones con agentes.
+/.agent/history/
