@@ -99,3 +99,10 @@
     }
   }
 }
+
+@media (prefers-reduced-motion: reduce) {
+  /* Cada vector declara su rebote con un selector más específico */
+  #about-me-vectors img {
+    animation: none !important;
+  }
+}

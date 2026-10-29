@@ -1,3 +1,5 @@
+import { useContext } from 'react'
+import TranslationContext from '@/app/[lang]/_contexts/TranslationContext'
 import { i18n } from '@/i18n-config'
 import '@/app/[lang]/_styles/languageSelector.css'
 
@@ -12,15 +14,17 @@ const LanguageSelector: React.FC<LanguageSelectorProps> = ({
   selectedLanguage,
   onLanguageChange
 }) => {
+  const { dict } = useContext(TranslationContext)
   return (
     <div className={`language-selector ${className}`}>
       <select
+        aria-label={dict?.header?.language}
         value={selectedLanguage}
         onChange={e => onLanguageChange(e.target.value)}
       >
         {i18n['locales'].map(language => (
           <option key={language} value={language}>
-            {language}
+            {dict?.header?.languages?.[language] ?? language}
           </option>
         ))}
       </select>

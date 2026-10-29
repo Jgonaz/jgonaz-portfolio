@@ -14,22 +14,20 @@ import { SITE_URL } from '@/app/utils/constants'
 
 const onest = Onest({ subsets: ['latin'] })
 
-export const metadata: Metadata = {
-  title:
-    process.env.NODE_ENV === 'development'
-      ? '[DEV] Jorge González Azpillaga'
-      : 'Jorge González Azpillaga - Web developer',
-  description: 'Porfolio profesional. Desarrollador Web Front-End.',
-  metadataBase: new URL(SITE_URL),
-  openGraph: {
-    images: [
-      {
-        url: '/opengraph-image.jpg',
-        width: 1200,
-        height: 630,
-        alt: 'Imagen de portada de jgonaz.dev'
-      }
-    ]
+export async function generateMetadata ({
+  params
+}: {
+  params: Promise<{ lang: string }>
+}): Promise<Metadata> {
+  const { lang } = await params
+  const { metadata } = await getDictionary(lang as Locale)
+  return {
+    title:
+      process.env.NODE_ENV === 'development'
+        ? '[DEV] Jorge González Azpillaga'
+        : metadata.title,
+    description: metadata.description,
+    metadataBase: new URL(SITE_URL)
   }
 }
 

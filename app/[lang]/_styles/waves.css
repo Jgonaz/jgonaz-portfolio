@@ -41,3 +41,9 @@
     animation-duration: 20s;
   }
 }
+
+@media (prefers-reduced-motion: reduce) {
+  .parallax use {
+    animation: none;
+  }
+}

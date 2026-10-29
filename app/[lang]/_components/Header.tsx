@@ -1,7 +1,7 @@
 'use client'
 
 import TranslationContext from '@/app/[lang]/_contexts/TranslationContext'
-import { useContext } from 'react'
+import { useContext, useState } from 'react'
 
 import '@/app/[lang]/_styles/header.css'
 
@@ -16,8 +16,11 @@ import { CV_URL_DOC, MOBILE_BREAKPOINT } from '@/app/utils/constants'
 export default function Header() {
   const { dict, lang } = useContext(TranslationContext)
 
+  const [isMobileMenuOpen, setMobileMenuOpen] = useState(false)
+
   const toggleMobileMenu = () => {
     if (window.innerWidth < MOBILE_BREAKPOINT) {
+      setMobileMenuOpen(isOpen => !isOpen)
       document.querySelector('header')?.classList.toggle('show-mobile-menu')
       document.querySelector('body')?.classList.toggle('overflow-hidden')
     }
@@ -33,7 +36,7 @@ export default function Header() {
               onClick={toggleMobileMenu}
               type="button"
               className="inline-flex items-center p-2 ml-1 text-sm text-jade-700 rounded-md hover:bg-jade-100 focus:outline-hidden"
-              aria-expanded="false"
+              aria-expanded={isMobileMenuOpen}
             >
               <span className="sr-only">{dict?.header?.openMainMenu}</span>
               <svg
@@ -72,7 +75,7 @@ export default function Header() {
             </div>
           </div>
           <div
-            className="opacity-0 md:opacity-100 pointer-events-none md:pointer-events-auto justify-center items-center w-full md:flex md:w-auto md:order-1"
+            className="opacity-0 md:opacity-100 invisible md:visible pointer-events-none md:pointer-events-auto justify-center items-center w-full md:flex md:w-auto md:order-1"
             id="mobile-menu"
           >
             <ul className="flex flex-col gap-x-4 mt-4 font-medium md:flex-row md:mt-0">
@@ -81,6 +84,7 @@ export default function Header() {
                 <a
                   href={CV_URL_DOC}
                   target="_blank"
+                  rel="noopener noreferrer"
                   className="md:hidden header-link transition-all flex items-center gap-2 py-3 px-4 text-jade-900 md:py-0"
                 >
                   <CVIcon className="scale-90" />
@@ -90,6 +94,7 @@ export default function Header() {
                 <a
                   href={CV_URL_DOC}
                   target="_blank"
+                  rel="noopener noreferrer"
                   className="hidden md:flex header-link transition-all items-center gap-2 py-3 px-4 text-jade-900 md:py-0"
                 >
                   {dict?.header?.CV}

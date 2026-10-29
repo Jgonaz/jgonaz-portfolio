@@ -44,7 +44,7 @@ export default function Education () {
                     <p className='order-first font-semibold text-jade-200'>
                       {education.title}
                     </p>
-                    <p className='mt-2 text-sm/4 text-jade-500'>
+                    <p className='mt-2 text-sm/4 text-jade-400'>
                       {education.duration}
                     </p>
                     <h3 className='mt-2 text-sm/6 font-semibold text-white'>
@@ -84,7 +84,7 @@ export default function Education () {
                       <p className='order-first font-semibold text-jade-200'>
                         {education.title}
                       </p>
-                      <p className='mt-2 text-sm/4 text-jade-500'>
+                      <p className='mt-2 text-sm/4 text-jade-400'>
                         {education.duration}
                       </p>
                       <h3 className='mt-2 text-sm/6 font-semibold text-white'>

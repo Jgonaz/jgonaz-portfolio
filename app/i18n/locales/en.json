@@ -1,4 +1,9 @@
 {
+  "metadata": {
+    "title": "Jorge González Azpillaga · Front-End & AI Engineer",
+    "description": "Senior front-end developer specialised in product, UX and development with AI agents.",
+    "ogAlt": "jgonaz.dev cover image"
+  },
   "header": {
     "openMainMenu": "Open main menu",
     "work": "Experience",
@@ -6,17 +11,24 @@
     "education": "Education",
     "aboutMe": "About me",
     "contact": "Contact",
-    "CV": "CV"
+    "CV": "CV",
+    "language": "Language",
+    "languages": {
+      "es": "Español",
+      "en": "English"
+    },
+    "backToTop": "Back to top"
   },
   "home": {
     "hi": "Hi there! I'm",
-    "andIDevelopWebApps": "and I develop modern web applications",
+    "andIDevelopWebApps": "and I design web products with great UX",
     "rotatingPhrases": [
-      "and I develop modern web applications",
-      "and I build AI-powered solutions",
-      "and I design intuitive user interfaces",
-      "and I turn ideas into digital products"
-    ]
+      "and I design web products with great UX",
+      "and I build software with AI agents",
+      "and I orchestrate agents, context and tools",
+      "and I turn ideas into real products"
+    ],
+    "photoAlt": "Profile photo of Jorge González"
   },
   "downloadCV": "Download CV",
   "work": {
@@ -26,39 +38,39 @@
         "company": "El Corte Inglés Group",
         "duration": "2024-Present",
         "position": "Senior Front-End Developer at Hiberus #h",
-        "description": "El Corte Inglés is recognized as one of the country's largest ecommerce platforms, known for its extensive range of products including fashion, electronics, home goods, and groceries. Its ecommerce platform blends tradition with innovation, providing an exceptional shopping experience to customers across Spain.        "
+        "description": "Front-end development for the My Account area of El Corte Inglés' ecommerce (Vue, SSR and accessibility). I also designed and evolved the agentic harness that the development team uses daily: an orchestrator with specialised subagents and skills on GitHub Copilot CLI covering the full cycle from user story to PR, with human approval and optimised for token spend management."
       },
       {
         "company": "Nyxell App",
         "duration": "2022-2023",
         "position": "Senior Front-End Developer at NyxellApp S.L.",
-        "description": "Innovative marketplace dedicated to the sale of nightlife tickets. Nyxell combines speed, security, and simplicity to offer an exceptional shopping experience. Focused on personalized customer service, it provides comprehensive support from purchase to access through our brand ambassadors."
+        "description": "I led the development of the back-office for a nightlife ticketing marketplace (events, venues and customer management), including the migration from Vue 2 to Vue 3, with a focus on improving the interface and usability. Vue, Sass, Node.js, Vite and AWS Amplify."
       },
       {
         "company": "Barrabés Group",
         "duration": "2019-2022",
         "position": "Agile Front-End Developer at Trackglobe S.L.",
-        "description": "Dynamic technology company, part of the Barrabés Group, a leader in e-commerce and innovation consulting, and the BTS Group, an international telecommunications operator. In full expansion both nationally and internationally, Trackglobe combines Barrabés' e-commerce experience with BTS' telecommunications strength, positioning itself as a reference in the technology sector."
+        "description": "Development and maintenance of custom modules with Vue and Sass within a .NET MVC platform on Azure, and integration of HTML5, Sass and JavaScript mock-ups into the group's projects."
       },
       {
         "company": "EFOR Internet & Tecnología",
         "duration": "2017-2019",
         "position": ".NET FullStack Developer at Integra Tecnología",
-        "description": "Prestigious technology consulting firm, with a specialized focus on digital transformation and innovative technological solutions. Founded in 1986 in Aragon, Integra has evolved from its roots in training and computer science to become a leader in the national technology sector. Its trajectory is marked by the development of cross-cutting projects, the attainment of the highest technical certifications, and the formation of strategic alliances that underline its commitment to continuous innovation."
+        "description": "Custom software development with C#, .NET MVC and MySQL, including database schema design and maintenance, and research into Microsoft mobile solutions on Office 365 (PowerApps)."
       },
       {
         "company": "Hipercor S.A.",
         "duration": "2013-2014",
         "position": "Intern, hardware system maintenance",
-        "description": "Part of the renowned supermarket chain of the El Corte Inglés group, HiperCor stands out for its wide range of high-quality products in food, fashion, electronics, and home. In my role as an intern, I gained key experience in hardware maintenance and repair. This stage provided me with fundamental skills in problem-solving and essential technical support for my professional development."
+        "description": "Hardware assembly and maintenance, backups and technical support at a HiperCor store (El Corte Inglés Group). My first professional experience and the foundation of how I solve problems."
       }
     ]
   },
   "sideProjects": {
     "title": "Side projects",
-    "subtitle": "Personal projects I design, build and run in production.",
+    "subtitle": "My own products, designed by me, built with AI agents and running in production.",
     "inProduction": "In production",
-    "role": "Design, development and deployment",
+    "role": "Product design & technical lead · built entirely with AI agents",
     "visit": "Visit",
     "projects": {
       "fitnessia": {
@@ -109,9 +121,17 @@
   },
   "aboutMe": {
     "title": "About me",
-    "description1": "From Andalusian roots, I was born in Jerez and raised in Seville, places I visit less often than I would like. Despite not being fond of the cold, I live in Zaragoza, although it's not uncommon to find me in Valencia, where my partner lives. On my travels, my faithful companion, my laptop, is always with me.    ",
-    "description2": "An enthusiast of music, sports and audiovisual content editing, an area that helps me combine my creativity and technical skills. I define myself as an extroverted person, always ready to meet new people and explore places to discover.",
-    "description3": "From an early age, I have been fascinated by any device with a screen, a curiosity that eventually turned into my vocation and, later, my professional career. Today, I have the privilege of dedicating myself to what I am most passionate about: creating and bringing my code to life, merging technology and creativity."
+    "description1": "I'm a front-end developer with a passion for product: understanding the people who use it and caring about every detail of the experience. Today AI is at the heart of how I work: I design agentic harnesses for teams, orchestrate subagents, look after the context window and token costs, and closely follow every new model and tool to keep what truly works.",
+    "description2": "With Andalusian roots, I was born in Jerez and grew up in Seville, which I visit less often than I'd like. I currently live in Valencia with my partner, and wherever I go, my laptop always comes with me.",
+    "description3": "Ever since I was a child I've been fascinated by any device with a screen, a curiosity that over time became a vocation and then my professional career. Today I have the privilege of doing what I love most: building digital experiences and bringing ideas to life through code.",
+    "alts": {
+      "main": "Illustration of Jorge",
+      "sports": "Sports illustration",
+      "music": "Music illustration",
+      "travel": "Travel illustration",
+      "video": "Video editing illustration",
+      "landscape": "Landscape illustration"
+    }
   },
   "contact": {
     "title": "Contact",
@@ -125,6 +145,14 @@
     "errorMessage": "An error has occurred. Please contact me through Linkedin.",
     "mailPlaceholder": "Your e-mail",
     "subjectPlaceholder": "I wanted to make you a proposal about...",
-    "messagePlaceholder": "Hi Jorge! I have seen your profile on Linkedin and I would like to talk to you to..."
+    "messagePlaceholder": "Hi Jorge! I have seen your profile on Linkedin and I would like to talk to you to...",
+    "linkedinPage": "Linkedin profile",
+    "githubAccount": "GitHub account",
+    "instagramPage": "Instagram profile",
+    "sending": "Sending message"
+  },
+  "footer": {
+    "madeWith": "Made with 💚",
+    "rights": "All Rights Reserved."
   }
 }

@@ -60,6 +60,13 @@
         animation-name: fadeFromBottom;
       }
     }
+    @media (prefers-reduced-motion: reduce) {
+      .anim-first,
+      .anim-second,
+      .anim-third {
+        animation: none;
+      }
+    }
   }
   #home-screen-photo {
     img {
@@ -80,12 +87,22 @@
   -webkit-animation: animatedGradient 6s ease infinite alternate;
   -moz-animation: animatedGradient 6s ease infinite alternate;
   animation: animatedGradient 6s ease infinite alternate;
+  @media (prefers-reduced-motion: reduce) {
+    -webkit-animation: none;
+    -moz-animation: none;
+    animation: none;
+  }
 }
 
 .home-rotating-phrase {
   display: inline-block;
+  /* Evita palabras huérfanas en las frases largas (móvil) */
+  text-wrap: balance;
   animation: fadeFromTop 0.25s ease-in-out both;
   @media (min-width: 768px) {
     animation-name: fadeFromBottom;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    animation: none;
   }
 }

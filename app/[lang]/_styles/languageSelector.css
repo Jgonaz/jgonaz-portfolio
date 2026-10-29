@@ -2,17 +2,15 @@
   -moz-appearance: none;
   -webkit-appearance: none;
   appearance: none;
-  text-transform: uppercase;
   position: relative;
   width: 100%;
   cursor: pointer;
 
   select {
-    text-transform: uppercase;
     width: 100%;
-    padding: 0 1rem; /* Añade padding a las opciones */
+    padding: 0 1.25rem 0 1rem; /* Deja sitio a la flecha con los nombres largos */
     border: none;
-    outline: none;
+    border-radius: 0.25rem;
     background: transparent;
     -moz-appearance: none;
     -webkit-appearance: none;
@@ -25,11 +23,9 @@
     &::-ms-expand {
       display: none;
     }
-    &:focus,
     &:focus-visible {
-      border: none;
-      box-shadow: none;
-      outline: none;
+      outline: 2px solid var(--color-jade-700);
+      outline-offset: 2px;
     }
   }
 

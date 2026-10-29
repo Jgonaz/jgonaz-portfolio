@@ -68,7 +68,7 @@ export default function Work() {
                     <p className="order-first font-semibold text-jade-200">
                       {job.company}
                     </p>
-                    <p className="mt-2 text-sm/4 text-jade-500">{job.duration}</p>
+                    <p className="mt-2 text-sm/4 text-jade-400">{job.duration}</p>
                     <h3 className="mt-2 text-sm/6 font-semibold text-white">
                       {job.position}
                     </h3>

@@ -10,6 +10,9 @@
 
   a {
     animation: backToTopBounce 1s infinite;
+    @media (prefers-reduced-motion: reduce) {
+      animation: none;
+    }
     cursor: pointer;
     border-radius: 100%;
     width: 40px;

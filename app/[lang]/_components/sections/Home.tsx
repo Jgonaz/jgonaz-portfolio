@@ -45,9 +45,11 @@ export default function Home () {
 
   useEffect(() => {
     if (rotatingPhrases.length <= 1) return
+    // Con movimiento reducido la frase se queda fija en la primera
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return
     const interval = setInterval(() => {
       setActivePhraseIndex(prevIndex => (prevIndex + 1) % rotatingPhrases.length)
-    }, 2800)
+    }, 3500)
     return () => clearInterval(interval)
   }, [rotatingPhrases])
 
@@ -83,7 +85,7 @@ export default function Home () {
           <Image
             className='anim-first'
             src={profileImage}
-            alt='Foto de perfil personal - Jgonaz'
+            alt={dict?.home?.photoAlt}
             priority={true}
             sizes='100vw'
           />

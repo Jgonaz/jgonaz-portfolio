@@ -1,4 +1,9 @@
 {
+  "metadata": {
+    "title": "Jorge González Azpillaga · Front-End & AI Engineer",
+    "description": "Desarrollador front-end senior especializado en producto, UX y desarrollo con agentes de IA.",
+    "ogAlt": "Imagen de portada de jgonaz.dev"
+  },
   "header": {
     "openMainMenu": "Abrir menú principal",
     "work": "Experiencia",
@@ -6,17 +11,24 @@
     "education": "Formación",
     "aboutMe": "Sobre mí",
     "contact": "Contacto",
-    "CV": "CV"
+    "CV": "CV",
+    "language": "Idioma",
+    "languages": {
+      "es": "Español",
+      "en": "English"
+    },
+    "backToTop": "Volver arriba"
   },
   "home": {
     "hi": "¡Hola! Soy",
-    "andIDevelopWebApps": "y desarrollo aplicaciones web modernas",
+    "andIDevelopWebApps": "y diseño productos web con buena UX",
     "rotatingPhrases": [
-      "y desarrollo aplicaciones web modernas",
-      "y construyo soluciones impulsadas por IA",
-      "y diseño interfaces de usuario intuitivas",
-      "y convierto ideas en productos digitales"
-    ]
+      "y diseño productos web con buena UX",
+      "y construyo software con agentes de IA",
+      "y orquesto agentes, contexto y herramientas",
+      "y convierto ideas en productos reales"
+    ],
+    "photoAlt": "Foto de perfil de Jorge González"
   },
   "downloadCV": "Descargar CV",
   "work": {
@@ -26,39 +38,39 @@
         "company": "Grupo El Corte Inglés",
         "duration": "2024-Actualidad",
         "position": "Senior Front-End Developer en Hiberus #h",
-        "description": "El Corte Inglés es reconocido como uno de los ecommerce más grandes del país, destacando por su amplia gama de productos que incluyen moda, electrónica, hogar y alimentación. Su plataforma de comercio electrónico combina la tradición y la innovación, ofreciendo una experiencia de compra excepcional a clientes de toda España.."
+        "description": "Desarrollo front-end en el área de Mi Cuenta del ecommerce de El Corte Inglés (Vue, SSR y accesibilidad). Además, he diseñado y evolucionado el harness agéntico que usa a diario el equipo de desarrollo: un orquestador con subagentes especializados y skills sobre GitHub Copilot CLI que cubren el ciclo completo, de la historia de usuario a la PR, con aprobación humana y optimizado para la gestión del gasto de tokens."
       },
       {
         "company": "Nyxell App",
         "duration": "2022-2023",
         "position": "Senior Front-End Developer en NyxellApp S.L.",
-        "description": "Marketplace innovador dedicado a la venta de entradas de ocio nocturno. Nyxell fusiona rapidez, seguridad y simplicidad para ofrecer una experiencia de compra excepcional. Enfocada en una atención al cliente personalizada, proporciona soporte integral desde la compra hasta el acceso a través de nuestros embajadores de marca."
+        "description": "Lideré el desarrollo del back-office del marketplace de entradas de ocio nocturno (gestión de eventos, salas y clientes), incluida la migración de Vue 2 a Vue 3, con foco en mejorar la interfaz y la usabilidad. Vue, Sass, Node.js, Vite y AWS Amplify."
       },
       {
         "company": "Grupo Barrabés",
         "duration": "2019-2022",
         "position": "Agile Front-End Developer en Trackglobe S.L.",
-        "description": "Empresa tecnológica dinámica, parte del Grupo Barrabés, líder en ecommerce y consultoría de innovación, y del Grupo BTS, un operador internacional de telecomunicaciones. En plena expansión tanto nacional como internacional, Trackglobe combina la experiencia en ecommerce de Barrabés con la fortaleza en telecomunicaciones de BTS, posicionándose como un referente en el sector tecnológico."
+        "description": "Desarrollo y mantenimiento de módulos a medida con Vue y Sass dentro de una plataforma .NET MVC sobre Azure, e integración de maquetas HTML5, Sass y JavaScript en proyectos del grupo."
       },
       {
         "company": "EFOR Internet & Tecnología",
         "duration": "2017-2019",
         "position": ".NET FullStack Developer en Integra Tecnología",
-        "description": "Consultora tecnológica de prestigio, con un enfoque especializado en la transformación digital y soluciones tecnológicas innovadoras. Fundada en 1986 en Aragón, Integra ha evolucionado desde sus raíces en formación e informática hasta convertirse en un líder en el sector tecnológico a nivel nacional. Su trayectoria está marcada por el desarrollo de proyectos transversales, la obtención de las máximas certificaciones técnicas y la formación de alianzas estratégicas que subrayan su compromiso con la innovación continua."
+        "description": "Desarrollo de software a medida con C#, .NET MVC y MySQL, incluido el diseño y mantenimiento de esquemas de base de datos, e investigación sobre soluciones móviles de Microsoft en Office 365 (PowerApps)."
       },
       {
         "company": "Hipercor S.A.",
         "duration": "2013-2014",
         "position": "Técnico en prácticas, mantenimiento sist. hardware",
-        "description": "Parte de la reconocida cadena de supermercados del grupo El Corte Inglés, HiperCor se destaca por su amplia gama de productos de alta calidad en alimentación, moda, electrónica y hogar. En mi rol como técnico en prácticas, adquirí experiencia clave en mantenimiento y reparación de hardware. Esta etapa me brindó habilidades fundamentales en solución de problemas y soporte técnico esenciales para mi desarrollo profesional."
+        "description": "Montaje y mantenimiento de equipos, copias de seguridad y soporte técnico en un centro de HiperCor (Grupo El Corte Inglés). Mi primera experiencia profesional y la base de mi forma de resolver problemas."
       }
     ]
   },
   "sideProjects": {
     "title": "Side-projects",
-    "subtitle": "Proyectos personales que diseño, desarrollo y mantengo en producción.",
+    "subtitle": "Productos propios que diseño, construyo con agentes de IA y mantengo en producción.",
     "inProduction": "En producción",
-    "role": "Diseño, desarrollo y despliegue",
+    "role": "Diseño de producto y dirección técnica · desarrollado íntegramente con agentes de IA",
     "visit": "Visitar",
     "projects": {
       "fitnessia": {
@@ -109,9 +121,17 @@
   },
   "aboutMe": {
     "title": "Sobre mí",
-    "description1": "De raíces andaluzas, nací en Jerez y crecí en Sevilla, a donde voy menos de lo que me gustaría. Actualmente vivo en Valencia con mi pareja, y allá donde vaya siempre me acompaña mi portátil.",
-    "description2": "Soy desarrollador front-end y un apasionado de la tecnología en constante evolución. En los últimos años he incorporado la inteligencia artificial de forma intensiva a mi flujo de trabajo, utilizando asistentes de programación y agentes de código, así como herramientas de generación y edición de imagen y vídeo. Para mí, la IA no es solo una tendencia, sino una extensión natural del proceso creativo y técnico.",
-    "description3": "Desde pequeño me ha fascinado cualquier dispositivo con una pantalla, una curiosidad que con el tiempo se transformó en vocación y después en mi carrera profesional. Hoy tengo el privilegio de dedicarme a lo que más me gusta: construir experiencias digitales y dar vida a ideas a través del código."
+    "description1": "Soy desarrollador front-end y me apasiona el producto: entender a quien lo usa y cuidar cada detalle de la experiencia. Hoy la IA está en el centro de mi forma de trabajar: diseño harness agénticos para equipos, orquesto subagentes, cuido la ventana de contexto y el coste en tokens, y sigo de cerca cada modelo y herramienta nueva para quedarme con lo que de verdad funciona.",
+    "description2": "De raíces andaluzas, nací en Jerez y crecí en Sevilla, a donde voy menos de lo que me gustaría. Actualmente vivo en Valencia con mi pareja, y allá donde vaya siempre me acompaña mi portátil.",
+    "description3": "Desde pequeño me ha fascinado cualquier dispositivo con una pantalla, una curiosidad que con el tiempo se transformó en vocación y después en mi carrera profesional. Hoy tengo el privilegio de dedicarme a lo que más me gusta: construir experiencias digitales y dar vida a ideas a través del código.",
+    "alts": {
+      "main": "Ilustración de Jorge",
+      "sports": "Ilustración de deporte",
+      "music": "Ilustración de música",
+      "travel": "Ilustración de viajes",
+      "video": "Ilustración de edición de vídeo",
+      "landscape": "Ilustración de paisaje"
+    }
   },
   "contact": {
     "title": "Contacto",
@@ -125,6 +145,14 @@
     "errorMessage": "Ha ocurrido un error. Por favor, ponte en contacto conmigo a través de Linkedin.",
     "mailPlaceholder": "Tu correo electrónico",
     "subjectPlaceholder": "Propuesta sobre...",
-    "messagePlaceholder": "¡Hola Jorge! He visto tu perfil en Linkedin y me gustaría hablar contigo para..."
+    "messagePlaceholder": "¡Hola Jorge! He visto tu perfil en Linkedin y me gustaría hablar contigo para...",
+    "linkedinPage": "Perfil de Linkedin",
+    "githubAccount": "Cuenta de GitHub",
+    "instagramPage": "Perfil de Instagram",
+    "sending": "Enviando mensaje"
+  },
+  "footer": {
+    "madeWith": "Hecho con 💚",
+    "rights": "Todos los derechos reservados."
   }
 }

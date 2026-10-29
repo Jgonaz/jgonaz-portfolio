@@ -160,8 +160,10 @@
   }
 
   @media (prefers-reduced-motion: reduce) {
-    .sp-float,
+    .sp-float.sp-left,
+    .sp-float.sp-right,
     .sp-floor,
+    .sp-floor.sp-right,
     .sp-stage .sp-enter {
       animation: none;
     }

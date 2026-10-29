@@ -46,26 +46,26 @@ export default function AboutMe () {
             <div id='about-me-vectors'>
               <Image
                 src={aboutMeImage}
-                alt='About me vector'
+                alt={dict?.aboutMe?.alts?.main}
                 width={350}
                 height={350}
               />
               <div className='icon-container aboutme-sports'>
-                <Image src={aboutMeSports} alt='About me - Sports vector' />
+                <Image src={aboutMeSports} alt={dict?.aboutMe?.alts?.sports} />
               </div>
               <div className='icon-container aboutme-music'>
-                <Image src={aboutMeMusic} alt='About me - Music vector' />
+                <Image src={aboutMeMusic} alt={dict?.aboutMe?.alts?.music} />
               </div>
               <div className='icon-container aboutme-travel'>
-                <Image src={aboutMeTravel} alt='About me - Travel vector' />
+                <Image src={aboutMeTravel} alt={dict?.aboutMe?.alts?.travel} />
               </div>
               <div className='icon-container aboutme-video'>
-                <Image src={aboutMeVideo} alt='About me - Video vector' />
+                <Image src={aboutMeVideo} alt={dict?.aboutMe?.alts?.video} />
               </div>
               <div className='icon-container aboutme-landscape'>
                 <Image
                   src={aboutMeLandscape}
-                  alt='About me - Landscape vector'
+                  alt={dict?.aboutMe?.alts?.landscape}
                 />
               </div>
             </div>

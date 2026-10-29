@@ -83,7 +83,11 @@ export default function Contact() {
           </h2>
         </div>
         <div className="relative w-full max-w-screen-md p-4 bg-white border border-gray-200 rounded-lg shadow-sm sm:p-6 md:p-8">
-          {isLoading && <Spinner />}
+          {isLoading && (
+            <div role="status" aria-label={dict?.contact?.sending}>
+              <Spinner />
+            </div>
+          )}
           <form className="space-y-6" action="#" onSubmit={handleSubmit}>
             <div>
               <label
@@ -93,10 +97,11 @@ export default function Contact() {
                 {dict?.contact?.from}
               </label>
               <input
-                type="from"
+                type="email"
                 name="from"
                 id="from"
-                className="bg-gray-50 border border-gray-300 text-jade-900 text-sm rounded-lg focus:ring-jade-900/50 focus:border-jade-900/50 focus:outline-hidden block w-full p-2.5"
+                autoComplete="email"
+                className="bg-gray-50 border border-gray-300 text-jade-900 text-sm rounded-lg placeholder:text-gray-500 focus:border-jade-700 focus:ring-2 focus:ring-jade-700/60 focus:outline-hidden block w-full p-2.5"
                 placeholder={dict?.contact?.mailPlaceholder}
                 disabled={isLoading || sentEmail}
                 required
@@ -110,10 +115,10 @@ export default function Contact() {
                 {dict?.contact?.subject}
               </label>
               <input
-                type="subject"
+                type="text"
                 name="subject"
                 id="subject"
-                className="bg-gray-50 border border-gray-300 text-jade-900 text-sm rounded-lg focus:ring-jade-900/50 focus:border-jade-900/50 focus:outline-hidden block w-full p-2.5"
+                className="bg-gray-50 border border-gray-300 text-jade-900 text-sm rounded-lg placeholder:text-gray-500 focus:border-jade-700 focus:ring-2 focus:ring-jade-700/60 focus:outline-hidden block w-full p-2.5"
                 placeholder={dict?.contact?.subjectPlaceholder}
                 disabled={isLoading || sentEmail}
                 required
@@ -129,7 +134,7 @@ export default function Contact() {
               <textarea
                 name="message"
                 id="message"
-                className="bg-gray-50 border border-gray-300 text-jade-900 text-sm rounded-lg focus:ring-jade-900/50 focus:border-jade-900/50 focus:outline-hidden block w-full p-2.5"
+                className="bg-gray-50 border border-gray-300 text-jade-900 text-sm rounded-lg placeholder:text-gray-500 focus:border-jade-700 focus:ring-2 focus:ring-jade-700/60 focus:outline-hidden block w-full p-2.5"
                 placeholder={dict?.contact?.messagePlaceholder}
                 required
                 disabled={isLoading || sentEmail}
@@ -140,7 +145,7 @@ export default function Contact() {
               <div>
                 <button
                   type="submit"
-                  className={`flex items-center justify-center w-full sm:w-fit text-white bg-jade-700 hover:bg-jade-800 focus:ring-4 focus:outline-hidden focus:ring-jade-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center text-nowrap ${
+                  className={`flex items-center justify-center w-full sm:w-fit text-white bg-jade-700 hover:bg-jade-800 focus-visible:ring-2 focus-visible:ring-offset-2 focus:outline-hidden focus-visible:ring-jade-700 font-medium rounded-lg text-sm px-5 py-2.5 text-center text-nowrap ${
                     sentEmail ? 'opacity-50' : ''
                   }`}
                   disabled={isLoading || sentEmail}
@@ -148,18 +153,23 @@ export default function Contact() {
                   <SendIcon className="mr-2" />
                   {!sentEmail ? dict?.contact?.sendMessage : dict?.contact?.messageSent}
                 </button>
-                {(sentEmail || errorMessage) && (
-                  <div className="flex p-2">
-                    <span
-                      className={`text-xs ${
-                        errorMessage ? 'text-red-600' : 'text-gray-500'
-                      }`}
-                    >
-                      {sentEmail && !errorMessage && dict?.contact?.thankYouMessage}
-                      {errorMessage}
-                    </span>
-                  </div>
-                )}
+                {/* Las regiones en vivo se montan siempre para que se anuncie su contenido */}
+                <div aria-live="polite" role="status">
+                  {sentEmail && !errorMessage && (
+                    <div className="flex p-2">
+                      <span className="text-xs text-gray-500">
+                        {dict?.contact?.thankYouMessage}
+                      </span>
+                    </div>
+                  )}
+                </div>
+                <div role="alert">
+                  {errorMessage && (
+                    <div className="flex p-2">
+                      <span className="text-xs text-red-600">{errorMessage}</span>
+                    </div>
+                  )}
+                </div>
               </div>
               <div className="w-full flex flex-col gap-2 sm:flex-row items-center xsm:items-end sm:items-center justify-center xsm:justify-end ">
                 <span className="mt-2 xsm:mt-0 bg-green-100 text-jade-800 border border-jade-800/50 text-xs font-medium px-2.5 py-0.5 rounded-sm">
@@ -169,26 +179,29 @@ export default function Contact() {
                   <a
                     href={LINKEDIN_URL}
                     target="_blank"
-                    className="p-2 hover:scale-125 transition-all"
+                    rel="noopener noreferrer"
+                    className="p-2 hover:scale-125 transition-all rounded-sm focus-visible:ring-2 focus-visible:ring-jade-700 focus:outline-hidden"
                   >
                     <LinkedinIcon fill="#126945" stroke="white" />
-                    <span className="sr-only">Linkedin page</span>
+                    <span className="sr-only">{dict?.contact?.linkedinPage}</span>
                   </a>
                   <a
                     href={GITHUB_URL}
                     target="_blank"
-                    className="p-2 hover:scale-125 transition-all"
+                    rel="noopener noreferrer"
+                    className="p-2 hover:scale-125 transition-all rounded-sm focus-visible:ring-2 focus-visible:ring-jade-700 focus:outline-hidden"
                   >
                     <GitHubIcon height="22" width="22" fill={'#126945'} />
-                    <span className="sr-only">GitHub account</span>
+                    <span className="sr-only">{dict?.contact?.githubAccount}</span>
                   </a>
                   <a
                     href={INSTAGRAM_URL}
                     target="_blank"
-                    className="p-2 hover:scale-125 transition-all"
+                    rel="noopener noreferrer"
+                    className="p-2 hover:scale-125 transition-all rounded-sm focus-visible:ring-2 focus-visible:ring-jade-700 focus:outline-hidden"
                   >
                     <InstagramIcon fill="#126945" />
-                    <span className="sr-only">Instagram page</span>
+                    <span className="sr-only">{dict?.contact?.instagramPage}</span>
                   </a>
                 </div>
               </div>
