@@ -210,6 +210,26 @@ export const LanguageIcon: React.FC<IconProps> = ({ className }) => {
   )
 }
 
+export const SparklesIcon: React.FC<IconProps> = ({ className }) => {
+  return (
+    <svg
+      xmlns='http://www.w3.org/2000/svg'
+      className={`icon icon-tabler icon-tabler-sparkles ${className}`}
+      width='20'
+      height='20'
+      viewBox='0 0 24 24'
+      strokeWidth='1.5'
+      stroke='currentColor'
+      fill='none'
+      strokeLinecap='round'
+      strokeLinejoin='round'
+    >
+      <path stroke='none' d='M0 0h24v24H0z' fill='none' />
+      <path d='M16 18a2 2 0 0 1 2 2a2 2 0 0 1 2 -2a2 2 0 0 1 -2 -2a2 2 0 0 1 -2 2m0 -12a2 2 0 0 1 2 2a2 2 0 0 1 2 -2a2 2 0 0 1 -2 -2a2 2 0 0 1 -2 2m-7 12a6 6 0 0 1 6 -6a6 6 0 0 1 -6 -6a6 6 0 0 1 -6 6a6 6 0 0 1 6 6' />
+    </svg>
+  )
+}
+
 export const RocketIcon: React.FC<IconProps> = ({ className }) => {
   return (
     <svg

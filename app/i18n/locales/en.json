@@ -7,6 +7,7 @@
   "header": {
     "openMainMenu": "Open main menu",
     "work": "Experience",
+    "ai": "AI",
     "sideProjects": "Side projects",
     "education": "Education",
     "aboutMe": "About me",
@@ -65,6 +66,84 @@
         "description": "Hardware assembly and maintenance, backups and technical support at a HiperCor store (El Corte Inglés Group). My first professional experience and the foundation of how I solve problems."
       }
     ]
+  },
+  "ai": {
+    "eyebrow": "Agentic engineering",
+    "title": "How I work with AI",
+    "subtitle": "I don't use AI as an autocomplete. I design agent systems with rules, subagents and human checkpoints, and tune them to perform well without blowing up token spend.",
+    "flowTitle": "The flow of a change",
+    "steps": [
+      {
+        "title": "Request",
+        "description": "A user story, a bug or an idea."
+      },
+      {
+        "title": "Orchestrator",
+        "description": "Understands the task and delegates the work to specialised subagents."
+      },
+      {
+        "title": "Subagents",
+        "description": "Exploration, implementation, review and in-browser validation."
+      },
+      {
+        "title": "Human approval",
+        "description": "Nothing is implemented or published without review and sign-off."
+      },
+      {
+        "title": "Pull Request",
+        "description": "Validated, reviewed and ready to merge."
+      }
+    ],
+    "principles": [
+      {
+        "title": "Context window",
+        "description": "Each subagent returns only its conclusions and context is loaded on demand, so the main session never gets overloaded."
+      },
+      {
+        "title": "Token spend",
+        "description": "The right model and effort for each task, and no delegating the trivial: every call has to earn its keep."
+      },
+      {
+        "title": "Skills and MCP",
+        "description": "Reusable procedures and connections to Figma, the browser or the logs, loaded only when needed."
+      },
+      {
+        "title": "Specs and control",
+        "description": "Significant changes are agreed upfront with specs, and sensitive actions always ask for permission."
+      },
+      {
+        "title": "Parallel work",
+        "description": "Each feature in its own worktree and branch, so several terminals with agents can run at once without stepping on each other."
+      }
+    ],
+    "cases": {
+      "team": {
+        "badge": "Team",
+        "title": "My Account harness · El Corte Inglés",
+        "description": "The agentic system the development team uses every day. I designed it and have evolved it based on how it is used: every subagent, skill and rule exists because it solved a real problem for the team.",
+        "tags": [
+          "GitHub Copilot CLI",
+          "Multiple model providers",
+          "MCP · Figma",
+          "OpenSpec",
+          "Playwright"
+        ],
+        "note": "Internal tool: the code is not public."
+      },
+      "personal": {
+        "badge": "Open source",
+        "title": "Personal harness (jdev-ai)",
+        "description": "My personal harness for working with several agents across independent projects: subagents, per-project memory and history, worktrees and specs. I built Fitnessia and Balanz.io with it.",
+        "tags": [
+          "Claude Code",
+          "Codex",
+          "Copilot",
+          "OpenCode",
+          "OpenSpec"
+        ],
+        "cta": "View on GitHub"
+      }
+    }
   },
   "sideProjects": {
     "title": "Side projects",

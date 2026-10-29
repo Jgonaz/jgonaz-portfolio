@@ -1,5 +1,6 @@
 import Home from '@/app/[lang]/_components/sections/Home'
 import Work from '@/app/[lang]/_components/sections/Work'
+import AiWorkflow from '@/app/[lang]/_components/sections/AiWorkflow'
 import SideProjects from '@/app/[lang]/_components/sections/SideProjects'
 import Education from '@/app/[lang]/_components/sections/Education'
 import AboutMe from '@/app/[lang]/_components/sections/AboutMe'
@@ -21,6 +22,7 @@ export default function Page () {
       />
 
       <Work />
+      <AiWorkflow />
       <SideProjects />
       <Education />
       <AboutMe />

@@ -7,7 +7,7 @@ import '@/app/[lang]/_styles/header.css'
 
 import LanguageSelector from '@/app/[lang]/_components/LanguageSelector'
 
-import { CVIcon, RocketIcon, WorkIcon } from '@/app/[lang]/_assets/MenuIcons'
+import { CVIcon, RocketIcon, SparklesIcon, WorkIcon } from '@/app/[lang]/_assets/MenuIcons'
 import { EducationIcon } from '@/app/[lang]/_assets/MenuIcons'
 import { MailIcon } from '@/app/[lang]/_assets/MenuIcons'
 import { UserIcon } from '@/app/[lang]/_assets/MenuIcons'
@@ -78,14 +78,14 @@ export default function Header() {
             className="opacity-0 md:opacity-100 invisible md:visible pointer-events-none md:pointer-events-auto justify-center items-center w-full md:flex md:w-auto md:order-1"
             id="mobile-menu"
           >
-            <ul className="flex flex-col gap-x-4 mt-4 font-medium md:flex-row md:mt-0">
+            <ul className="flex flex-col gap-x-4 md:gap-x-2 lg:gap-x-4 mt-4 font-medium md:flex-row md:mt-0">
               <li>
                 {/* Mobile => Download CV */}
                 <a
                   href={CV_URL_DOC}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="md:hidden header-link transition-all flex items-center gap-2 py-3 px-4 text-jade-900 md:py-0"
+                  className="md:hidden header-link transition-all flex items-center gap-2 py-3 px-4 md:px-2 lg:px-4 whitespace-nowrap text-jade-900 md:py-0"
                 >
                   <CVIcon className="scale-90" />
                   {dict?.downloadCV}
@@ -95,7 +95,7 @@ export default function Header() {
                   href={CV_URL_DOC}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="hidden md:flex header-link transition-all items-center gap-2 py-3 px-4 text-jade-900 md:py-0"
+                  className="hidden md:flex header-link transition-all items-center gap-2 py-3 px-4 md:px-2 lg:px-4 whitespace-nowrap text-jade-900 md:py-0"
                 >
                   {dict?.header?.CV}
                 </a>
@@ -104,7 +104,7 @@ export default function Header() {
                 <a
                   onClick={toggleMobileMenu}
                   href="#work"
-                  className="header-link transition-all flex items-center gap-2 py-3 px-4 text-jade-900 md:py-0"
+                  className="header-link transition-all flex items-center gap-2 py-3 px-4 md:px-2 lg:px-4 whitespace-nowrap text-jade-900 md:py-0"
                   aria-current="page"
                 >
                   <WorkIcon className="md:hidden" />
@@ -114,8 +114,18 @@ export default function Header() {
               <li>
                 <a
                   onClick={toggleMobileMenu}
+                  href="#ai"
+                  className="header-link transition-all flex items-center gap-2 py-3 px-4 md:px-2 lg:px-4 whitespace-nowrap text-jade-900 md:py-0"
+                >
+                  <SparklesIcon className="md:hidden" />
+                  {dict?.header?.ai}
+                </a>
+              </li>
+              <li>
+                <a
+                  onClick={toggleMobileMenu}
                   href="#side-projects"
-                  className="header-link transition-all flex items-center gap-2 py-3 px-4 text-jade-900 md:py-0"
+                  className="header-link transition-all flex items-center gap-2 py-3 px-4 md:px-2 lg:px-4 whitespace-nowrap text-jade-900 md:py-0"
                 >
                   <RocketIcon className="md:hidden" />
                   {dict?.header?.sideProjects}
@@ -125,7 +135,7 @@ export default function Header() {
                 <a
                   onClick={toggleMobileMenu}
                   href="#education"
-                  className="header-link transition-all flex items-center gap-2 py-3 px-4 text-jade-900 md:py-0"
+                  className="header-link transition-all flex items-center gap-2 py-3 px-4 md:px-2 lg:px-4 whitespace-nowrap text-jade-900 md:py-0"
                 >
                   <EducationIcon className="md:hidden" />
                   {dict?.header?.education}
@@ -135,7 +145,7 @@ export default function Header() {
                 <a
                   onClick={toggleMobileMenu}
                   href="#about-me"
-                  className="header-link transition-all flex items-center gap-2 py-3 px-4 text-jade-900 md:py-0"
+                  className="header-link transition-all flex items-center gap-2 py-3 px-4 md:px-2 lg:px-4 whitespace-nowrap text-jade-900 md:py-0"
                 >
                   <UserIcon className="md:hidden" />
                   {dict?.header?.aboutMe}
@@ -145,7 +155,7 @@ export default function Header() {
                 <a
                   onClick={toggleMobileMenu}
                   href="#contact"
-                  className="header-link transition-all flex items-center gap-2 py-3 px-4 text-jade-900 md:py-0"
+                  className="header-link transition-all flex items-center gap-2 py-3 px-4 md:px-2 lg:px-4 whitespace-nowrap text-jade-900 md:py-0"
                 >
                   <MailIcon className="md:hidden" />
                   {dict?.header?.contact}
