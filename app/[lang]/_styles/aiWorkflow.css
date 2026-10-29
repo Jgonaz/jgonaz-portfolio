@@ -1,0 +1,38 @@
+/* Robot que se asoma en el flujo de la sección de IA */
+.ai-robot-peek {
+  animation: aiRobotPeek 6s ease-in-out infinite;
+}
+
+.ai-robot-eyes {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: aiRobotBlink 5s infinite;
+}
+
+@keyframes aiRobotPeek {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-4px);
+  }
+}
+
+@keyframes aiRobotBlink {
+  0%,
+  92%,
+  100% {
+    transform: scaleY(1);
+  }
+  95% {
+    transform: scaleY(0.1);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ai-robot-peek,
+  .ai-robot-eyes {
+    animation: none;
+  }
+}

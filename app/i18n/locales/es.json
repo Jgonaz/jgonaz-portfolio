@@ -7,6 +7,7 @@
   "header": {
     "openMainMenu": "Abrir menú principal",
     "work": "Experiencia",
+    "ai": "IA",
     "sideProjects": "Side-projects",
     "education": "Formación",
     "aboutMe": "Sobre mí",
@@ -65,6 +66,84 @@
         "description": "Montaje y mantenimiento de equipos, copias de seguridad y soporte técnico en un centro de HiperCor (Grupo El Corte Inglés). Mi primera experiencia profesional y la base de mi forma de resolver problemas."
       }
     ]
+  },
+  "ai": {
+    "eyebrow": "Agentic engineering",
+    "title": "Cómo trabajo con IA",
+    "subtitle": "No uso la IA como un autocompletado. Diseño sistemas de agentes con reglas, subagentes y puntos de control humano, y los optimizo para que rindan sin disparar el gasto de tokens.",
+    "flowTitle": "El flujo de un cambio",
+    "steps": [
+      {
+        "title": "Petición",
+        "description": "Una historia de usuario, un bug o una idea."
+      },
+      {
+        "title": "Orquestador",
+        "description": "Entiende la tarea y deriva el trabajo a los subagentes específicos."
+      },
+      {
+        "title": "Subagentes",
+        "description": "Exploración, implementación, revisión y validación en navegador."
+      },
+      {
+        "title": "Aprobación humana",
+        "description": "Nada se implementa ni se publica sin revisión ni visto bueno."
+      },
+      {
+        "title": "Pull Request",
+        "description": "Validada, revisada y lista para integrar."
+      }
+    ],
+    "principles": [
+      {
+        "title": "Ventana de contexto",
+        "description": "Cada subagente devuelve solo conclusiones y el contexto se carga bajo demanda, así la sesión principal no se satura."
+      },
+      {
+        "title": "Gasto de tokens",
+        "description": "Modelo y esfuerzo adecuados a cada tarea, y nada de delegar lo trivial: cada llamada tiene que aportar."
+      },
+      {
+        "title": "Skills y MCP",
+        "description": "Procedimientos reutilizables y conexiones con Figma, el navegador o los logs, cargados solo cuando hacen falta."
+      },
+      {
+        "title": "Specs y control",
+        "description": "Los cambios relevantes se acuerdan antes con specs, y las acciones sensibles siempre piden permiso."
+      },
+      {
+        "title": "Trabajo en paralelo",
+        "description": "Cada feature en su propio worktree y rama, para tener varias terminales con agentes a la vez sin que se pisen."
+      }
+    ],
+    "cases": {
+      "team": {
+        "badge": "En equipo",
+        "title": "Harness de Mi Cuenta · El Corte Inglés",
+        "description": "El sistema agéntico que usa a diario el equipo de desarrollo. Lo he diseñado y evolucionado según su uso: cada subagente, skill y regla existe porque resolvió un problema real del equipo.",
+        "tags": [
+          "GitHub Copilot CLI",
+          "Varios proveedores de modelos",
+          "MCP · Figma",
+          "OpenSpec",
+          "Playwright"
+        ],
+        "note": "Herramienta interna: el código no es público."
+      },
+      "personal": {
+        "badge": "Open source",
+        "title": "Harness personal (jdev-ai)",
+        "description": "Mi harness personal para trabajar con varios agentes sobre proyectos independientes: subagentes, memoria e historial por proyecto, worktrees y specs. Con él he construido Fitnessia y Balanz.io.",
+        "tags": [
+          "Claude Code",
+          "Codex",
+          "Copilot",
+          "OpenCode",
+          "OpenSpec"
+        ],
+        "cta": "Ver en GitHub"
+      }
+    }
   },
   "sideProjects": {
     "title": "Side-projects",
