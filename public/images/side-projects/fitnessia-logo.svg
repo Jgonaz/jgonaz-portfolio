@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <!-- «F de la semana»: cuadrícula de 3 × 3 sobre una placa de tinta; la F en acento y papel, el resto apagado. -->
+  <rect width="512" height="512" rx="112" fill="#15171c"/>
+  <rect x="74" y="74" width="104" height="104" rx="26" fill="#ff9f87"/>
+  <rect x="204" y="74" width="104" height="104" rx="26" fill="#ff9f87"/>
+  <rect x="334" y="74" width="104" height="104" rx="26" fill="#ff9f87"/>
+  <rect x="74" y="204" width="104" height="104" rx="26" fill="#ff9f87"/>
+  <rect x="204" y="204" width="104" height="104" rx="26" fill="#f5f4f0"/>
+  <rect x="334" y="204" width="104" height="104" rx="26" fill="#f5f4f0" fill-opacity="0.16"/>
+  <rect x="74" y="334" width="104" height="104" rx="26" fill="#f5f4f0"/>
+  <rect x="204" y="334" width="104" height="104" rx="26" fill="#f5f4f0" fill-opacity="0.16"/>
+  <rect x="334" y="334" width="104" height="104" rx="26" fill="#f5f4f0" fill-opacity="0.16"/>
+</svg>

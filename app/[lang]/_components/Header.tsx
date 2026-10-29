@@ -7,7 +7,7 @@ import '@/app/[lang]/_styles/header.css'
 
 import LanguageSelector from '@/app/[lang]/_components/LanguageSelector'
 
-import { CVIcon, WorkIcon } from '@/app/[lang]/_assets/MenuIcons'
+import { CVIcon, RocketIcon, WorkIcon } from '@/app/[lang]/_assets/MenuIcons'
 import { EducationIcon } from '@/app/[lang]/_assets/MenuIcons'
 import { MailIcon } from '@/app/[lang]/_assets/MenuIcons'
 import { UserIcon } from '@/app/[lang]/_assets/MenuIcons'
@@ -104,6 +104,16 @@ export default function Header() {
                 >
                   <WorkIcon className="md:hidden" />
                   {dict?.header?.work}
+                </a>
+              </li>
+              <li>
+                <a
+                  onClick={toggleMobileMenu}
+                  href="#side-projects"
+                  className="header-link transition-all flex items-center gap-2 py-3 px-4 text-jade-900 md:py-0"
+                >
+                  <RocketIcon className="md:hidden" />
+                  {dict?.header?.sideProjects}
                 </a>
               </li>
               <li>

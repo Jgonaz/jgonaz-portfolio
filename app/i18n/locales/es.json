@@ -2,6 +2,7 @@
   "header": {
     "openMainMenu": "Abrir menú principal",
     "work": "Experiencia",
+    "sideProjects": "Side-projects",
     "education": "Formación",
     "aboutMe": "Sobre mí",
     "contact": "Contacto",
@@ -52,6 +53,42 @@
         "description": "Parte de la reconocida cadena de supermercados del grupo El Corte Inglés, HiperCor se destaca por su amplia gama de productos de alta calidad en alimentación, moda, electrónica y hogar. En mi rol como técnico en prácticas, adquirí experiencia clave en mantenimiento y reparación de hardware. Esta etapa me brindó habilidades fundamentales en solución de problemas y soporte técnico esenciales para mi desarrollo profesional."
       }
     ]
+  },
+  "sideProjects": {
+    "title": "Side-projects",
+    "subtitle": "Proyectos personales que diseño, desarrollo y mantengo en producción.",
+    "inProduction": "En producción",
+    "role": "Diseño, desarrollo y despliegue",
+    "visit": "Visitar",
+    "projects": {
+      "fitnessia": {
+        "description": "Plataforma web para planificar rutinas de entrenamiento y registrar lo que se entrena cada día: fuerza serie a serie, cardio, pádel, caminatas y movilidad. PWA instalable con registro sin conexión, calendario y modo en vivo.",
+        "tags": [
+          "Nuxt 4",
+          "Vue 3",
+          "TypeScript",
+          "Tailwind v4",
+          "Neon",
+          "Drizzle",
+          "PWA"
+        ],
+        "desktopAlt": "Portada de Fitnessia",
+        "mobileAlt": "Sesión de entrenamiento en vivo en Fitnessia desde el móvil"
+      },
+      "balanzio": {
+        "description": "App web para llevar las cuentas de casa: ingresos, gastos, balance mensual y ahorro acumulado. Usa IA para sugerir categorías y capturar gastos por voz o foto, y permite compartir las cuentas en pareja.",
+        "tags": [
+          "Nuxt 4",
+          "Vue 3",
+          "TypeScript",
+          "Tailwind",
+          "Supabase",
+          "IA · Gemini"
+        ],
+        "desktopAlt": "Portada de Balanz.io",
+        "mobileAlt": "Dashboard de Balanz.io con gráficos desde el móvil"
+      }
+    }
   },
   "education": {
     "title": "Formación",

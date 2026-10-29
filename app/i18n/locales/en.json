@@ -2,6 +2,7 @@
   "header": {
     "openMainMenu": "Open main menu",
     "work": "Experience",
+    "sideProjects": "Side projects",
     "education": "Education",
     "aboutMe": "About me",
     "contact": "Contact",
@@ -52,6 +53,42 @@
         "description": "Part of the renowned supermarket chain of the El Corte Inglés group, HiperCor stands out for its wide range of high-quality products in food, fashion, electronics, and home. In my role as an intern, I gained key experience in hardware maintenance and repair. This stage provided me with fundamental skills in problem-solving and essential technical support for my professional development."
       }
     ]
+  },
+  "sideProjects": {
+    "title": "Side projects",
+    "subtitle": "Personal projects I design, build and run in production.",
+    "inProduction": "In production",
+    "role": "Design, development and deployment",
+    "visit": "Visit",
+    "projects": {
+      "fitnessia": {
+        "description": "Web platform to plan workout routines and log what you actually train every day: set-by-set strength work, cardio, padel, walks and mobility. Installable PWA with offline logging, a calendar and a live workout mode.",
+        "tags": [
+          "Nuxt 4",
+          "Vue 3",
+          "TypeScript",
+          "Tailwind v4",
+          "Neon",
+          "Drizzle",
+          "PWA"
+        ],
+        "desktopAlt": "Fitnessia landing page",
+        "mobileAlt": "Live workout session in Fitnessia on a phone"
+      },
+      "balanzio": {
+        "description": "Web app to manage household finances: income, expenses, monthly balance and accumulated savings. It uses AI to suggest categories and capture expenses by voice or photo, and lets couples share their accounts.",
+        "tags": [
+          "Nuxt 4",
+          "Vue 3",
+          "TypeScript",
+          "Tailwind",
+          "Supabase",
+          "AI · Gemini"
+        ],
+        "desktopAlt": "Balanz.io landing page",
+        "mobileAlt": "Balanz.io dashboard with charts on a phone"
+      }
+    }
   },
   "education": {
     "title": "Education",
