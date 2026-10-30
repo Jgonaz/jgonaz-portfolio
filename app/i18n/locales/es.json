@@ -22,9 +22,9 @@
   },
   "home": {
     "hi": "¡Hola! Soy",
-    "andIDevelopWebApps": "y diseño productos web con buena UX",
+    "andIDevelopWebApps": "y diseño productos web centrados en la UX",
     "rotatingPhrases": [
-      "y diseño productos web con buena UX",
+      "y diseño productos web centrados en la UX",
       "y construyo software con agentes de IA",
       "y orquesto agentes, contexto y herramientas",
       "y convierto ideas en productos reales"
@@ -39,7 +39,8 @@
         "company": "Grupo El Corte Inglés",
         "duration": "2024-Actualidad",
         "position": "Senior Front-End Developer en Hiberus #h",
-        "description": "Desarrollo front-end en el área de Mi Cuenta del ecommerce de El Corte Inglés (Vue, SSR y accesibilidad). Además, he diseñado y evolucionado el harness agéntico que usa a diario el equipo de desarrollo: un orquestador con subagentes especializados y skills sobre GitHub Copilot CLI que cubren el ciclo completo, de la historia de usuario a la PR, con aprobación humana y optimizado para la gestión del gasto de tokens."
+        "role": "Front-end · Harness agéntico del equipo",
+        "description": "Desarrollo front-end en el área de Mi Cuenta del ecommerce de El Corte Inglés (Vue, SSR y accesibilidad). Además, he diseñado y evolucionado el harness agéntico que usa a diario el equipo de desarrollo: un orquestador con subagentes especializados y skills en GitHub Copilot CLI sobre modelos de OpenAI y Anthropic, que cubren el ciclo completo, de la historia de usuario a la PR, con aprobación humana y optimizado para la gestión del gasto de tokens."
       },
       {
         "company": "Nyxell App",
@@ -105,7 +106,7 @@
       },
       {
         "title": "Skills y MCP",
-        "description": "Procedimientos reutilizables y conexiones con Figma, el navegador o los logs, cargados solo cuando hacen falta."
+        "description": "Procedimientos reutilizables y conexiones con distintas plataformas, cargados solo cuando hacen falta."
       },
       {
         "title": "Specs y control",
@@ -123,9 +124,9 @@
         "description": "El sistema agéntico que usa a diario el equipo de desarrollo. Lo he diseñado y evolucionado según su uso: cada subagente, skill y regla existe porque resolvió un problema real del equipo.",
         "tags": [
           "GitHub Copilot CLI",
-          "Varios proveedores de modelos",
-          "MCP · Figma",
-          "OpenSpec",
+          "OpenAI y Anthropic",
+          "MCPs internos",
+          "SDD",
           "Playwright"
         ],
         "note": "Herramienta interna: el código no es público."
@@ -139,7 +140,7 @@
           "Codex",
           "Copilot",
           "OpenCode",
-          "OpenSpec"
+          "SDD"
         ],
         "cta": "Ver en GitHub"
       }
@@ -174,7 +175,7 @@
           "TypeScript",
           "Tailwind",
           "Supabase",
-          "IA · Gemini"
+          "API de Gemini"
         ],
         "desktopAlt": "Portada de Balanz.io",
         "mobileAlt": "Dashboard de Balanz.io con gráficos desde el móvil"

@@ -114,21 +114,21 @@ export default function Header() {
               <li>
                 <a
                   onClick={toggleMobileMenu}
-                  href="#ai"
-                  className="header-link transition-all flex items-center gap-2 py-3 px-4 md:px-2 lg:px-4 whitespace-nowrap text-jade-900 md:py-0"
-                >
-                  <SparklesIcon className="md:hidden" />
-                  {dict?.header?.ai}
-                </a>
-              </li>
-              <li>
-                <a
-                  onClick={toggleMobileMenu}
                   href="#side-projects"
                   className="header-link transition-all flex items-center gap-2 py-3 px-4 md:px-2 lg:px-4 whitespace-nowrap text-jade-900 md:py-0"
                 >
                   <RocketIcon className="md:hidden" />
                   {dict?.header?.sideProjects}
+                </a>
+              </li>
+              <li>
+                <a
+                  onClick={toggleMobileMenu}
+                  href="#ai"
+                  className="header-link transition-all flex items-center gap-2 py-3 px-4 md:px-2 lg:px-4 whitespace-nowrap text-jade-900 md:py-0"
+                >
+                  <SparklesIcon className="md:hidden" />
+                  {dict?.header?.ai}
                 </a>
               </li>
               <li>

@@ -54,6 +54,7 @@ export default function Work() {
                   job: {
                     company: string
                     position: string
+                    role?: string
                     description: string
                     duration: string
                   },
@@ -72,6 +73,11 @@ export default function Work() {
                     <h3 className="mt-2 text-sm/6 font-semibold text-white">
                       {job.position}
                     </h3>
+                    {job.role && (
+                      <p className="text-[13px]/5 font-medium text-jade-300">
+                        {job.role}
+                      </p>
+                    )}
                     <p className="mt-0.5 text-sm/6 text-zinc-300">{job.description}</p>
                   </li>
                 )

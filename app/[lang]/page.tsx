@@ -22,8 +22,8 @@ export default function Page () {
       />
 
       <Work />
-      <AiWorkflow />
       <SideProjects />
+      <AiWorkflow />
       <Education />
       <AboutMe />
 

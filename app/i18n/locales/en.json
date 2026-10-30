@@ -22,9 +22,9 @@
   },
   "home": {
     "hi": "Hi there! I'm",
-    "andIDevelopWebApps": "and I design web products with great UX",
+    "andIDevelopWebApps": "and I design UX-driven web products",
     "rotatingPhrases": [
-      "and I design web products with great UX",
+      "and I design UX-driven web products",
       "and I build software with AI agents",
       "and I orchestrate agents, context and tools",
       "and I turn ideas into real products"
@@ -39,7 +39,8 @@
         "company": "El Corte Inglés Group",
         "duration": "2024-Present",
         "position": "Senior Front-End Developer at Hiberus #h",
-        "description": "Front-end development for the My Account area of El Corte Inglés' ecommerce (Vue, SSR and accessibility). I also designed and evolved the agentic harness that the development team uses daily: an orchestrator with specialised subagents and skills on GitHub Copilot CLI covering the full cycle from user story to PR, with human approval and optimised for token spend management."
+        "role": "Front-end · Team's agentic harness",
+        "description": "Front-end development for the My Account area of El Corte Inglés' ecommerce (Vue, SSR and accessibility). I also designed and evolved the agentic harness that the development team uses daily: an orchestrator with specialised subagents and skills in GitHub Copilot CLI on OpenAI and Anthropic models, covering the full cycle from user story to PR, with human approval and optimised for token spend management."
       },
       {
         "company": "Nyxell App",
@@ -105,7 +106,7 @@
       },
       {
         "title": "Skills and MCP",
-        "description": "Reusable procedures and connections to Figma, the browser or the logs, loaded only when needed."
+        "description": "Reusable procedures and connections to different platforms, loaded only when needed."
       },
       {
         "title": "Specs and control",
@@ -123,9 +124,9 @@
         "description": "The agentic system the development team uses every day. I designed it and have evolved it based on how it is used: every subagent, skill and rule exists because it solved a real problem for the team.",
         "tags": [
           "GitHub Copilot CLI",
-          "Multiple model providers",
-          "MCP · Figma",
-          "OpenSpec",
+          "OpenAI & Anthropic",
+          "Internal MCPs",
+          "SDD",
           "Playwright"
         ],
         "note": "Internal tool: the code is not public."
@@ -139,7 +140,7 @@
           "Codex",
           "Copilot",
           "OpenCode",
-          "OpenSpec"
+          "SDD"
         ],
         "cta": "View on GitHub"
       }
@@ -174,7 +175,7 @@
           "TypeScript",
           "Tailwind",
           "Supabase",
-          "AI · Gemini"
+          "Gemini API"
         ],
         "desktopAlt": "Balanz.io landing page",
         "mobileAlt": "Balanz.io dashboard with charts on a phone"
