@@ -4,8 +4,9 @@
 }
 
 .ai-robot-eyes {
-  transform-box: fill-box;
-  transform-origin: center;
+  /* Origen fijo en unidades del SVG (altura de los ojos): fill-box no es fiable en Safari */
+  transform-box: view-box;
+  transform-origin: 48px 37.7px;
   animation: aiRobotBlink 5s infinite;
 }
 

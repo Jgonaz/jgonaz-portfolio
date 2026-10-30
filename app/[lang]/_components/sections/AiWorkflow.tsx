@@ -111,18 +111,12 @@ function PeekingRobot ({ className }: { className: string }) {
           <circle cx='23' cy='18.5' r='2.3' fill='#ff5f57' />
           <circle cx='30.5' cy='18.5' r='2.3' fill='#febc2e' />
           <circle cx='38' cy='18.5' r='2.3' fill='#28c840' />
-          <text
-            className='ai-robot-eyes'
-            x='48'
-            y='45'
-            textAnchor='middle'
-            fontFamily={jetbrainsMono.style.fontFamily}
-            fontSize='20'
-            fontWeight='700'
-            fill='#43e5a0'
-          >
-            {'•  •'}
-          </text>
+          {/* Ojos como círculos (antes un <text> «•  •»): Safari calcula mal la caja de un
+              texto SVG y el parpadeo los desplazaba hacia arriba en lugar de cerrarlos */}
+          <g className='ai-robot-eyes' fill='#43e5a0'>
+            <circle cx='36' cy='37.7' r='2.7' />
+            <circle cx='60' cy='37.7' r='2.7' />
+          </g>
           <path d='M40.5 49.5q7.5 6 15 0' fill='none' stroke='#43e5a0' strokeWidth='3' strokeLinecap='round' />
         </g>
       </g>
