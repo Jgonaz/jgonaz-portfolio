@@ -14,6 +14,18 @@
     transform-style: preserve-3d;
   }
 
+  /* Pausa la oscilación fuera de pantalla (clase puesta desde SideProjects.tsx). Los
+     selectores repiten .sp-left/.sp-right para ganar en especificidad al shorthand
+     `animation` de más abajo, que si no devolvería el estado a running */
+  &.sp-offscreen {
+    .sp-float.sp-left,
+    .sp-float.sp-right,
+    .sp-floor,
+    .sp-floor.sp-right {
+      animation-play-state: paused;
+    }
+  }
+
   /* Oscilación continua; el lado derecho gira en espejo y va desfasado */
   .sp-float.sp-left {
     animation: sideProjectFloatLeft 7s ease-in-out infinite;

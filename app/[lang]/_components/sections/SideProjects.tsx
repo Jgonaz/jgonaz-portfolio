@@ -2,7 +2,7 @@
 
 import TranslationContext from '@/app/[lang]/_contexts/TranslationContext'
 import Image, { StaticImageData } from 'next/image'
-import { MouseEvent, useContext } from 'react'
+import { MouseEvent, useContext, useEffect, useRef } from 'react'
 
 import '@/app/[lang]/_styles/section.css'
 import '@/app/[lang]/_styles/sideProjects.css'
@@ -70,8 +70,24 @@ const resetTilt = (event: MouseEvent<HTMLDivElement>) => {
 
 export default function SideProjects () {
   const { dict } = useContext(TranslationContext)
+  const sectionRef = useRef<HTMLElement>(null)
+
+  // La oscilación 3D es infinita y cuesta composición en cada fotograma: se pausa
+  // mientras la sección no está en pantalla
+  useEffect(() => {
+    const section = sectionRef.current
+    if (!section) return
+    const observer = new IntersectionObserver(
+      ([entry]) => section.classList.toggle('sp-offscreen', !entry.isIntersecting),
+      { rootMargin: '100px 0px' }
+    )
+    observer.observe(section)
+    return () => observer.disconnect()
+  }, [])
+
   return (
     <section
+      ref={sectionRef}
       className='section bg-jade-900 relative z-30 pt-16 sm:pt-12 md:pt-8 lg:pt-4 xl:pt-0'
       id='side-projects'
     >
