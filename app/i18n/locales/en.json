@@ -204,6 +204,7 @@
     "lead": "I'm a front-end developer with a passion for product: understanding the people who use it and caring about every detail of the experience.",
     "paragraphs": [
       "Today AI is at the heart of how I work: I design agentic harnesses for teams, orchestrate subagents, look after the context window and token costs, and closely follow every new model and tool to keep what truly works.",
+      "With Andalusian roots, I was born in Jerez and grew up in Seville, which I visit less often than I'd like. I currently live in Valencia with my partner, and wherever I go, my laptop always comes with me.",
       "Ever since I was a child I've been fascinated by any device with a screen, a curiosity that over time became a vocation and then my professional career. Today I have the privilege of doing what I love most: building digital experiences and bringing ideas to life through code."
     ],
     "photos": [
@@ -223,28 +224,6 @@
         "caption": "Music",
         "alt": "Headphones on a stack of vinyl records"
       }
-    ],
-    "facts": [
-      {
-        "label": "Based in",
-        "value": "Valencia"
-      },
-      {
-        "label": "From",
-        "value": "Jerez & Seville"
-      },
-      {
-        "label": "Always with me",
-        "value": "My laptop"
-      }
-    ],
-    "hobbiesLabel": "Hobbies",
-    "hobbies": [
-      "Music",
-      "Sports",
-      "Travel",
-      "Video editing",
-      "Landscapes"
     ]
   },
   "contact": {
