@@ -9,6 +9,8 @@ export function proxy (request: NextRequest) {
   // // `/_next/` and `/api/` are ignored by the watcher, but we need to ignore files in `public` manually.
   // // If you have one
   if (['/favicon.ico', '/opengraph-image.jpg'].includes(pathname)) return
+  // PDF del CV en public/cv/; la página /cv sin idioma sí debe redirigir
+  if (pathname.startsWith('/cv/') && pathname.endsWith('.pdf')) return
 
   const pathnameIsMissingLocale = i18n.locales.every(
     locale => !pathname.startsWith(`/${locale}/`) && pathname !== `/${locale}`

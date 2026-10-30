@@ -8,8 +8,6 @@ import { TranslationProvider } from '@/app/[lang]/_contexts/TranslationContext'
 import type { Metadata } from 'next'
 import { Onest } from 'next/font/google'
 import '@/app/[lang]/globals.css'
-import Header from '@/app/[lang]/_components/Header'
-import Footer from '@/app/[lang]/_components/Footer'
 import { SITE_URL } from '@/app/utils/constants'
 
 const onest = Onest({ subsets: ['latin'] })
@@ -42,12 +40,11 @@ export default async function RootLayout ({
   const locale = lang as Locale
   const dict = await getDictionary(locale)
   return (
-    <html lang={locale}>
+    // Indica a Next que el scroll suave es del sitio, para que lo desactive al navegar entre rutas
+    <html lang={locale} data-scroll-behavior='smooth'>
       <TranslationProvider dict={dict} lang={locale}>
         <body className={onest.className} suppressHydrationWarning>
-          <Header />
           {children}
-          <Footer />
           <SpeedInsights />
           <Analytics />
         </body>

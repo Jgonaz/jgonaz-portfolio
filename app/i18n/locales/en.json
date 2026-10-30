@@ -31,7 +31,157 @@
     ],
     "photoAlt": "Profile photo of Jorge González"
   },
-  "downloadCV": "Download CV",
+  "viewCV": "View CV",
+  "cv": {
+    "metadata": {
+      "title": "CV · Jorge González Azpillaga",
+      "description": "Résumé of Jorge González Azpillaga, senior front-end developer and Front-End & AI Engineer."
+    },
+    "headline": "Senior Front-End & AI Engineer",
+    "location": "Valencia",
+    "bar": {
+      "navLabel": "CV actions",
+      "back": "Back to portfolio",
+      "language": "Language",
+      "print": "Print",
+      "download": "Download PDF"
+    },
+    "labels": {
+      "profile": "Profile",
+      "skills": "Skills",
+      "experience": "Experience",
+      "projects": "Projects",
+      "education": "Education",
+      "languages": "Languages"
+    },
+    "profile": "Front-end developer with over 9 years of experience building large-scale web products, specialised in Vue and TypeScript with a clear focus on UX and product. At El Corte Inglés I have designed and evolved the agentic harness the development team uses every day, and I have shipped my own products to production, built entirely with AI agents.",
+    "skills": [
+      {
+        "label": "Agentic engineering",
+        "value": "Agent and subagent orchestration, skills, MCP, context window management, token optimisation, SDD, human approval"
+      },
+      {
+        "label": "AI tools",
+        "value": "GitHub Copilot CLI, Claude Code, Codex CLI, Gemini CLI, OpenCode, Cursor · LLM APIs, Ollama"
+      },
+      {
+        "label": "Front-End",
+        "value": "Vue 3, Nuxt, React, Next.js, TypeScript, Vite, Pinia, Tailwind, Sass · SSR and accessibility"
+      },
+      {
+        "label": "Back-End",
+        "value": "Node.js, Express, REST APIs · PostgreSQL, MySQL, MongoDB, Supabase, Neon · C#/.NET MVC"
+      },
+      {
+        "label": "Testing and deployment",
+        "value": "Vitest, Jest, Playwright · Vercel, Azure, AWS Amplify, Docker · Git, pnpm"
+      },
+      {
+        "label": "UI / UX",
+        "value": "Figma, Claude Design, Google Stitch"
+      }
+    ],
+    "experience": [
+      {
+        "company": "El Corte Inglés",
+        "role": "Senior Front-End Developer at Hiberus #h",
+        "location": "Valencia",
+        "period": "2024 – Present",
+        "function": "Front-end · Team agentic harness",
+        "tech": "Vue 3, TypeScript, Node.js, Express, Vite, SSR · GitHub Copilot CLI, MCP, SDD",
+        "bullets": [
+          "Development of features in the My Account area of one of the largest ecommerce sites in Spain, with SSR and accessibility.",
+          "Design and evolution of the team's agentic harness: an orchestrator with specialised subagents and skills in GitHub Copilot CLI, running on OpenAI and Anthropic models.",
+          "Automation of the cycle from user story to PR: discovery, plan or specs, implementation, validation, browser testing and review, with human approval.",
+          "Optimisation of token spend: model and effort per subagent, and context loaded on demand."
+        ]
+      },
+      {
+        "company": "Nyxell App",
+        "role": "Senior Front-End Developer",
+        "location": "Zaragoza",
+        "period": "2022 – 2023",
+        "tech": "Vue 2/3, Sass, Node.js, Vite, AWS Amplify",
+        "bullets": [
+          "Led the back-office of a nightlife ticket marketplace (events, venues and customers), including the migration from Vue 2 to Vue 3.",
+          "Improved the product's interface and usability."
+        ]
+      },
+      {
+        "company": "Grupo Barrabés",
+        "role": "Agile Front-End Developer at Trackglobe",
+        "location": "Zaragoza",
+        "period": "2019 – 2022",
+        "tech": "Vue 2, Sass, C#, .NET MVC, Azure",
+        "bullets": [
+          "Development and maintenance of custom modules with Vue and Sass on a .NET MVC platform, and integration of HTML5, Sass and JavaScript mockups."
+        ]
+      },
+      {
+        "company": "EFOR",
+        "role": ".NET FullStack Developer at Integra Tecnología",
+        "location": "Zaragoza",
+        "period": "2017 – 2019",
+        "tech": "C#, .NET MVC, MySQL, JavaScript",
+        "bullets": [
+          "Custom software development, including the design and maintenance of database schemas, and research into Microsoft mobile solutions in Office 365 (PowerApps)."
+        ]
+      },
+      {
+        "company": "Hipercor (Grupo El Corte Inglés)",
+        "role": "Intern Technician",
+        "location": "Seville",
+        "period": "2013 – 2014",
+        "bullets": [
+          "Hardware assembly and maintenance, backups and technical support."
+        ]
+      }
+    ],
+    "projects": [
+      {
+        "name": "Fitnessia",
+        "url": "https://fitnessia.jgonaz.dev",
+        "description": "PWA for planning and logging workouts, with offline logging. Designed and shipped to production by me, built entirely with AI agents.",
+        "tech": "Nuxt 4, Vue 3, TypeScript, Neon, Drizzle"
+      },
+      {
+        "name": "Balanz.io",
+        "url": "https://balanz-io.jgonaz.dev",
+        "description": "Shared household finances, with AI that suggests categories and logs expenses by voice or photo. Built entirely with AI agents.",
+        "tech": "Nuxt 4, Vue 3, Supabase, Gemini API"
+      },
+      {
+        "name": "Personal harness (jdev-ai)",
+        "url": "https://github.com/Jgonaz/jdev-ai",
+        "description": "Open-source harness for working with several agents (Claude Code, Codex, Copilot, OpenCode) on independent projects: subagents, per-project memory and history, worktrees and specs."
+      }
+    ],
+    "education": [
+      {
+        "degree": "Higher Vocational Diploma in Cross-Platform Application Development",
+        "institution": "IES Santiago Hernández (Zaragoza)",
+        "period": "2015 – 2017"
+      },
+      {
+        "degree": "Intermediate Vocational Diploma in Microcomputer Systems and Networks",
+        "institution": "IES Martínez Montañés (Seville)",
+        "period": "2012 – 2014"
+      }
+    ],
+    "languages": {
+      "items": [
+        {
+          "name": "Spanish",
+          "level": "native"
+        },
+        {
+          "name": "English",
+          "level": "B2 (certification in progress)"
+        }
+      ],
+      "note": "strong written level and broad technical vocabulary."
+    }
+  },
   "work": {
     "title": "Experience",
     "data": [

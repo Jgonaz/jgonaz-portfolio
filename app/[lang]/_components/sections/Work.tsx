@@ -3,15 +3,17 @@
 import '@/app/[lang]/_styles/section.css'
 import TranslationContext from '@/app/[lang]/_contexts/TranslationContext'
 import { useEffect, useContext } from 'react'
-import { CV_URL_PDF, MOBILE_BREAKPOINT } from '@/app/utils/constants'
+import Link from 'next/link'
+import { MOBILE_BREAKPOINT } from '@/app/utils/constants'
 
 export default function Work() {
-  const { dict } = useContext(TranslationContext)
+  const { dict, lang } = useContext(TranslationContext)
   useEffect(() => {
     if (window.innerWidth < MOBILE_BREAKPOINT) return
 
     const handleScroll = () => {
-      const div = document.getElementById('work-title') as HTMLDivElement
+      const div = document.getElementById('work-title') as HTMLDivElement | null
+      if (!div) return
       const title = div.getElementsByTagName('h2')[0] as HTMLHeadingElement
       div.style.minWidth = `${title.offsetWidth}px`
 
@@ -31,6 +33,8 @@ export default function Work() {
     }
 
     window.addEventListener('scroll', handleScroll)
+    // Sin limpiar, el listener seguía vivo en /cv tras navegar desde la home
+    return () => window.removeEventListener('scroll', handleScroll)
   }, [])
   return (
     <section
@@ -84,20 +88,22 @@ export default function Work() {
               )}
             </ul>
             <div className="flex md:hidden justify-center w-full mt-8">
-              <a
-                href={CV_URL_PDF}
+              <Link
+                href={`/${lang}/cv`}
+                  transitionTypes={['nav-forward']}
                 className="download-cv-btn text-white bg-jade-700 hover:bg-jade-800 focus:ring-1 focus:ring-jade-300 font-medium rounded-lg text-sm px-5 py-2.5 focus:outline-hidden"
               >
-                {dict?.downloadCV}
-              </a>
+                {dict?.viewCV}
+              </Link>
             </div>
             <div className="hidden md:flex justify-end w-full mt-12">
-              <a
-                href={CV_URL_PDF}
+              <Link
+                href={`/${lang}/cv`}
+                  transitionTypes={['nav-forward']}
                 className="download-cv-btn text-white bg-jade-700 hover:bg-jade-800 focus:ring-1 focus:ring-jade-300 font-medium rounded-lg text-sm px-5 py-2.5 focus:outline-hidden"
               >
-                {dict?.downloadCV}
-              </a>
+                {dict?.viewCV}
+              </Link>
             </div>
           </div>
         </div>

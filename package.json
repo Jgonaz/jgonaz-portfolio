@@ -28,7 +28,8 @@
     "lint": "eslint .",
     "typecheck": "tsc --noEmit",
     "format": "prettier --write .",
-    "format:check": "prettier --check ."
+    "format:check": "prettier --check .",
+    "cv:pdf": "node scripts/generate-cv-pdf.mjs"
   },
   "dependencies": {
     "@next/third-parties": "^16.4.3",

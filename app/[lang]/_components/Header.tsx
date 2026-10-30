@@ -2,6 +2,7 @@
 
 import TranslationContext from '@/app/[lang]/_contexts/TranslationContext'
 import { useContext, useState } from 'react'
+import Link from 'next/link'
 
 import '@/app/[lang]/_styles/header.css'
 
@@ -11,7 +12,7 @@ import { CVIcon, RocketIcon, SparklesIcon, WorkIcon } from '@/app/[lang]/_assets
 import { EducationIcon } from '@/app/[lang]/_assets/MenuIcons'
 import { MailIcon } from '@/app/[lang]/_assets/MenuIcons'
 import { UserIcon } from '@/app/[lang]/_assets/MenuIcons'
-import { CV_URL_DOC, MOBILE_BREAKPOINT } from '@/app/utils/constants'
+import { MOBILE_BREAKPOINT } from '@/app/utils/constants'
 
 export default function Header() {
   const { dict, lang } = useContext(TranslationContext)
@@ -80,25 +81,25 @@ export default function Header() {
           >
             <ul className="flex flex-col gap-x-4 md:gap-x-2 lg:gap-x-4 mt-4 font-medium md:flex-row md:mt-0">
               <li>
-                {/* Mobile => Download CV */}
-                <a
-                  href={CV_URL_DOC}
-                  target="_blank"
-                  rel="noopener noreferrer"
+                {/* Mobile => CV integrado. No cierra el menú: la cortina de la transición lo tapa
+                    y el CV no tiene Header; solo libera el bloqueo de scroll que pone el menú */}
+                <Link
+                  href={`/${lang}/cv`}
+                  transitionTypes={['nav-forward']}
+                  onClick={() => document.body.classList.remove('overflow-hidden')}
                   className="md:hidden header-link transition-all flex items-center gap-2 py-3 px-4 md:px-2 lg:px-4 whitespace-nowrap text-jade-900 md:py-0"
                 >
                   <CVIcon className="scale-90" />
-                  {dict?.downloadCV}
-                </a>
-                {/* Desktop => Google Document */}
-                <a
-                  href={CV_URL_DOC}
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  {dict?.viewCV}
+                </Link>
+                {/* Desktop => CV integrado */}
+                <Link
+                  href={`/${lang}/cv`}
+                  transitionTypes={['nav-forward']}
                   className="hidden md:flex header-link transition-all items-center gap-2 py-3 px-4 md:px-2 lg:px-4 whitespace-nowrap text-jade-900 md:py-0"
                 >
                   {dict?.header?.CV}
-                </a>
+                </Link>
               </li>
               <li>
                 <a

@@ -31,7 +31,157 @@
     ],
     "photoAlt": "Foto de perfil de Jorge González"
   },
-  "downloadCV": "Descargar CV",
+  "viewCV": "Ver CV",
+  "cv": {
+    "metadata": {
+      "title": "CV · Jorge González Azpillaga",
+      "description": "Currículum de Jorge González Azpillaga, desarrollador front-end senior y Front-End & AI Engineer."
+    },
+    "headline": "Senior Front-End & AI Engineer",
+    "location": "Valencia",
+    "bar": {
+      "navLabel": "Acciones del CV",
+      "back": "Volver al portfolio",
+      "language": "Idioma",
+      "print": "Imprimir",
+      "download": "Descargar PDF"
+    },
+    "labels": {
+      "profile": "Perfil",
+      "skills": "Habilidades",
+      "experience": "Experiencia",
+      "projects": "Proyectos",
+      "education": "Formación",
+      "languages": "Idiomas"
+    },
+    "profile": "Desarrollador front-end con más de 9 años construyendo productos web a gran escala, especializado en Vue y TypeScript y con un foco claro en UX y producto. En El Corte Inglés he diseñado y evolucionado el harness agéntico que usa a diario el equipo de desarrollo, y he llevado a producción productos propios desarrollados íntegramente con agentes de IA.",
+    "skills": [
+      {
+        "label": "Agentic engineering",
+        "value": "Orquestación de agentes y subagentes, skills, MCP, gestión de la ventana de contexto, optimización de tokens, SDD, aprobación humana"
+      },
+      {
+        "label": "Herramientas de IA",
+        "value": "GitHub Copilot CLI, Claude Code, Codex CLI, Gemini CLI, OpenCode, Cursor · APIs de LLM, Ollama"
+      },
+      {
+        "label": "Front-End",
+        "value": "Vue 3, Nuxt, React, Next.js, TypeScript, Vite, Pinia, Tailwind, Sass · SSR y accesibilidad"
+      },
+      {
+        "label": "Back-End",
+        "value": "Node.js, Express, APIs REST · PostgreSQL, MySQL, MongoDB, Supabase, Neon · C#/.NET MVC"
+      },
+      {
+        "label": "Testing y despliegue",
+        "value": "Vitest, Jest, Playwright · Vercel, Azure, AWS Amplify, Docker · Git, pnpm"
+      },
+      {
+        "label": "UI / UX",
+        "value": "Figma, Claude Design, Google Stitch"
+      }
+    ],
+    "experience": [
+      {
+        "company": "El Corte Inglés",
+        "role": "Senior Front-End Developer en Hiberus #h",
+        "location": "Valencia",
+        "period": "2024 – Actualidad",
+        "function": "Front-end · Harness agéntico del equipo",
+        "tech": "Vue 3, TypeScript, Node.js, Express, Vite, SSR · GitHub Copilot CLI, MCP, SDD",
+        "bullets": [
+          "Desarrollo de funcionalidades en el área de Mi Cuenta de uno de los mayores ecommerce de España, con SSR y accesibilidad.",
+          "Diseño y evolución del harness agéntico del equipo: un orquestador con subagentes especializados y skills en GitHub Copilot CLI sobre modelos de OpenAI y Anthropic.",
+          "Automatización del ciclo de la historia de usuario a la PR: discovery, plan o specs, implementación, validación, pruebas de navegador y revisión, con aprobación humana.",
+          "Optimización de la gestión del gasto de tokens: modelo y esfuerzo por subagente y contexto cargado bajo demanda."
+        ]
+      },
+      {
+        "company": "Nyxell App",
+        "role": "Senior Front-End Developer",
+        "location": "Zaragoza",
+        "period": "2022 – 2023",
+        "tech": "Vue 2/3, Sass, Node.js, Vite, AWS Amplify",
+        "bullets": [
+          "Liderazgo del back-office del marketplace de entradas de ocio nocturno (eventos, salas y clientes), incluida la migración de Vue 2 a Vue 3.",
+          "Mejora de la interfaz y la usabilidad del producto."
+        ]
+      },
+      {
+        "company": "Grupo Barrabés",
+        "role": "Agile Front-End Developer en Trackglobe",
+        "location": "Zaragoza",
+        "period": "2019 – 2022",
+        "tech": "Vue 2, Sass, C#, .NET MVC, Azure",
+        "bullets": [
+          "Desarrollo y mantenimiento de módulos a medida con Vue y Sass en una plataforma .NET MVC, e integración de maquetas HTML5, Sass y JavaScript."
+        ]
+      },
+      {
+        "company": "EFOR",
+        "role": ".NET FullStack Developer en Integra Tecnología",
+        "location": "Zaragoza",
+        "period": "2017 – 2019",
+        "tech": "C#, .NET MVC, MySQL, JavaScript",
+        "bullets": [
+          "Desarrollo de software a medida, incluido el diseño y mantenimiento de esquemas de base de datos, e investigación sobre soluciones móviles de Microsoft en Office 365 (PowerApps)."
+        ]
+      },
+      {
+        "company": "Hipercor (Grupo El Corte Inglés)",
+        "role": "Técnico en prácticas",
+        "location": "Sevilla",
+        "period": "2013 – 2014",
+        "bullets": [
+          "Montaje y mantenimiento de equipos, copias de seguridad y soporte técnico."
+        ]
+      }
+    ],
+    "projects": [
+      {
+        "name": "Fitnessia",
+        "url": "https://fitnessia.jgonaz.dev",
+        "description": "PWA para planificar y registrar entrenamientos, con registro sin conexión. Diseñada y llevada a producción por mí, desarrollada íntegramente con agentes de IA.",
+        "tech": "Nuxt 4, Vue 3, TypeScript, Neon, Drizzle"
+      },
+      {
+        "name": "Balanz.io",
+        "url": "https://balanz-io.jgonaz.dev",
+        "description": "Finanzas domésticas compartidas, con IA para sugerir categorías y registrar gastos por voz o foto. Desarrollada íntegramente con agentes de IA.",
+        "tech": "Nuxt 4, Vue 3, Supabase, API de Gemini"
+      },
+      {
+        "name": "Harness personal (jdev-ai)",
+        "url": "https://github.com/Jgonaz/jdev-ai",
+        "description": "Harness open source para trabajar con varios agentes (Claude Code, Codex, Copilot, OpenCode) sobre proyectos independientes: subagentes, memoria e historial por proyecto, worktrees y specs."
+      }
+    ],
+    "education": [
+      {
+        "degree": "Grado Superior en Desarrollo de Aplicaciones Multiplataforma",
+        "institution": "IES Santiago Hernández (Zaragoza)",
+        "period": "2015 – 2017"
+      },
+      {
+        "degree": "Grado Medio en Sistemas Microinformáticos y Redes",
+        "institution": "IES Martínez Montañés (Sevilla)",
+        "period": "2012 – 2014"
+      }
+    ],
+    "languages": {
+      "items": [
+        {
+          "name": "Español",
+          "level": "nativo"
+        },
+        {
+          "name": "Inglés",
+          "level": "B2 (certificación en proceso)"
+        }
+      ],
+      "note": "buen nivel escrito y vocabulario técnico amplio."
+    }
+  },
   "work": {
     "title": "Experiencia",
     "data": [

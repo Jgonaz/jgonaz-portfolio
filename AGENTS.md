@@ -11,7 +11,9 @@ Esta guía define la forma estándar de trabajo para agentes en este repositorio
 - API de contacto: `app/api/send/route.ts` con SMTP mediante Nodemailer.
 
 ## Estructura del repositorio
-- `app/[lang]/`: Ruta principal localizada.
+- `app/[lang]/`: Ruta principal localizada. El layout raíz (`layout.tsx`) solo contiene lo común (html/body, fuente, proveedor de traducciones, analytics y metadatos).
+- `app/[lang]/(home)/`: Route group de la home; su `layout.tsx` añade Header y Footer.
+- `app/[lang]/cv/`: CV integrado (`/es/cv`, `/en/cv`), sin Header ni Footer. Datos en la clave `cv` de los diccionarios; «Imprimir» usa la impresión del navegador (`_styles/cv.css`, `@media print`) y «Descargar PDF» sirve los PDF de `public/cv/`, que hay que regenerar con `pnpm cv:pdf` siempre que cambie la clave `cv`.
 - `app/[lang]/_components/`: Componentes compartidos y secciones.
 - `app/[lang]/_styles/`: Estilos CSS por bloques visuales.
 - `app/[lang]/globals.css`: Import de Tailwind, tokens de tema y variantes CSS-first.

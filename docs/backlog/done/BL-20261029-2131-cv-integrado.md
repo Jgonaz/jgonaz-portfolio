@@ -2,7 +2,7 @@
 
 - ID: BL-20261029-2131-cv-integrado
 - Tipo: feature
-- Estado: pending
+- Estado: done
 - Prioridad: media
 - Creado: 2026-10-29
 - Referencias: `app/utils/constants.ts` (`CV_URL_DOC`, `CV_URL_PDF`), `app/[lang]/_components/Header.tsx`, `app/i18n/locales/`
@@ -27,3 +27,7 @@ Contenido de partida: la reescritura del CV propuesta en la sesión del 2026-10-
 - `/es/cv` y `/en/cv` muestran el CV desde la misma fuente de datos que la web.
 - Se puede obtener un PDF con texto seleccionable, en una columna y bien maquetado.
 - El Header enlaza al CV del idioma activo y se retiran los enlaces a Google Drive.
+
+## Resolución
+
+Implementado el 2026-10-30. `/es/cv` y `/en/cv` salen de la clave `cv` de los diccionarios, sin Header ni Footer (route group `(home)`). La barra tiene «Imprimir» (`window.print()` con estilos `@media print`) y «Descargar PDF», que sirve los PDF de `public/cv/` generados con `pnpm cv:pdf`. Transición de cortina entre la home y el CV con View Transitions. Diseño aprobado en Claude Design: https://claude.ai/artifact/EYbTSKCvFTV2rtArkGJW5N. Los enlaces a Google Drive se han eliminado.

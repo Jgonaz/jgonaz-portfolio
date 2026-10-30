@@ -1,0 +1,468 @@
+/* CV integrado (/[lang]/cv): vista web sobre fondo jade y hoja A4 para imprimir */
+
+.cv-root {
+  --cv-ink: #1f2933;
+  --cv-muted: #3e4c59;
+  min-height: 100vh;
+  min-height: 100dvh;
+  background: var(--color-jade-900);
+}
+
+.cv-main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 28px;
+  padding: 32px 24px 80px;
+}
+
+/* Barra de acciones */
+.cv-bar {
+  width: 100%;
+  max-width: 794px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 4px 16px;
+}
+
+.cv-bar a,
+.cv-bar button {
+  font-family: inherit;
+}
+
+.cv-bar a:focus-visible,
+.cv-bar button:focus-visible {
+  outline: 2px solid var(--color-jade-50);
+  outline-offset: 3px;
+}
+
+.cv-back {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 44px;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--color-jade-50);
+  text-decoration: none;
+}
+
+.cv-back:hover {
+  color: #fff;
+}
+
+.cv-bar-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px 12px;
+}
+
+.cv-lang {
+  display: inline-flex;
+  padding: 3px;
+  border-radius: 999px;
+  background: var(--color-jade-950);
+}
+
+.cv-lang a {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  min-height: 38px;
+  padding: 0 14px;
+  border-radius: 999px;
+  color: var(--color-jade-200);
+  font-size: 13px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+/* Amplía el área pulsable hasta 44 px sin cambiar el aspecto */
+.cv-lang a::after {
+  content: '';
+  position: absolute;
+  inset: -3px 0;
+}
+
+.cv-lang a:hover {
+  color: #fff;
+}
+
+.cv-lang a[aria-current='true'] {
+  background: var(--color-jade-700);
+  color: #fff;
+}
+
+.cv-download {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 44px;
+  padding: 0 20px;
+  border: 0;
+  border-radius: 8px;
+  background: var(--color-jade-50);
+  color: var(--color-jade-950);
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.cv-download:hover {
+  background: #fff;
+}
+
+.cv-download {
+  text-decoration: none;
+}
+
+/* Acción secundaria: misma altura que la principal, solo con borde */
+.cv-print {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 44px;
+  padding: 0 18px;
+  border: 1px solid rgb(239 254 247 / 0.6);
+  border-radius: 8px;
+  background: transparent;
+  color: var(--color-jade-50);
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.cv-print:hover {
+  background: rgb(239 254 247 / 0.1);
+}
+
+/* Hoja */
+.cv-sheet {
+  width: 100%;
+  max-width: 794px;
+  box-sizing: border-box;
+  padding: 56px 60px;
+  background: #fff;
+  color: var(--cv-ink);
+  box-shadow: 0 24px 40px rgba(3, 48, 31, 0.6);
+}
+
+.cv-sheet a {
+  color: var(--color-jade-700);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.cv-sheet a:hover {
+  color: var(--color-jade-900);
+}
+
+.cv-sheet a:focus-visible {
+  outline: 2px solid var(--color-jade-700);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+/* :where() deja el reset sin especificidad para que los márgenes entre bloques lo pisen */
+.cv-sheet :where(h1, h2, h3, p, dl, dd, ul) {
+  margin: 0;
+}
+
+.cv-sheet strong {
+  color: var(--color-jade-950);
+}
+
+.cv-header {
+  padding-bottom: 18px;
+  border-bottom: 2px solid var(--color-jade-700);
+}
+
+.cv-header > * + * {
+  margin-top: 6px;
+}
+
+.cv-header h1 {
+  font-size: 30px;
+  line-height: 36px;
+  font-weight: 800;
+  color: var(--color-jade-950);
+}
+
+.cv-headline {
+  font-size: 15px;
+  line-height: 20px;
+  font-weight: 600;
+  color: var(--color-jade-700);
+}
+
+.cv-header .cv-contact {
+  margin-top: 10px;
+  font-size: 12px;
+  line-height: 18px;
+  color: var(--cv-muted);
+}
+
+/* Secciones: el espacio entre bloques se hace con márgenes (no con gap) para
+   que no sobreviva al principio de una página al imprimir */
+.cv-section {
+  --gap: 10px;
+  margin-top: 34px;
+}
+
+.cv-section > * + * {
+  margin-top: var(--gap);
+}
+
+.cv-section--experience {
+  --gap: 22px;
+}
+
+.cv-section--projects {
+  --gap: 18px;
+}
+
+.cv-section--education {
+  --gap: 12px;
+}
+
+.cv-section:has(.cv-skills) {
+  --gap: 12px;
+}
+
+.cv-section h2 {
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-jade-700);
+}
+
+.cv-section h3 {
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 800;
+  color: var(--color-jade-950);
+}
+
+.cv-section h3 a {
+  font-weight: 600;
+}
+
+.cv-text {
+  font-size: 13px;
+  line-height: 20px;
+}
+
+.cv-section--projects .cv-text,
+.cv-section--education .cv-text {
+  line-height: 19px;
+}
+
+/* Habilidades */
+.cv-skills {
+  display: grid;
+  row-gap: 8px;
+  font-size: 12.5px;
+  line-height: 18px;
+}
+
+.cv-skills > div {
+  display: grid;
+  grid-template-columns: 150px minmax(0, 1fr);
+  column-gap: 16px;
+}
+
+.cv-skills dt {
+  font-weight: 600;
+  color: var(--color-jade-950);
+}
+
+/* Puestos y proyectos */
+.cv-item {
+  --item-gap: 5px;
+}
+
+.cv-section--projects .cv-item {
+  --item-gap: 3px;
+}
+
+.cv-item > * + * {
+  margin-top: var(--item-gap);
+}
+
+/* Fila título/fecha: si no caben en una línea, la fecha pasa debajo */
+.cv-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0 16px;
+}
+
+.cv-meta {
+  font-size: 12px;
+  line-height: 20px;
+  font-weight: 600;
+  color: var(--cv-muted);
+  white-space: nowrap;
+}
+
+.cv-function {
+  font-size: 12px;
+  line-height: 17px;
+  font-weight: 600;
+  color: var(--color-jade-700);
+}
+
+.cv-tech {
+  font-size: 12px;
+  line-height: 17px;
+  color: var(--cv-muted);
+}
+
+.cv-item ul {
+  /* Tailwind (preflight) quita las viñetas de las listas */
+  list-style: disc;
+  padding-left: 18px;
+  margin-top: 7px;
+  font-size: 13px;
+  line-height: 19px;
+}
+
+.cv-item li + li {
+  margin-top: 3px;
+}
+
+/* En Formación el título largo envuelve y la fecha se queda a la derecha */
+.cv-edu {
+  flex-wrap: nowrap;
+}
+
+.cv-edu .cv-meta {
+  line-height: 19px;
+}
+
+@media screen and (max-width: 600px) {
+  .cv-edu {
+    flex-wrap: wrap;
+  }
+}
+
+@media screen and (max-width: 840px) {
+  .cv-main {
+    padding: 24px 16px 64px;
+    gap: 20px;
+  }
+
+  .cv-sheet {
+    padding: 40px 36px;
+  }
+
+  /* Barra en dos filas simétricas: volver | idioma, y debajo los dos botones a partes iguales */
+  .cv-bar {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+  }
+
+  .cv-bar-actions {
+    display: contents;
+  }
+
+  .cv-back {
+    justify-self: start;
+  }
+
+  .cv-lang {
+    justify-self: end;
+  }
+
+  .cv-print,
+  .cv-download {
+    justify-content: center;
+    padding: 0 12px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .cv-sheet {
+    padding: 28px 20px;
+  }
+
+  .cv-header h1 {
+    font-size: 26px;
+    line-height: 32px;
+  }
+
+  .cv-skills > div {
+    grid-template-columns: minmax(0, 1fr);
+    row-gap: 1px;
+  }
+
+  .cv-contact {
+    overflow-wrap: anywhere;
+  }
+
+}
+
+/* Impresión / PDF: el contenido se reparte en páginas A4 sin la barra ni el fondo */
+@media print {
+  @page {
+    size: A4;
+    margin: 15mm 16mm;
+  }
+
+  html,
+  body:has(.cv-root) {
+    background: #fff;
+  }
+
+  .cv-root {
+    min-height: 0;
+    background: #fff;
+  }
+
+  .cv-bar {
+    display: none;
+  }
+
+  .cv-main {
+    display: block;
+    padding: 0;
+  }
+
+  .cv-sheet {
+    width: 100%;
+    max-width: none;
+    padding: 0;
+    border: 0;
+    box-shadow: none;
+  }
+
+  /* Evita cortar un puesto, un proyecto o un título a mitad */
+  .cv-header,
+  .cv-item,
+  .cv-edu,
+  .cv-skills > div,
+  .cv-sheet li {
+    break-inside: avoid;
+  }
+
+  .cv-section > h2 {
+    break-after: avoid;
+  }
+
+  .cv-text {
+    orphans: 3;
+    widows: 3;
+  }
+
+  /* Los enlaces conservan su aspecto y no se les añade la URL entre corchetes */
+  .cv-sheet a::after {
+    content: none;
+  }
+}
