@@ -201,17 +201,51 @@
   },
   "aboutMe": {
     "title": "Sobre mí",
-    "description1": "Soy desarrollador front-end y me apasiona el producto: entender a quien lo usa y cuidar cada detalle de la experiencia. Hoy la IA está en el centro de mi forma de trabajar: diseño harness agénticos para equipos, orquesto subagentes, cuido la ventana de contexto y el coste en tokens, y sigo de cerca cada modelo y herramienta nueva para quedarme con lo que de verdad funciona.",
-    "description2": "De raíces andaluzas, nací en Jerez y crecí en Sevilla, a donde voy menos de lo que me gustaría. Actualmente vivo en Valencia con mi pareja, y allá donde vaya siempre me acompaña mi portátil.",
-    "description3": "Desde pequeño me ha fascinado cualquier dispositivo con una pantalla, una curiosidad que con el tiempo se transformó en vocación y después en mi carrera profesional. Hoy tengo el privilegio de dedicarme a lo que más me gusta: construir experiencias digitales y dar vida a ideas a través del código.",
-    "alts": {
-      "main": "Ilustración de Jorge",
-      "sports": "Ilustración de deporte",
-      "music": "Ilustración de música",
-      "travel": "Ilustración de viajes",
-      "video": "Ilustración de edición de vídeo",
-      "landscape": "Ilustración de paisaje"
-    }
+    "lead": "Soy desarrollador front-end y me apasiona el producto: entender a quien lo usa y cuidar cada detalle de la experiencia.",
+    "paragraphs": [
+      "Hoy la IA está en el centro de mi forma de trabajar: diseño harness agénticos para equipos, orquesto subagentes, cuido la ventana de contexto y el coste en tokens, y sigo de cerca cada modelo y herramienta nueva para quedarme con lo que de verdad funciona.",
+      "Desde pequeño me ha fascinado cualquier dispositivo con una pantalla, una curiosidad que con el tiempo se transformó en vocación y después en mi carrera profesional. Hoy tengo el privilegio de dedicarme a lo que más me gusta: construir experiencias digitales y dar vida a ideas a través del código."
+    ],
+    "photos": [
+      {
+        "caption": "Viajes",
+        "alt": "Mochila, mapa y cámara sobre una mesa junto a la ventana"
+      },
+      {
+        "caption": "Valencia",
+        "alt": "Ciudad de las Artes y las Ciencias de Valencia al atardecer"
+      },
+      {
+        "caption": "Deporte",
+        "alt": "Pala y bolas de pádel sobre la pista"
+      },
+      {
+        "caption": "Música",
+        "alt": "Auriculares sobre una pila de vinilos"
+      }
+    ],
+    "facts": [
+      {
+        "label": "Base",
+        "value": "Valencia"
+      },
+      {
+        "label": "Origen",
+        "value": "Jerez y Sevilla"
+      },
+      {
+        "label": "Siempre conmigo",
+        "value": "El portátil"
+      }
+    ],
+    "hobbiesLabel": "Aficiones",
+    "hobbies": [
+      "Música",
+      "Deporte",
+      "Viajes",
+      "Edición de vídeo",
+      "Paisajes"
+    ]
   },
   "contact": {
     "title": "Contacto",

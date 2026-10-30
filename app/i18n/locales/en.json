@@ -201,17 +201,51 @@
   },
   "aboutMe": {
     "title": "About me",
-    "description1": "I'm a front-end developer with a passion for product: understanding the people who use it and caring about every detail of the experience. Today AI is at the heart of how I work: I design agentic harnesses for teams, orchestrate subagents, look after the context window and token costs, and closely follow every new model and tool to keep what truly works.",
-    "description2": "With Andalusian roots, I was born in Jerez and grew up in Seville, which I visit less often than I'd like. I currently live in Valencia with my partner, and wherever I go, my laptop always comes with me.",
-    "description3": "Ever since I was a child I've been fascinated by any device with a screen, a curiosity that over time became a vocation and then my professional career. Today I have the privilege of doing what I love most: building digital experiences and bringing ideas to life through code.",
-    "alts": {
-      "main": "Illustration of Jorge",
-      "sports": "Sports illustration",
-      "music": "Music illustration",
-      "travel": "Travel illustration",
-      "video": "Video editing illustration",
-      "landscape": "Landscape illustration"
-    }
+    "lead": "I'm a front-end developer with a passion for product: understanding the people who use it and caring about every detail of the experience.",
+    "paragraphs": [
+      "Today AI is at the heart of how I work: I design agentic harnesses for teams, orchestrate subagents, look after the context window and token costs, and closely follow every new model and tool to keep what truly works.",
+      "Ever since I was a child I've been fascinated by any device with a screen, a curiosity that over time became a vocation and then my professional career. Today I have the privilege of doing what I love most: building digital experiences and bringing ideas to life through code."
+    ],
+    "photos": [
+      {
+        "caption": "Travel",
+        "alt": "Backpack, map and camera on a table by the window"
+      },
+      {
+        "caption": "Valencia",
+        "alt": "City of Arts and Sciences in Valencia at sunset"
+      },
+      {
+        "caption": "Sports",
+        "alt": "Padel racket and balls on the court"
+      },
+      {
+        "caption": "Music",
+        "alt": "Headphones on a stack of vinyl records"
+      }
+    ],
+    "facts": [
+      {
+        "label": "Based in",
+        "value": "Valencia"
+      },
+      {
+        "label": "From",
+        "value": "Jerez & Seville"
+      },
+      {
+        "label": "Always with me",
+        "value": "My laptop"
+      }
+    ],
+    "hobbiesLabel": "Hobbies",
+    "hobbies": [
+      "Music",
+      "Sports",
+      "Travel",
+      "Video editing",
+      "Landscapes"
+    ]
   },
   "contact": {
     "title": "Contact",

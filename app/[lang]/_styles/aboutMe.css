@@ -1,108 +1,203 @@
 @import './animations.css';
 
-.separator {
-  margin-top: 2rem;
-  margin-bottom: 1.5rem;
-  opacity: 0.35;
-  width: 100%;
-}
-
-#about-me-vectors {
-  position: relative;
-  view-timeline-name: --vector-container;
-  view-timeline-axis: block;
-  animation-name: scrollShow;
-  animation-timeline: --vector-container;
-  animation-fill-mode: both;
-  animation-range: entry 20% cover 40%;
-
-  img {
-    max-width: unset;
-    @media (max-width: 450px) {
-      max-width: 250px;
-    }
+/* Móvil: polaroids agrupadas y centradas en un lienzo de 250px de alto */
+#about-me {
+  .about-photos {
+    position: relative;
+    width: 100%;
+    max-width: 342px;
+    height: 250px;
+    margin-inline: auto;
   }
 
-  .icon-container {
+  /*
+   * El wrapper recibe la animación de entrada (translate/rotate/opacity) y la figura
+   * conserva su rotación final en `rotate`: así la entrada nunca pisa la inclinación.
+   */
+  .about-photo {
     position: absolute;
-    view-timeline-name: --vector-items;
-    view-timeline-axis: block;
-    animation-timeline: --vector-items;
-    animation-fill-mode: both;
-    &:nth-of-type(even) {
-      animation-range: entry 10% cover 50%;
-      animation-name: vector-entry-1;
+    width: 130px;
+    --about-dx: 0px;
+    --about-dy: -32px;
+    --about-dr: 0deg;
+  }
+
+  .about-photo figure {
+    position: relative;
+    margin: 0;
+    padding: 6px 6px 26px;
+    border-radius: 4px;
+    background: #fff;
+    box-shadow: 0 20px 40px -16px rgb(3 48 31 / 0.8);
+    rotate: var(--about-rot);
+  }
+
+  .about-photo img {
+    display: block;
+    width: 100%;
+    height: 118px;
+    object-fit: cover;
+  }
+
+  .about-photo figcaption {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 6px;
+    text-align: center;
+    font-size: 11px;
+    font-style: italic;
+    color: var(--color-jade-900);
+  }
+
+  .about-photo-travel {
+    --about-rot: -6deg;
+    --about-dx: -24px;
+    --about-dy: -36px;
+    --about-dr: -12deg;
+    top: 0;
+    left: 30px;
+  }
+  .about-photo-valencia {
+    --about-rot: 5deg;
+    --about-dx: 24px;
+    --about-dy: -44px;
+    --about-dr: 12deg;
+    top: 12px;
+    right: 30px;
+  }
+  .about-photo-sports {
+    --about-rot: 3deg;
+    --about-dx: -20px;
+    --about-dy: -28px;
+    --about-dr: -10deg;
+    bottom: 0;
+    left: 52px;
+    img {
+      height: 100px;
     }
-    &:nth-of-type(odd) {
-      animation-range: entry 30% cover 100%;
-      animation-name: vector-entry-2;
+  }
+  .about-photo-music {
+    --about-rot: -4deg;
+    --about-dx: 20px;
+    --about-dy: -32px;
+    --about-dr: 10deg;
+    width: 114px;
+    bottom: 10px;
+    right: 44px;
+    figure {
+      padding: 6px 6px 24px;
     }
-    &.aboutme-sports {
-      top: 70px;
-      left: 65px;
-      @media (max-width: 450px) {
-        top: 25px;
-        left: 30px;
+    img {
+      height: 88px;
+    }
+    figcaption {
+      bottom: 5px;
+    }
+  }
+
+  /* Escritorio: lienzo de 280px dentro de la columna de 420px */
+  @media (min-width: 1024px) {
+    .about-photos {
+      max-width: none;
+      height: 280px;
+    }
+    .about-photo {
+      width: 150px;
+    }
+    .about-photo figure {
+      padding: 7px 7px 30px;
+      box-shadow: 0 24px 48px -16px rgb(3 48 31 / 0.8);
+    }
+    .about-photo img {
+      height: 136px;
+    }
+    .about-photo figcaption {
+      bottom: 8px;
+      font-size: 12px;
+    }
+    .about-photo-travel {
+      left: 62px;
+    }
+    .about-photo-valencia {
+      top: 14px;
+      right: 62px;
+    }
+    .about-photo-sports {
+      left: 88px;
+      img {
+        height: 116px;
+      }
+    }
+    .about-photo-music {
+      width: 130px;
+      bottom: 12px;
+      right: 76px;
+      figure {
+        padding: 7px 7px 28px;
       }
       img {
-        animation: bounce-1 2.25s infinite;
-        animation-delay: 0.25s;
+        height: 100px;
+      }
+      figcaption {
+        bottom: 7px;
       }
     }
-    &.aboutme-music {
-      top: 0;
-      left: 95px;
-      @media (max-width: 450px) {
-        top: -35px;
-        left: 60px;
-      }
-      img {
-        animation: bounce-2 1.5s infinite;
-        animation-delay: 0.75s;
-      }
+  }
+
+  /* Las fotos se enderezan un poco y suben; el hover vive en la figura para no chocar con la animación del wrapper */
+  @media (hover: hover) and (prefers-reduced-motion: no-preference) {
+    .about-photo figure {
+      transition:
+        rotate 0.25s ease-out,
+        translate 0.25s ease-out;
     }
-    &.aboutme-travel {
-      top: 115px;
-      left: 10px;
-      @media (max-width: 450px) {
-        top: 65px;
-        left: -5px;
-      }
-      img {
-        animation: bounce-1 1.75s infinite;
-        animation-delay: 0.5s;
-      }
+    .about-photo:hover figure {
+      rotate: calc(var(--about-rot) * 0.4);
+      translate: 0 -6px;
     }
-    &.aboutme-video {
-      top: 110px;
-      right: 30px;
-      @media (max-width: 450px) {
-        top: 75px;
-        right: 5px;
-      }
-      img {
-        animation: bounce-2 2s infinite;
-        animation-delay: 1s;
-      }
+  }
+
+  /* Caída escalonada al entrar en pantalla; sin soporte las fotos se ven ya asentadas */
+  @supports (animation-timeline: view()) {
+    .about-photos {
+      view-timeline: --about-photos block;
     }
-    &.aboutme-landscape {
-      top: 0px;
-      right: 70px;
-      @media (max-width: 450px) {
-        top: -20px;
-        right: 20px;
-      }
-      img {
-        animation: bounce-1 2.5s infinite;
-        animation-delay: 1.25s;
-      }
+    .about-photo {
+      animation: aboutPhotoDrop ease-out both;
+      animation-timeline: --about-photos;
+    }
+    .about-photo-travel {
+      animation-range: entry 0% entry 55%;
+    }
+    .about-photo-valencia {
+      animation-range: entry 10% entry 65%;
+    }
+    .about-photo-sports {
+      animation-range: entry 20% entry 75%;
+    }
+    .about-photo-music {
+      animation-range: entry 30% entry 85%;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .about-photo {
+      animation: none;
+    }
+    .about-photo figure {
+      transition: none;
+    }
+    .about-photo:hover figure {
+      rotate: var(--about-rot);
+      translate: none;
     }
   }
 }
 
-@media (prefers-reduced-motion: reduce) {
-  /* Cada vector declara su rebote con un selector más específico */
-  #about-me-vectors img {
-    animation: none !important;
+/* En una columna las fotos quedan justo bajo el texto: una caída corta evita que rocen el último párrafo */
+@media (max-width: 1023px) {
+  .about-photos {
+    --about-dy-scale: 0.35;
   }
 }
