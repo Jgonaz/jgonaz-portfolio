@@ -50,8 +50,11 @@
   }
 }
 
-html {
-  scroll-behavior: smooth;
+/* Con movimiento reducido, los saltos a anclas son instantáneos */
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
 }
 
 body {

@@ -11,7 +11,7 @@ export default function BackToTop () {
     <div className='back-to-top w-full z-40'>
       <div className='flex justify-end px-12 pb-4'>
         <a
-          href='#'
+          href='#top'
           aria-label={label}
           className='bg-jade-700 flex justify-center items-center focus-visible:ring-2 focus-visible:ring-jade-300 focus:outline-hidden'
         >

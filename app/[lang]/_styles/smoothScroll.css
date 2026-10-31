@@ -1,0 +1,5 @@
+/* Con Lenis activo (añade la clase .lenis a <html>), el scroll-behavior: smooth global
+   animaría también cada scroll que Lenis fija fotograma a fotograma y daría tirones */
+html.lenis {
+  scroll-behavior: auto;
+}
