@@ -1,6 +1,7 @@
 'use client'
 
 import TranslationContext from '@/app/[lang]/_contexts/TranslationContext'
+import { HARNESS_REPO_URL } from '@/app/utils/constants'
 import { JetBrains_Mono } from 'next/font/google'
 import { ReactNode, useContext, useId } from 'react'
 
@@ -13,8 +14,6 @@ const jetbrainsMono = JetBrains_Mono({
   weight: ['400', '500'],
   display: 'swap'
 })
-
-const REPO_URL = 'https://github.com/Jgonaz/jdev-ai'
 
 interface Step {
   title: string
@@ -279,7 +278,7 @@ export default function AiWorkflow () {
                 <TagList tags={personal.tags} />
                 <div className='flex md:pt-1'>
                   <a
-                    href={REPO_URL}
+                    href={HARNESS_REPO_URL}
                     target='_blank'
                     rel='noopener noreferrer'
                     className='flex w-full md:w-auto min-h-12 md:min-h-11 items-center justify-center gap-2 rounded-lg bg-jade-700 px-5 text-[15px] md:text-sm font-medium text-white hover:bg-jade-800 focus:outline-hidden focus-visible:ring-2 focus-visible:ring-jade-300'

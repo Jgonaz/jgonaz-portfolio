@@ -9,6 +9,7 @@ Esta guía define la forma estándar de trabajo para agentes en este repositorio
 - Estilos: Tailwind CSS v4 + archivos CSS por sección/componente.
 - i18n: Rutas por idioma en `app/[lang]` con diccionarios en `app/i18n/locales`.
 - API de contacto: `app/api/send/route.ts` con SMTP mediante Nodemailer.
+- Servidor MCP público de solo lectura: `app/api/mcp/` (ver «Servidor MCP» en el README).
 
 ## Estructura del repositorio
 - `app/[lang]/`: Ruta principal localizada. El layout raíz (`layout.tsx`) solo contiene lo común (html/body, fuente, proveedor de traducciones, analytics y metadatos).
@@ -19,6 +20,7 @@ Esta guía define la forma estándar de trabajo para agentes en este repositorio
 - `app/[lang]/globals.css`: Import de Tailwind, tokens de tema y variantes CSS-first.
 - `app/i18n/`: Carga de diccionarios y archivos de traducción.
 - `app/api/send/route.ts`: Endpoint para envío de correo.
+- `app/api/mcp/`: Servidor MCP (`route.ts`) y mapeo de los diccionarios a sus respuestas (`portfolio-data.ts`). Las formas de salida son contrato público.
 - `public/images/`: Recursos estáticos.
 - `proxy.ts`: Redirección y control de locale.
 
