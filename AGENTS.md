@@ -18,7 +18,7 @@ Esta guía define la forma estándar de trabajo para agentes en este repositorio
 - `app/[lang]/_components/`: Componentes compartidos y secciones.
 - `app/[lang]/_styles/`: Estilos CSS por bloques visuales.
 - `app/[lang]/globals.css`: Import de Tailwind, tokens de tema y variantes CSS-first.
-- `app/i18n/`: Carga de diccionarios y archivos de traducción.
+- `app/i18n/`: Carga de diccionarios (`get-dictionary.ts` en servidor, `load-dictionary.ts` en cliente) y archivos de traducción.
 - `app/api/send/route.ts`: Endpoint para envío de correo.
 - `app/api/mcp/`: Servidor MCP (`route.ts`) y mapeo de los diccionarios a sus respuestas (`portfolio-data.ts`). Las formas de salida son contrato público.
 - `public/images/`: Recursos estáticos.
@@ -53,6 +53,7 @@ Esta guía define la forma estándar de trabajo para agentes en este repositorio
 - Cualquier nueva clave traducible debe añadirse en:
   - `app/i18n/locales/es.json`
   - `app/i18n/locales/en.json`
+- En la home, el selector cambia el idioma sin recargar: `TranslationContext` carga el otro diccionario en cliente, sustituye el texto y actualiza la URL con `history.replaceState`, `<html lang>` y el título. Los componentes de la home deben leer los textos del contexto (nunca guardarlos ya traducidos en estado) y pintarlos con `AnimatedText` (`letters` para textos cortos, `fade` para párrafos); los atributos (`alt`, `placeholder`, `aria-label`) y los `sr-only` van sin envolver. No uses claves de React derivadas del texto ni `key={lang}`: remontan el nodo y rompen la animación o el estado.
 - Verificar que las rutas sigan funcionando con la lógica de `proxy.ts`.
 
 ## API y seguridad

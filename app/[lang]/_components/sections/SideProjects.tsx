@@ -1,6 +1,7 @@
 'use client'
 
 import TranslationContext from '@/app/[lang]/_contexts/TranslationContext'
+import AnimatedText from '@/app/[lang]/_components/AnimatedText'
 import Image, { StaticImageData } from 'next/image'
 import { MouseEvent, useContext, useEffect, useRef } from 'react'
 
@@ -94,10 +95,10 @@ export default function SideProjects () {
       <div className='container text-pretty px-6 sm:px-12 md:p-16 md:pb-0 lg:p-20 lg:pb-0 xl:p-24 xl:pb-0'>
         <div className='section-title flex flex-col items-center lg:items-start gap-3 mb-12 lg:mb-16 text-center lg:text-left'>
           <h2 className='text-4xl font-extrabold text-white'>
-            {dict?.sideProjects?.title}
+            <AnimatedText text={dict?.sideProjects?.title} />
           </h2>
           <p className='max-w-xl text-[15px]/6 lg:text-base/7 text-zinc-300'>
-            {dict?.sideProjects?.subtitle}
+            <AnimatedText text={dict?.sideProjects?.subtitle} mode='fade' />
           </p>
         </div>
 
@@ -208,24 +209,24 @@ export default function SideProjects () {
                             className='h-1.5 w-1.5 rounded-full bg-jade-400'
                             aria-hidden='true'
                           ></span>
-                          {dict?.sideProjects?.inProduction}
+                          <AnimatedText text={dict?.sideProjects?.inProduction} />
                         </span>
                       </div>
                       <p className='text-[13px]/[18px] text-jade-200'>
-                        {dict?.sideProjects?.role}
+                        <AnimatedText text={dict?.sideProjects?.role} mode='fade' />
                       </p>
                     </div>
                   </div>
                   <p className='text-sm/6 lg:text-[15px]/[26px] text-zinc-300'>
-                    {texts?.description}
+                    <AnimatedText text={texts?.description} mode='fade' />
                   </p>
                   <ul role='list' className='flex flex-wrap gap-2'>
-                    {texts?.tags.map(tag => (
+                    {texts?.tags.map((tag, index) => (
                       <li
-                        key={tag}
+                        key={index}
                         className='rounded-full bg-jade-950 px-2.5 py-1 text-xs font-medium text-jade-200'
                       >
-                        {tag}
+                        <AnimatedText text={tag} />
                       </li>
                     ))}
                   </ul>
@@ -236,7 +237,7 @@ export default function SideProjects () {
                       rel='noopener noreferrer'
                       className='flex w-full lg:w-auto min-h-12 lg:min-h-11 items-center justify-center gap-2 rounded-lg bg-jade-700 px-5 text-[15px] lg:text-sm font-medium text-white hover:bg-jade-800 focus:outline-hidden focus-visible:ring-2 focus-visible:ring-jade-300'
                     >
-                      {dict?.sideProjects?.visit} {project.name}
+                      <AnimatedText text={dict?.sideProjects?.visit} /> {project.name}
                       <svg
                         width='14'
                         height='14'

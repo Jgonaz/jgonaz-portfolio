@@ -1,5 +1,6 @@
 'use client'
 import TranslationContext from '@/app/[lang]/_contexts/TranslationContext'
+import AnimatedText from '@/app/[lang]/_components/AnimatedText'
 import { useState, useContext } from 'react'
 
 import { SendIcon } from '@/app/[lang]/_assets/MenuIcons'
@@ -21,7 +22,8 @@ export default function Contact() {
 
   const [isLoading, setLoading] = useState(false)
   const [sentEmail, setSentEmail] = useState(false)
-  const [errorMessage, setErrorMessage] = useState<string | null>(null)
+  // Mensaje del API, o `undefined` si se usa el genérico: así el genérico sigue el idioma vigente
+  const [error, setError] = useState<{ apiMessage?: string } | null>(null)
 
   const fallbackErrorMessage =
     dict?.contact?.errorMessage ??
@@ -30,7 +32,7 @@ export default function Contact() {
   const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault()
     setLoading(true)
-    setErrorMessage(null)
+    setError(null)
 
     const formData = new FormData(event.currentTarget)
     const formProps = Object.fromEntries(formData)
@@ -53,11 +55,8 @@ export default function Contact() {
       const data = await response.json().catch(() => ({}))
 
       if (!response.ok) {
-        const apiMessage =
-          typeof data?.message === 'string' ? data.message : fallbackErrorMessage
-
         setSentEmail(false)
-        setErrorMessage(apiMessage)
+        setError({ apiMessage: typeof data?.message === 'string' ? data.message : undefined })
         return
       }
 
@@ -65,7 +64,7 @@ export default function Contact() {
     } catch (e) {
       console.error('Error in handleSubmit:', e)
       setSentEmail(false)
-      setErrorMessage(fallbackErrorMessage)
+      setError({})
     } finally {
       setLoading(false)
     }
@@ -79,7 +78,7 @@ export default function Contact() {
       <div className="container flex flex-col items-center justify-center text-pretty gap-10 px-8 sm:px-12 md:p-16 lg:p-20 xl:p-24">
         <div id="contact-title" className="flex justify-center md:justify-start">
           <h2 className="text-4xl font-extrabold text-jade-800">
-            {dict?.contact?.shallWeTalk}
+            <AnimatedText text={dict?.contact?.shallWeTalk} />
           </h2>
         </div>
         <div className="relative w-full max-w-screen-md p-4 bg-white border border-gray-200 rounded-lg shadow-sm sm:p-6 md:p-8">
@@ -94,7 +93,7 @@ export default function Contact() {
                 htmlFor="from"
                 className="block mb-2 text-sm font-medium text-jade-900"
               >
-                {dict?.contact?.from}
+                <AnimatedText text={dict?.contact?.from} />
               </label>
               <input
                 type="email"
@@ -112,7 +111,7 @@ export default function Contact() {
                 htmlFor="subject"
                 className="block mb-2 text-sm font-medium text-jade-900"
               >
-                {dict?.contact?.subject}
+                <AnimatedText text={dict?.contact?.subject} />
               </label>
               <input
                 type="text"
@@ -129,7 +128,7 @@ export default function Contact() {
                 htmlFor="message"
                 className="block mb-2 text-sm font-medium text-jade-900"
               >
-                {dict?.contact?.message}
+                <AnimatedText text={dict?.contact?.message} />
               </label>
               <textarea
                 name="message"
@@ -151,22 +150,29 @@ export default function Contact() {
                   disabled={isLoading || sentEmail}
                 >
                   <SendIcon className="mr-2" />
-                  {!sentEmail ? dict?.contact?.sendMessage : dict?.contact?.messageSent}
+                  <AnimatedText
+                    text={!sentEmail ? dict?.contact?.sendMessage : dict?.contact?.messageSent}
+                  />
                 </button>
                 {/* Las regiones en vivo se montan siempre para que se anuncie su contenido */}
                 <div aria-live="polite" role="status">
-                  {sentEmail && !errorMessage && (
+                  {sentEmail && !error && (
                     <div className="flex p-2">
                       <span className="text-xs text-gray-500">
-                        {dict?.contact?.thankYouMessage}
+                        <AnimatedText text={dict?.contact?.thankYouMessage} />
                       </span>
                     </div>
                   )}
                 </div>
                 <div role="alert">
-                  {errorMessage && (
+                  {error && (
                     <div className="flex p-2">
-                      <span className="text-xs text-red-600">{errorMessage}</span>
+                      <span className="text-xs text-red-600">
+                        <AnimatedText
+                          text={error.apiMessage ?? fallbackErrorMessage}
+                          mode="fade"
+                        />
+                      </span>
                     </div>
                   )}
                 </div>

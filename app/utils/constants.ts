@@ -6,7 +6,7 @@ export const GITHUB_URL = 'https://github.com/Jgonaz'
 export const HARNESS_REPO_URL = 'https://github.com/Jgonaz/jdev-ai'
 export const INSTAGRAM_URL = 'https://instagram.com/jorgedelnueve'
 
-export const CONTACT_EMAIL = 'jgonaz.dev@gmail.com'
+export const CONTACT_EMAIL = 'contact@gmail.com'
 
 export const MOBILE_BREAKPOINT = 768
 export const FORM_SUBMIT_DELAY_MS = 2000
