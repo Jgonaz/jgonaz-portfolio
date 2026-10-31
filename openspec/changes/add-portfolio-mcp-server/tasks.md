@@ -24,6 +24,6 @@
 
 - [x] 5.1 Documentar en el README el endpoint, la conexión desde Claude, Cursor y `mcp-remote`, las herramientas y el límite de uso
 - [x] 5.2 Actualizar `AGENTS.md` (estructura del repositorio: `app/api/mcp/`)
-- [ ] 5.3 Comprobar cuántas reglas de rate limiting permite el plan de Vercel y, con visto bueno, crear la regla de 60 peticiones/minuto por IP en `/api/mcp`
-- [ ] 5.4 Verificar el 429 en el entorno desplegado
-- [ ] 5.5 Mover `BL-20261030-1156-servidor-mcp-portfolio` a `docs/backlog/done/`
+- [x] 5.3 Comprobar cuántas reglas de rate limiting permite el plan de Vercel y, con visto bueno, crear la regla de 60 peticiones/minuto por IP en `/api/mcp`
+- [x] 5.4 Verificar el 429 en el entorno desplegado
+- [x] 5.5 Mover `BL-20261030-1156-servidor-mcp-portfolio` a `docs/backlog/done/`
