@@ -1,45 +1,63 @@
+/* Selector ES / EN con la misma tipografía que los enlaces del menú: el idioma activo
+   va a color pleno y una línea se desliza bajo él */
 .language-selector {
-  -moz-appearance: none;
-  -webkit-appearance: none;
-  appearance: none;
-  position: relative;
-  width: 100%;
-  cursor: pointer;
+  --lang-switch-duration: 380ms;
+  --lang-switch-ease: cubic-bezier(0.65, 0, 0.35, 1);
+  --lang-option-width: 1.75rem;
+  --lang-separator-width: 0.875rem;
 
-  select {
-    width: 100%;
-    padding: 0 1.25rem 0 1rem; /* Deja sitio a la flecha con los nombres largos */
-    border: none;
-    border-radius: 0.25rem;
-    background: transparent;
-    -moz-appearance: none;
-    -webkit-appearance: none;
-    appearance: none;
-    cursor: pointer;
-    option {
-      background-color: var(--color-jade-950);
-      color: var(--color-jade-50);
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  height: 1.5rem; /* Una línea de los enlaces del menú */
+  font-weight: 500;
+  line-height: 1.5rem;
+
+  a {
+    width: var(--lang-option-width);
+    text-align: center;
+    color: color-mix(in srgb, var(--color-jade-900) 45%, transparent);
+    transition: color 250ms ease;
+
+    &:hover {
+      color: color-mix(in srgb, var(--color-jade-900) 80%, transparent);
     }
-    &::-ms-expand {
-      display: none;
+    &[aria-current='true'] {
+      color: var(--color-jade-900);
+      cursor: default;
     }
     &:focus-visible {
       outline: 2px solid var(--color-jade-700);
-      outline-offset: 2px;
+      outline-offset: 3px;
+      border-radius: 0.25rem;
     }
   }
+}
 
-  .arrow:after {
-    content: '';
-    background-image: url('data:image/svg+xml;utf8,<svg fill="%2311563a" height="16px" width="16px" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 330 330" xml:space="preserve"><path id="XMLID_225_" d="M325.607,79.393c-5.857-5.857-15.355-5.858-21.213,0.001l-139.39,139.393L25.607,79.393c-5.857-5.857-15.355-5.858-21.213,0.001c-5.858,5.858-5.858,15.355,0,21.213l150.004,150c2.813,2.813,6.628,4.393,10.606,4.393s7.794-1.581,10.606-4.394l149.996-150C331.465,94.749,331.465,85.251,325.607,79.393z"/></svg>');
-    width: 16px;
-    height: 16px;
-    display: inline-block; /* Para asegurarse de que el SVG se muestre correctamente */
+.language-selector-separator {
+  width: var(--lang-separator-width);
+  text-align: center;
+  color: color-mix(in srgb, var(--color-jade-900) 30%, transparent);
+}
 
-    position: absolute;
-    top: 50%;
-    right: -2px;
-    transform: translateY(-50%) scale(0.75);
-    pointer-events: none;
+.language-selector-underline {
+  position: absolute;
+  bottom: -0.25rem;
+  left: 0.25rem;
+  width: calc(var(--lang-option-width) - 0.5rem);
+  height: 2px;
+  border-radius: 2px;
+  background: var(--color-jade-700);
+  transform: translateX(
+    calc(var(--lang-index, 0) * (var(--lang-option-width) + var(--lang-separator-width)))
+  );
+  transition: transform var(--lang-switch-duration) var(--lang-switch-ease);
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .language-selector a,
+  .language-selector-underline {
+    transition: none;
   }
 }

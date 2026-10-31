@@ -1,6 +1,7 @@
 'use client'
 
 import TranslationContext from '@/app/[lang]/_contexts/TranslationContext'
+import AnimatedText from '@/app/[lang]/_components/AnimatedText'
 import { useContext } from 'react'
 
 import InfiniteSlide from '@/app/[lang]/_components/InfiniteSlide'
@@ -19,7 +20,7 @@ export default function Education () {
             className='section-title flex justify-center md:justify-start mb-16 md:mb-0'
           >
             <h2 className='text-4xl font-extrabold text-white md:mb-8'>
-              {dict?.education?.title}
+              <AnimatedText text={dict?.education?.title} />
             </h2>
           </div>
           <div id='education-description' className='flex'>
@@ -42,16 +43,16 @@ export default function Education () {
                     <div className='absolute bottom-0 left-[calc(0.25rem-0.5px)] top-0 w-px bg-white/30 group-first:top-3'></div>
                     <div className='absolute left-0 top-2 h-2 w-2 rounded-full border border-jade-300 bg-jade-600'></div>
                     <p className='order-first font-semibold text-jade-200'>
-                      {education.title}
+                      <AnimatedText text={education.title} />
                     </p>
                     <p className='mt-2 text-sm/4 text-jade-400'>
-                      {education.duration}
+                      <AnimatedText text={education.duration} />
                     </p>
                     <h3 className='mt-2 text-sm/6 font-semibold text-white'>
-                      {education.center}
+                      <AnimatedText text={education.center} />
                     </h3>
                     <p className='mt-0.5 text-sm/6 text-zinc-300'>
-                      {education.description}
+                      <AnimatedText text={education.description} mode='fade' />
                     </p>
                   </li>
                 )
@@ -82,16 +83,16 @@ export default function Education () {
                     </div>
                     <div className='mt-6 sm:pe-8'>
                       <p className='order-first font-semibold text-jade-200'>
-                        {education.title}
+                        <AnimatedText text={education.title} />
                       </p>
                       <p className='mt-2 text-sm/4 text-jade-400'>
-                        {education.duration}
+                        <AnimatedText text={education.duration} />
                       </p>
                       <h3 className='mt-2 text-sm/6 font-semibold text-white'>
-                        {education.center}
+                        <AnimatedText text={education.center} />
                       </h3>
                       <p className='mt-0.5 text-sm/6 text-zinc-300'>
-                        {education.description}
+                        <AnimatedText text={education.description} mode='fade' />
                       </p>
                     </div>
                   </li>

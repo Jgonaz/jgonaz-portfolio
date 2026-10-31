@@ -2,6 +2,7 @@
 
 import '@/app/[lang]/_styles/section.css'
 import TranslationContext from '@/app/[lang]/_contexts/TranslationContext'
+import AnimatedText from '@/app/[lang]/_components/AnimatedText'
 import { useEffect, useContext } from 'react'
 import Link from 'next/link'
 import { MOBILE_BREAKPOINT } from '@/app/utils/constants'
@@ -48,7 +49,7 @@ export default function Work() {
             className="section-title flex justify-center mb-16 md:mb-0"
           >
             <h2 className="h-fit text-4xl font-extrabold text-white md:mb-22">
-              {dict?.work?.title}
+              <AnimatedText text={dict?.work?.title} />
             </h2>
           </div>
           <div id="work-description" className="flex flex-col items-end">
@@ -71,18 +72,22 @@ export default function Work() {
                     <div className="absolute bottom-0 left-[calc(0.25rem-0.5px)] top-0 w-px bg-white/30 group-first:top-3"></div>
                     <div className="absolute left-0 top-2 h-2 w-2 rounded-full border border-jade-300 bg-jade-600"></div>
                     <p className="order-first font-semibold text-jade-200">
-                      {job.company}
+                      <AnimatedText text={job.company} />
                     </p>
-                    <p className="mt-2 text-sm/4 text-jade-400">{job.duration}</p>
+                    <p className="mt-2 text-sm/4 text-jade-400">
+                      <AnimatedText text={job.duration} />
+                    </p>
                     <h3 className="mt-2 text-sm/6 font-semibold text-white">
-                      {job.position}
+                      <AnimatedText text={job.position} />
                     </h3>
                     {job.role && (
                       <p className="text-[13px]/5 font-medium text-jade-300">
-                        {job.role}
+                        <AnimatedText text={job.role} />
                       </p>
                     )}
-                    <p className="mt-0.5 text-sm/6 text-zinc-300">{job.description}</p>
+                    <p className="mt-0.5 text-sm/6 text-zinc-300">
+                      <AnimatedText text={job.description} mode="fade" />
+                    </p>
                   </li>
                 )
               )}
@@ -93,7 +98,7 @@ export default function Work() {
                   transitionTypes={['nav-forward']}
                 className="download-cv-btn text-white bg-jade-700 hover:bg-jade-800 focus:ring-1 focus:ring-jade-300 font-medium rounded-lg text-sm px-5 py-2.5 focus:outline-hidden"
               >
-                {dict?.viewCV}
+                <AnimatedText text={dict?.viewCV} />
               </Link>
             </div>
             <div className="hidden md:flex justify-end w-full mt-12">
@@ -102,7 +107,7 @@ export default function Work() {
                   transitionTypes={['nav-forward']}
                 className="download-cv-btn text-white bg-jade-700 hover:bg-jade-800 focus:ring-1 focus:ring-jade-300 font-medium rounded-lg text-sm px-5 py-2.5 focus:outline-hidden"
               >
-                {dict?.viewCV}
+                <AnimatedText text={dict?.viewCV} />
               </Link>
             </div>
           </div>
