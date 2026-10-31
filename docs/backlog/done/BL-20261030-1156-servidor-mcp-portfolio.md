@@ -2,7 +2,7 @@
 
 - ID: BL-20261030-1156-servidor-mcp-portfolio
 - Tipo: feature
-- Estado: pending
+- Estado: done
 - Prioridad: baja
 - Creado: 2026-10-30
 - Referencias: `app/i18n/locales/` (fuente de los datos), `app/api/`
@@ -25,3 +25,7 @@ Decidir con el desarrollador antes de implementar:
 - Un cliente MCP puede conectarse al endpoint público y consultar la información del portfolio en es y en en.
 - Los datos salen de la misma fuente que la web.
 - El endpoint tiene límites de uso y está documentado en el README.
+
+## Resolución
+
+Implementado el 2026-10-31 con el cambio OpenSpec `add-portfolio-mcp-server`, en la rama `feat/portfolio-mcp`. Endpoint `/api/mcp` sin estado y de solo lectura, con cinco herramientas (`get_profile`, `get_experience`, `get_projects`, `get_skills`, `get_ai_workflow`) en `es` y `en`, construido con `mcp-handler` y el SDK oficial v2. Los datos salen de las claves `cv` y `ai` de los diccionarios. El límite de uso es la regla «Rate limit MCP» del WAF de Vercel (60 peticiones/minuto por IP, respuesta 429), verificada contra un preview. Documentado en el README. El post o artículo queda fuera de este alcance.
