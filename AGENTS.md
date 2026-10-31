@@ -13,7 +13,7 @@ Esta guía define la forma estándar de trabajo para agentes en este repositorio
 
 ## Estructura del repositorio
 - `app/[lang]/`: Ruta principal localizada. El layout raíz (`layout.tsx`) solo contiene lo común (html/body, fuente, proveedor de traducciones, analytics y metadatos).
-- `app/[lang]/(home)/`: Route group de la home; su `layout.tsx` añade Header y Footer.
+- `app/[lang]/(home)/`: Route group de la home; su `layout.tsx` añade Header, Footer y el scroll suave con la rueda (`SmoothScroll`, con Lenis; solo en la home, nativo en táctil y con movimiento reducido). Los enlaces a anclas de la home los desliza ese componente.
 - `app/[lang]/cv/`: CV integrado (`/es/cv`, `/en/cv`), sin Header ni Footer. Datos en la clave `cv` de los diccionarios; «Imprimir» usa la impresión del navegador (`_styles/cv.css`, `@media print`) y «Descargar PDF» sirve los PDF de `public/cv/`, que hay que regenerar con `pnpm cv:pdf` siempre que cambie la clave `cv`.
 - `app/[lang]/_components/`: Componentes compartidos y secciones.
 - `app/[lang]/_styles/`: Estilos CSS por bloques visuales.
