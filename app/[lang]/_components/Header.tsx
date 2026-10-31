@@ -67,10 +67,9 @@ export default function Header() {
             </button>
             <div className="mr-4">
               <LanguageSelector
-                className="header-link transition-all text-jade-900 md:py-0"
                 selectedLanguage={lang}
-                onLanguageChange={() => {
-                  window.location.href = `/${lang === 'en' ? 'es' : 'en'}`
+                onLanguageChange={language => {
+                  window.location.href = `/${language}`
                 }}
               />
             </div>
@@ -162,12 +161,11 @@ export default function Header() {
                   {dict?.header?.contact}
                 </a>
               </li>
-              <li className="hidden md:block">
+              <li className="hidden md:flex md:items-center">
                 <LanguageSelector
-                  className="header-link transition-all text-jade-900 py-3 md:py-0"
                   selectedLanguage={lang}
-                  onLanguageChange={() => {
-                    window.location.href = `/${lang === 'en' ? 'es' : 'en'}`
+                  onLanguageChange={language => {
+                    window.location.href = `/${language}`
                   }}
                 />
               </li>
