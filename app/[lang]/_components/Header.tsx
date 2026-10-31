@@ -7,6 +7,7 @@ import Link from 'next/link'
 import '@/app/[lang]/_styles/header.css'
 
 import LanguageSelector from '@/app/[lang]/_components/LanguageSelector'
+import AnimatedText from '@/app/[lang]/_components/AnimatedText'
 
 import { CVIcon, RocketIcon, SparklesIcon, WorkIcon } from '@/app/[lang]/_assets/MenuIcons'
 import { EducationIcon } from '@/app/[lang]/_assets/MenuIcons'
@@ -66,12 +67,7 @@ export default function Header() {
               </svg>
             </button>
             <div className="mr-4">
-              <LanguageSelector
-                selectedLanguage={lang}
-                onLanguageChange={language => {
-                  window.location.href = `/${language}`
-                }}
-              />
+              <LanguageSelector />
             </div>
           </div>
           <div
@@ -89,7 +85,7 @@ export default function Header() {
                   className="md:hidden header-link transition-all flex items-center gap-2 py-3 px-4 md:px-2 lg:px-4 whitespace-nowrap text-jade-900 md:py-0"
                 >
                   <CVIcon className="scale-90" />
-                  {dict?.viewCV}
+                  <AnimatedText text={dict?.viewCV} />
                 </Link>
                 {/* Desktop => CV integrado */}
                 <Link
@@ -97,7 +93,7 @@ export default function Header() {
                   transitionTypes={['nav-forward']}
                   className="hidden md:flex header-link transition-all items-center gap-2 py-3 px-4 md:px-2 lg:px-4 whitespace-nowrap text-jade-900 md:py-0"
                 >
-                  {dict?.header?.CV}
+                  <AnimatedText text={dict?.header?.CV} />
                 </Link>
               </li>
               <li>
@@ -108,7 +104,7 @@ export default function Header() {
                   aria-current="page"
                 >
                   <WorkIcon className="md:hidden" />
-                  {dict?.header?.work}
+                  <AnimatedText text={dict?.header?.work} />
                 </a>
               </li>
               <li>
@@ -118,7 +114,7 @@ export default function Header() {
                   className="header-link transition-all flex items-center gap-2 py-3 px-4 md:px-2 lg:px-4 whitespace-nowrap text-jade-900 md:py-0"
                 >
                   <RocketIcon className="md:hidden" />
-                  {dict?.header?.sideProjects}
+                  <AnimatedText text={dict?.header?.sideProjects} />
                 </a>
               </li>
               <li>
@@ -128,7 +124,7 @@ export default function Header() {
                   className="header-link transition-all flex items-center gap-2 py-3 px-4 md:px-2 lg:px-4 whitespace-nowrap text-jade-900 md:py-0"
                 >
                   <SparklesIcon className="md:hidden" />
-                  {dict?.header?.ai}
+                  <AnimatedText text={dict?.header?.ai} />
                 </a>
               </li>
               <li>
@@ -138,7 +134,7 @@ export default function Header() {
                   className="header-link transition-all flex items-center gap-2 py-3 px-4 md:px-2 lg:px-4 whitespace-nowrap text-jade-900 md:py-0"
                 >
                   <EducationIcon className="md:hidden" />
-                  {dict?.header?.education}
+                  <AnimatedText text={dict?.header?.education} />
                 </a>
               </li>
               <li>
@@ -148,7 +144,7 @@ export default function Header() {
                   className="header-link transition-all flex items-center gap-2 py-3 px-4 md:px-2 lg:px-4 whitespace-nowrap text-jade-900 md:py-0"
                 >
                   <UserIcon className="md:hidden" />
-                  {dict?.header?.aboutMe}
+                  <AnimatedText text={dict?.header?.aboutMe} />
                 </a>
               </li>
               <li>
@@ -158,16 +154,11 @@ export default function Header() {
                   className="header-link transition-all flex items-center gap-2 py-3 px-4 md:px-2 lg:px-4 whitespace-nowrap text-jade-900 md:py-0"
                 >
                   <MailIcon className="md:hidden" />
-                  {dict?.header?.contact}
+                  <AnimatedText text={dict?.header?.contact} />
                 </a>
               </li>
               <li className="hidden md:flex md:items-center">
-                <LanguageSelector
-                  selectedLanguage={lang}
-                  onLanguageChange={language => {
-                    window.location.href = `/${language}`
-                  }}
-                />
+                <LanguageSelector />
               </li>
             </ul>
           </div>

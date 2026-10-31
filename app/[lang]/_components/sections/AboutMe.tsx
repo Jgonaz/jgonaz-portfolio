@@ -1,6 +1,7 @@
 'use client'
 
 import TranslationContext from '@/app/[lang]/_contexts/TranslationContext'
+import AnimatedText from '@/app/[lang]/_components/AnimatedText'
 import Image, { StaticImageData } from 'next/image'
 import { useContext } from 'react'
 
@@ -49,17 +50,17 @@ export default function AboutMe () {
               id='about-me-title'
               className='section-title mb-1 lg:mb-2 text-center lg:text-left text-[32px]/10 lg:text-4xl/11 font-extrabold text-white'
             >
-              {dict?.aboutMe?.title}
+              <AnimatedText text={dict?.aboutMe?.title} />
             </h2>
             <p className='text-base/[27px] lg:text-[17px]/[30px] text-white'>
-              {dict?.aboutMe?.lead}
+              <AnimatedText text={dict?.aboutMe?.lead} mode='fade' />
             </p>
-            {paragraphs.map((paragraph) => (
+            {paragraphs.map((paragraph, index) => (
               <p
-                key={paragraph}
+                key={index}
                 className='text-sm/6 lg:text-[15px]/[26px] text-zinc-300'
               >
-                {paragraph}
+                <AnimatedText text={paragraph} mode='fade' />
               </p>
             ))}
           </div>
@@ -75,7 +76,9 @@ export default function AboutMe () {
                     height={640}
                     sizes='150px'
                   />
-                  <figcaption>{photos[index]?.caption}</figcaption>
+                  <figcaption>
+                    <AnimatedText text={photos[index]?.caption} />
+                  </figcaption>
                 </figure>
               </div>
             ))}

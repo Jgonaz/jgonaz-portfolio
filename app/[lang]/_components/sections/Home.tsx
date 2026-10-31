@@ -3,6 +3,7 @@
 import Image from 'next/image'
 import { useContext, useEffect, useMemo, useState } from 'react'
 import TranslationContext from '@/app/[lang]/_contexts/TranslationContext'
+import AnimatedText from '@/app/[lang]/_components/AnimatedText'
 import profileImage from '@/public/images/profile.png'
 import { isMobile } from '@/app/utils/utils'
 import '@/app/[lang]/_styles/home.css'
@@ -61,7 +62,7 @@ export default function Home () {
       <div className='container p-8 sm:p-12 md:p-16 lg:p-20 xl:p-24 flex justify-center mobile-landscape:pt-4'>
         <div id='home-screen-title' className='max-w-max z-30'>
           <p className='anim-first text-center sm:text-start text-lg font-normal text-jade-900 lg:text-xl p-0 sm:px-4'>
-            {dict?.home?.hi}
+            <AnimatedText text={dict?.home?.hi} />
           </p>
           <div className='anim-second'>
             <h1
@@ -74,7 +75,7 @@ export default function Home () {
           </div>
           <p className='anim-third text-center sm:text-end text-lg font-normal text-jade-900 lg:text-xl p-0 sm:px-4'>
             <span key={activePhraseIndex} className='home-rotating-phrase'>
-              {rotatingPhrases[activePhraseIndex]}
+              <AnimatedText text={rotatingPhrases[activePhraseIndex % rotatingPhrases.length]} />
             </span>
           </p>
         </div>

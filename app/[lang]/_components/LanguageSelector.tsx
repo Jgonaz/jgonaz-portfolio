@@ -5,33 +5,27 @@ import '@/app/[lang]/_styles/languageSelector.css'
 
 interface LanguageSelectorProps {
   className?: string
-  selectedLanguage: string
-  onLanguageChange: (language: string) => void
 }
 
-// Duración del deslizamiento del indicador; debe coincidir con --lang-switch-duration
-const SWITCH_DURATION_MS = 380
-
-const LanguageSelector: React.FC<LanguageSelectorProps> = ({
-  className = '',
-  selectedLanguage,
-  onLanguageChange
-}) => {
-  const { dict } = useContext(TranslationContext)
-  const [activeLanguage, setActiveLanguage] = useState(selectedLanguage)
+const LanguageSelector: React.FC<LanguageSelectorProps> = ({ className = '' }) => {
+  const { dict, lang, setLanguage, preloadLanguage } = useContext(TranslationContext)
+  // Idioma pulsado mientras se carga su diccionario: el indicador se desliza sin esperar
+  const [pendingLanguage, setPendingLanguage] = useState<string | null>(null)
+  const activeLanguage = pendingLanguage ?? lang
   const locales = i18n.locales
   const activeIndex = Math.max(0, locales.indexOf(activeLanguage as (typeof locales)[number]))
 
-  const handleClick = (event: React.MouseEvent<HTMLAnchorElement>, language: string) => {
+  const handleClick = (
+    event: React.MouseEvent<HTMLAnchorElement>,
+    language: (typeof locales)[number]
+  ) => {
     // Clics con modificadores (nueva pestaña, etc.) siguen el enlace nativo
     if (event.metaKey || event.ctrlKey || event.shiftKey || event.altKey || event.button !== 0) return
     event.preventDefault()
     if (language === activeLanguage) return
-    setActiveLanguage(language)
-    // El cambio de idioma recarga la página: se espera a que el indicador termine de
-    // deslizarse para que la animación se vea, salvo con movimiento reducido
-    const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches
-    window.setTimeout(() => onLanguageChange(language), reducedMotion ? 0 : SWITCH_DURATION_MS)
+    setPendingLanguage(language)
+    // El indicador y las letras se animan a la vez; al terminar, manda el idioma del contexto
+    setLanguage(language).finally(() => setPendingLanguage(null))
   }
 
   return (
@@ -59,6 +53,8 @@ const LanguageSelector: React.FC<LanguageSelectorProps> = ({
             aria-label={dict?.header?.languages?.[language] ?? language}
             aria-current={language === activeLanguage ? 'true' : undefined}
             onClick={event => handleClick(event, language)}
+            onPointerEnter={() => preloadLanguage(language)}
+            onFocus={() => preloadLanguage(language)}
           >
             {language.toUpperCase()}
           </a>

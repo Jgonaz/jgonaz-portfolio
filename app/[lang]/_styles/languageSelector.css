@@ -1,7 +1,7 @@
 /* Selector ES / EN con la misma tipografía que los enlaces del menú: el idioma activo
    va a color pleno y una línea se desliza bajo él */
 .language-selector {
-  --lang-switch-duration: 380ms; /* Debe coincidir con SWITCH_DURATION_MS */
+  --lang-switch-duration: 380ms;
   --lang-switch-ease: cubic-bezier(0.65, 0, 0.35, 1);
   --lang-option-width: 1.75rem;
   --lang-separator-width: 0.875rem;

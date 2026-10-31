@@ -1,6 +1,7 @@
 'use client'
 
 import TranslationContext from '@/app/[lang]/_contexts/TranslationContext'
+import AnimatedText from '@/app/[lang]/_components/AnimatedText'
 import { HARNESS_REPO_URL } from '@/app/utils/constants'
 import { JetBrains_Mono } from 'next/font/google'
 import { ReactNode, useContext, useId } from 'react'
@@ -75,12 +76,12 @@ const PRINCIPLE_ICONS: ReactNode[] = [
 function TagList ({ tags }: { tags: string[] }) {
   return (
     <ul role='list' className='flex flex-wrap gap-2'>
-      {tags.map(tag => (
+      {tags.map((tag, index) => (
         <li
-          key={tag}
+          key={index}
           className='rounded-full bg-jade-900 px-2.5 py-1 text-xs/[18px] font-medium text-jade-200'
         >
-          {tag}
+          <AnimatedText text={tag} />
         </li>
       ))}
     </ul>
@@ -152,20 +153,20 @@ export default function AiWorkflow () {
             <span
               className={`${jetbrainsMono.className} text-xs/4 md:text-[13px]/[18px] uppercase tracking-[0.04em] text-jade-300`}
             >
-              {ai?.eyebrow}
+              <AnimatedText text={ai?.eyebrow} />
             </span>
             <h2 className='text-[32px]/10 md:text-4xl/11 font-extrabold text-white'>
-              {ai?.title}
+              <AnimatedText text={ai?.title} />
             </h2>
             <p className='text-[15px]/6 md:text-base/[26px] text-zinc-300'>
-              {ai?.subtitle}
+              <AnimatedText text={ai?.subtitle} mode='fade' />
             </p>
           </div>
 
           {/* Flujo de un cambio */}
           <div className='flex flex-col gap-4 md:gap-5'>
             <h3 className='text-sm/5 font-semibold text-jade-200'>
-              {ai?.flowTitle}
+              <AnimatedText text={ai?.flowTitle} />
             </h3>
             <ol
               role='list'
@@ -175,7 +176,7 @@ export default function AiWorkflow () {
                 const isLast = index === steps.length - 1
                 return (
                   <li
-                    key={step.title}
+                    key={index}
                     className={`relative flex gap-3.5 md:flex-col md:gap-2 rounded-xl border p-4 md:p-5 ${
                       isLast
                         ? 'bg-jade-700 border-jade-300/40'
@@ -198,14 +199,14 @@ export default function AiWorkflow () {
                     </span>
                     <div className='flex flex-col gap-0.5 md:gap-2'>
                       <strong className='text-[15px]/[22px] md:text-base/[22px] font-semibold text-white'>
-                        {step.title}
+                        <AnimatedText text={step.title} />
                       </strong>
                       <span
                         className={`text-[13px]/5 ${
                           isLast ? 'text-white' : 'text-zinc-300'
                         }`}
                       >
-                        {step.description}
+                        <AnimatedText text={step.description} />
                       </span>
                     </div>
                   </li>
@@ -221,7 +222,7 @@ export default function AiWorkflow () {
           >
             {principles.map((principle, index) => (
               <li
-                key={principle.title}
+                key={index}
                 className='flex gap-3.5 md:flex-col md:gap-2.5'
               >
                 <svg
@@ -238,10 +239,10 @@ export default function AiWorkflow () {
                 </svg>
                 <div className='flex flex-col gap-1 md:gap-2.5'>
                   <h4 className='text-[15px]/[22px] md:text-base/[22px] font-semibold text-white'>
-                    {principle.title}
+                    <AnimatedText text={principle.title} />
                   </h4>
                   <p className='text-sm/[22px] text-zinc-300'>
-                    {principle.description}
+                    <AnimatedText text={principle.description} mode='fade' />
                   </p>
                 </div>
               </li>
@@ -252,28 +253,28 @@ export default function AiWorkflow () {
           <div className='section-content grid grid-cols-1 lg:grid-cols-2 gap-5 md:gap-6'>
             {team && (
               <article className='flex flex-col gap-3.5 md:gap-4 rounded-2xl border border-jade-300/16 bg-jade-950 p-6 md:p-8'>
-                <CaseBadge>{team.badge}</CaseBadge>
+                <CaseBadge><AnimatedText text={team.badge} /></CaseBadge>
                 <h3 className='text-[21px]/7 md:text-2xl/[30px] font-extrabold text-white'>
-                  {team.title}
+                  <AnimatedText text={team.title} />
                 </h3>
                 <p className='text-sm/6 md:text-[15px]/[26px] text-zinc-300'>
-                  {team.description}
+                  <AnimatedText text={team.description} mode='fade' />
                 </p>
                 <TagList tags={team.tags} />
                 <p className='md:pt-1 text-[13px]/5 text-jade-200'>
-                  {team.note}
+                  <AnimatedText text={team.note} mode='fade' />
                 </p>
               </article>
             )}
 
             {personal && (
               <article className='flex flex-col gap-3.5 md:gap-4 rounded-2xl border border-jade-300/16 bg-jade-950 p-6 md:p-8'>
-                <CaseBadge>{personal.badge}</CaseBadge>
+                <CaseBadge><AnimatedText text={personal.badge} /></CaseBadge>
                 <h3 className='text-[21px]/7 md:text-2xl/[30px] font-extrabold text-white'>
-                  {personal.title}
+                  <AnimatedText text={personal.title} />
                 </h3>
                 <p className='text-sm/6 md:text-[15px]/[26px] text-zinc-300'>
-                  {personal.description}
+                  <AnimatedText text={personal.description} mode='fade' />
                 </p>
                 <TagList tags={personal.tags} />
                 <div className='flex md:pt-1'>
@@ -283,7 +284,7 @@ export default function AiWorkflow () {
                     rel='noopener noreferrer'
                     className='flex w-full md:w-auto min-h-12 md:min-h-11 items-center justify-center gap-2 rounded-lg bg-jade-700 px-5 text-[15px] md:text-sm font-medium text-white hover:bg-jade-800 focus:outline-hidden focus-visible:ring-2 focus-visible:ring-jade-300'
                   >
-                    {personal.cta}
+                    <AnimatedText text={personal.cta} />
                     <svg
                       width='14'
                       height='14'
