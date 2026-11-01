@@ -1,11 +1,21 @@
+---
+id: BL-20261030-1156-servidor-mcp-portfolio
+title: "Servidor MCP del portfolio"
+type: feature
+status: done
+priority: baja
+created: 2026-10-30
+updated: 2026-11-01
+refs:
+  - "`app/i18n/locales/` (fuente de los datos)"
+  - "`app/api/`"
+---
+
 # Servidor MCP del portfolio
 
-- ID: BL-20261030-1156-servidor-mcp-portfolio
-- Tipo: feature
-- Estado: done
-- Prioridad: baja
-- Creado: 2026-10-30
-- Referencias: `app/i18n/locales/` (fuente de los datos), `app/api/`
+## Resumen
+
+Idea de exponer un servidor MCP público del portfolio con la experiencia, los proyectos, el stack y la forma de trabajar con IA, para que cualquiera lo conecte a Claude, Cursor u otro cliente y pregunte por el perfil. Servía sobre todo como demostración y no era prioritario. Se resolvió el 2026-10-31 con el cambio OpenSpec `add-portfolio-mcp-server` (rama `feat/portfolio-mcp`): el endpoint `/api/mcp`, sin estado y de solo lectura, ofrece cinco herramientas en `es` y `en`, construido con `mcp-handler` y el SDK oficial v2, con datos tomados de los diccionarios. El límite de uso es una regla del WAF de Vercel (60 peticiones por minuto por IP) y está documentado en el README. El post o artículo queda fuera del alcance.
 
 ## Contexto
 

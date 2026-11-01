@@ -1,11 +1,22 @@
+---
+id: BL-20261029-2131-cv-integrado
+title: "CV integrado en el portfolio"
+type: feature
+status: done
+priority: media
+created: 2026-10-29
+updated: 2026-11-01
+refs:
+  - "`app/utils/constants.ts` (`CV_URL_DOC`, `CV_URL_PDF`)"
+  - "`app/[lang]/_components/Header.tsx`"
+  - "`app/i18n/locales/`"
+---
+
 # CV integrado en el portfolio
 
-- ID: BL-20261029-2131-cv-integrado
-- Tipo: feature
-- Estado: done
-- Prioridad: media
-- Creado: 2026-10-29
-- Referencias: `app/utils/constants.ts` (`CV_URL_DOC`, `CV_URL_PDF`), `app/[lang]/_components/Header.tsx`, `app/i18n/locales/`
+## Resumen
+
+El CV enlazado desde el Header del portfolio era un Google Doc solo en español y desincronizado con la web, y se decidió sustituirlo por un CV generado desde el propio portfolio una vez terminados los textos, el hero y el resto de secciones. Se resolvió el 2026-10-30: `/es/cv` y `/en/cv` salen de la clave `cv` de los diccionarios, sin Header ni Footer, con una barra con «Imprimir» (estilos `@media print`) y «Descargar PDF» (PDF de `public/cv/` generados con `pnpm cv:pdf`), y con una transición de cortina entre la home y el CV. El diseño se aprobó en Claude Design y los enlaces a Google Drive se eliminaron.
 
 ## Contexto
 
